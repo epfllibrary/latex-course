@@ -1,4 +1,4 @@
-# Introduction to LaTeX
+# Introduction to LaTeX (Work in progress)
 
 This repository generates the corresponding lesson website from [The Carpentries](https://carpentries.org/) repertoire of lessons. 
 

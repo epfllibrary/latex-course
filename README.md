@@ -15,9 +15,9 @@ how to write new episodes.
 
 Current maintainers of this lesson are 
 
-* FIXME
-* FIXME
-* FIXME
+* Elisa BANFI 
+* Antoine MASSON
+* Mathilde PANES
 
 
 ## Authors

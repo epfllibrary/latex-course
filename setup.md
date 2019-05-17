@@ -1,7 +1,10 @@
 ---
 title: Setup
 ---
-FIXME
+# Install Latex Windows
 
+# Install Latex MacOs
+
+# Install Latex Linux
 
 {% include links.md %}

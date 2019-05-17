@@ -10,7 +10,7 @@
 carpentry: "swc"
 
 # Overall title for pages.
-title: "Introduction to LaTeX (Work in progress)"
+title: "Introduction to LaTeX"
 
 # Life cycle stage of the lesson
 # possible values: "pre-alpha", "alpha", "beta", "stable"
@@ -99,3 +99,12 @@ exclude:
 
 # Turn on built-in syntax highlighting.
 highlighter: rouge
+liquid_latex:
+  debug: false
+  density: 300
+  usepackages: pst-all,pst-3dplot
+  output_directory: /res/latex
+  latex_cmd: "latex -interaction=nonstopmode $texfile &> /dev/null"
+  dvips_cmd: "dvips -E $dvifile -o $epsfile &> /dev/null"
+  convert_cmd: "convert -density $density $epsfile $pngfile &> /dev/null"
+  temp_filename: "latex_temp"

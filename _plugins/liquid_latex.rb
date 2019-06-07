@@ -119,7 +119,7 @@ module Jekyll
           @@generated_files << st_file
           site.static_files << st_file
           # Build the <img> tag to be returned to the renderer
-          png_path = File.join(@@globals["output_directory"], filename)
+          png_path = File.join("..",@@globals["output_directory"], filename)
           return "<img src=\"" + png_path + "\" />"
         else
           # Generate a block of text in the post with the original source

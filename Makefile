@@ -119,3 +119,5 @@ lesson-fixme :
 #-------------------------------------------------------------------------------
 
 -include commands.mk
+# Add extra commond for latex
+-include latex.mk

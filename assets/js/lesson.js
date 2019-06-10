@@ -54,3 +54,18 @@ $(window).scroll(function(){
         }
     }
 });
+
+
+// foldable latex
+$(".latex-foldable").click(function(event) {
+    var trigger = $(event.target).has(".fold-unfold").size() > 0
+               || $(event.target).filter(".fold-unfold").size() > 0;
+    if (trigger) {
+        $(">div.latex-hide", this).toggle(400);
+        $(">h2>span.fold-unfold", this).toggleClass("glyphicon-collapse-down glyphicon-collapse-up");
+        event.stopPropagation();
+    }
+});
+$(".latex-foldable").each(function() {
+    $(">div.latex-hide", this).toggle();
+});

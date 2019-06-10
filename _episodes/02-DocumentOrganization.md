@@ -16,10 +16,12 @@ keypoints:
 
 # Let's start
 
-Here is the contents of the ``minimal.tex`` file. It contains the minimal commands required to compile a Latex document. We will see a little further what does all of this.
+Here is the contents of the ``02-minimal.tex`` file. It contains the minimal commands required to compile a Latex document. We will see a little further what does all of this.
 
-~~~
-\documentclass{article}
+
+
+{% latex fold_src=true filename=02-minimal %}
+\documentclass[a4paper]{article}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -28,14 +30,25 @@ Here is the contents of the ``minimal.tex`` file. It contains the minimal comman
 
 
 \begin{document}
-  Hello World
-\end{document}
-~~~
-{: .language-latex}
 
-{% latex %}
-Hello World
+  Hello World
+
+\end{document}
 {% endlatex %}
 
+{% latex  filename=02-test source=02-minimal.tex %}
+
+  \textbf{Hello World 2}
+
+{% endlatex %}
+
+
+> ## Try by our self
+> Try this code
+> > ## Solution
+> > blabla
+> > blabla
+> {: .solution}
+{: .challenge}
 
 {% include links.md %}

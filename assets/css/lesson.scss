@@ -24,6 +24,10 @@ $color-prereq:      #9cd6dc !default;
 $color-solution:    #ded4b9 !default;
 $color-testimonial: #fc8dc1 !default;
 
+// LaTeX
+$color-latex: #b3b3cc !default;
+$color-latex-compil: #66ccff !default;
+
 //----------------------------------------
 // Specialized code blocks.
 //----------------------------------------
@@ -111,7 +115,6 @@ $codeblock-padding: 5px !default;
   }
 
 }
-
 .callout{ @include bkSetup($color-callout, "\e146"); }
 .challenge{ @include bkSetup($color-challenge, "\270f"); }
 .checklist{ @include bkSetup($color-checklist, "\e067"); }
@@ -121,6 +124,10 @@ $codeblock-padding: 5px !default;
 .prereq{ @include bkSetup($color-prereq, "\e124"); }
 .solution{ @include bkSetup($color-solution, "\e105"); }
 .testimonial{ @include bkSetup($color-testimonial, "\e143"); }
+
+//LaTeX
+.latex{ @include bkSetup($color-latex, "\e065"); }
+.latex-compil{ @include bkSetup($color-latex-compil, "\e210"); }
 
 .callout h3,
 .challenge h3,

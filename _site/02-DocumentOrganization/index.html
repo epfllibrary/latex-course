@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-06-07 16:55:16 +0200">
+    <meta http-equiv="last-modified" content="2019-06-10 21:26:02 +0200">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -271,9 +271,13 @@
 
 <h1 id="lets-start">Let’s start</h1>
 
-<p>Here is the contents of the <code class="highlighter-rouge">minimal.tex</code> file. It contains the minimal commands required to compile a Latex document. We will see a little further what does all of this.</p>
+<p>Here is the contents of the <code class="language-html highlighter-rouge">02-minimal.tex</code> file. It contains the minimal commands required to compile a Latex document. We will see a little further what does all of this.</p>
 
-<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
+<div class="latex latex-foldable">
+  <h2><a href="../latex/tex/02-minimal.tex">02-minimal.tex</a><span class="fold-unfold glyphicon glyphicon-collapse-down"></span></h2>
+  <div class="latex-hide">
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
 
 <span class="k">\usepackage</span><span class="na">[T1]</span><span class="p">{</span>fontenc<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
@@ -282,11 +286,48 @@
 
 
 <span class="nt">\begin{document}</span>
-  Hello World
-<span class="nt">\end{document}</span>
-</code></pre></div></div>
 
-<p><img src="../res/latex/latex-4e9b1c7a1fcbbf83bbf333f73458c467.png" /></p>
+  Hello World
+
+<span class="nt">\end{document}</span>
+
+</code></pre></div>    </div>
+  </div>
+  <div class="latex-compil latex-foldable">
+    <h2> Compilation : <a href="../latex/pdf/02-minimal.pdf">02-minimal.pdf</a><span class="fold-unfold glyphicon glyphicon-collapse-down"></span></h2>
+    <div class="latex-hide">
+      <p><img src="../latex/png/02-minimal.png" /></p>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="latex">
+  <h2><a href="../latex/tex/02-test.tex">02-test.tex</a></h2>
+  <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to 02-minimal.tex &lt;-----&gt;</span>
+
+
+  <span class="k">\textbf</span><span class="p">{</span>Hello World 2<span class="p">}</span>
+
+
+</code></pre></div>  </div>
+  <div class="latex-compil">
+    <h2> Compilation : <a href="../latex/pdf/02-test.pdf">02-test.pdf</a></h2>
+    <p><img src="../latex/png/02-test.png" /></p>
+  </div>
+
+</div>
+
+<blockquote class="challenge">
+  <h2 id="try-by-our-self">Try by our self</h2>
+  <p>Try this code</p>
+  <blockquote class="solution">
+    <h2 id="solution">Solution</h2>
+    <p>blabla
+blabla</p>
+  </blockquote>
+</blockquote>
 
 
 

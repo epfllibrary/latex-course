@@ -33,6 +33,8 @@ Here is the contents of the ``02-minimal.tex`` file. It contains the minimal com
 
   Hello World
 
+  je suis a l'epicure
+
 \end{document}
 {% endlatex %}
 

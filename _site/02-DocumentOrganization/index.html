@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-06-11 10:46:25 +0200">
+    <meta http-equiv="last-modified" content="2019-06-11 22:09:29 +0200">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -243,7 +243,7 @@
 	<li><p>How is organized a Latex document ?</p>
 </li>
 	
-	<li><p>What are the minimal commands needed to compile ?</p>
+	<li><p>What are the minimal commands needed to compile?</p>
 </li>
 	
       </ul>
@@ -269,17 +269,13 @@
 
 </blockquote>
 
-<h1 id="lets-start">Let’s start</h1>
-
 <p>Here is the contents of the <code class="language-html highlighter-rouge">02-minimal.tex</code> file. It contains the minimal commands required to compile a Latex document. We will see a little further what does all of this.</p>
 
-<div class="latex latex-foldable">
-  <h2><a href="../latex/tex/02-minimal.tex">02-minimal.tex</a><span class="fold-unfold glyphicon glyphicon-collapse-down"></span></h2>
-  <div class="latex-hide">
-    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="latex">
+  <h2><a href="../latex/tex/02-minimal-helloworld.tex">02-minimal-helloworld.tex</a></h2>
+  <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
 
-<span class="k">\usepackage</span><span class="na">[T1]</span><span class="p">{</span>fontenc<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
@@ -289,37 +285,78 @@
 
   Hello World
 
-  je suis a l'epicure
-
 <span class="nt">\end{document}</span>
 
-</code></pre></div>    </div>
-  </div>
-  <div class="latex-compil latex-foldable">
-    <h2> Compilation : <a href="../latex/pdf/02-minimal.pdf">02-minimal.pdf</a><span class="fold-unfold glyphicon glyphicon-collapse-down"></span></h2>
-    <div class="latex-hide">
-      <p><img src="../latex/png/02-minimal.png" /></p>
-    </div>
-
+</code></pre></div>  </div>
+  <div class="latex-compil">
+    <h2> Compilation : <a href="../latex/pdf/02-minimal-helloworld.pdf">02-minimal-helloworld.pdf</a></h2>
+    <p><img src="../latex/png/02-minimal-helloworld.png" /></p>
   </div>
 
 </div>
 
+<p>When we compile it only “Hello World” appears the others things are inputs for the compiler they give instructions or add new capabilities, they are not displayed after compilation.</p>
+
+<p>Environments define a “block” all the text inside this block will be transformed according to what the block do.</p>
+
+<p>An environment always start with <code class="language-html highlighter-rouge">\begin{}</code> and stop with <code class="language-html highlighter-rouge">\end{}</code> inside the {} is specified the name of the environment.</p>
+
+<p>The <code class="language-html highlighter-rouge">02-minimal.tex</code> contains the environment <code class="language-html highlighter-rouge">document</code> this environment is obligatory : what is inside is the contents of the document. Outside the document block we will find commands that will change the functionalities or how the document is printed (for example package or global commands)</p>
+
+<p>All the others environments are optional and you use them when you need, for example the environment <code class="language-html highlighter-rouge">itemize</code>`creates bullet point :</p>
+
 <div class="latex">
-  <h2><a href="../latex/tex/02-test.tex">02-test.tex</a></h2>
-  <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to 02-minimal.tex &lt;-----&gt;</span>
+  <h2><a href="../latex/tex/02-environment-example.tex">02-environment-example.tex</a></h2>
+  <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
 
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
 
-  <span class="k">\textbf</span><span class="p">{</span>Hello World 2<span class="p">}</span>
+<span class="nt">\begin{document}</span>
+  This text is before  
+
+  <span class="nt">\begin{itemize}</span>
+    <span class="k">\item</span> One entry in the list
+    <span class="k">\item</span> Another entry in the list
+  <span class="nt">\end{itemize}</span>
+
+  This text is after <span class="k">\textbf</span><span class="p">{</span>this is bold<span class="p">}</span>
+
+<span class="nt">\end{document}</span>
 
 
 </code></pre></div>  </div>
   <div class="latex-compil">
-    <h2> Compilation : <a href="../latex/pdf/02-test.pdf">02-test.pdf</a></h2>
-    <p><img src="../latex/png/02-test.png" /></p>
+    <h2> Compilation : <a href="../latex/pdf/02-environment-example.pdf">02-environment-example.pdf</a></h2>
+    <p><img src="../latex/png/02-environment-example.png" /></p>
   </div>
 
 </div>
+
+<blockquote class="challenge">
+  <h2 id="inputs-and-options">Inputs and options</h2>
+  <p>We usually have to provide inputs for commands or environment, you need to put them into the <code class="language-html highlighter-rouge">{}</code> sometimes the inputs can take options they are written between <code class="language-html highlighter-rouge">[]</code> before the <code class="language-html highlighter-rouge">{}</code>.</p>
+</blockquote>
+
+<p><code class="language-html highlighter-rouge">\textbf{this is bold}</code> is a command, it’s usally used for a short and localize modification, for example ```\textbf{}`` will change the text font inside {} and display it in bold.</p>
+
+<p>Before the <code class="language-html highlighter-rouge">document</code>environment there is several commands :</p>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
+
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-html highlighter-rouge">\documentclass[a4paper]{article}</code> is a command that describe the template used for the document (here <code class="language-html highlighter-rouge">article</code>) the option <code class="language-html highlighter-rouge">a4paper</code> specified the size of the paper used</p>
+
+<p><code class="language-html highlighter-rouge">\usepackage[]{}</code> is a command that loads a plugins for example <code class="language-html highlighter-rouge">\usepackage[utf8]{inputenc}</code> loads the <code class="language-html highlighter-rouge">ìnputenc</code><code class="language-html highlighter-rouge">package with the </code><code class="language-html highlighter-rouge">utf8</code>`option (this is is for character encoding)</p>
+
+<p><code class="language-html highlighter-rouge">\usepackage{lmodern}</code> specified that we want to use the <code class="language-html highlighter-rouge">lmodern</code> fonts packages</p>
+
+<p><code class="language-html highlighter-rouge">\usepackage[english]{babel}</code> loads the package <code class="language-html highlighter-rouge">babel</code> that take care of the specific typography for the language (here <code class="language-html highlighter-rouge">english</code> you can change the option if you are typing in another language for example <code class="language-html highlighter-rouge">french</code> or <code class="language-html highlighter-rouge">german</code>)</p>
 
 <blockquote class="challenge">
   <h2 id="try-by-our-self">Try by our self</h2>
@@ -337,10 +374,10 @@ blabla</p>
   <h2>Key Points</h2>
   <ul>
     
-    <li><p>A Latex document is composed of commands (they start with /), environments (starts with /begin{envname} and stop with /end{envname})</p>
+    <li><p>A Latex document is composed of commands (they start with  ), environments (starts with egin{envname} and stop with nd{envname})</p>
 </li>
     
-    <li><p>Packages are tools to add mew functionalities to Latex</p>
+    <li><p>Packages are tools to add new functionalities to Latex</p>
 </li>
     
   </ul>

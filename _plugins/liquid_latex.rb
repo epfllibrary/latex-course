@@ -136,11 +136,7 @@ module Jekyll
 
 
 
-        if @p.key?("filename")
-          filename = @p["filename"]
-        else
-          filename = "latex-" + hash_p
-        end
+
         src_disp=latex_source
 
         if @p.key?("source")
@@ -155,8 +151,13 @@ module Jekyll
           source_file = ""
 
         end
+        hash_p = Digest::MD5.hexdigest(@p.to_s+latex_source)
 
-
+        if @p.key?("filename")
+          filename = @p["filename"]
+        else
+          filename = "latex-" + hash_p
+        end
         filename_png=filename + ".png"
         filename_pdf=filename + ".pdf"
         filename_tex=filename + ".tex"
@@ -169,7 +170,6 @@ module Jekyll
         @p["save_tex_fn"] = File.join(@@globals["src_dir_tex"],filename_tex)
 
         # if this LaTeX code is already compiled, skip its compilation
-        hash_p = Digest::MD5.hexdigest(@p.to_s+latex_source)
 
         needwork=true
         if File.exists?(@p["hash_fn"])
@@ -214,7 +214,7 @@ module Jekyll
             tex_file.puts(latex_source)
             tex_file.close
             ok = execute_cmd(@@globals["pdflatex_cmd"])
-            FileUtils.cp(@p["pdf_fn"],@p["save_pdf_fn"])
+            FileUtils.cp(@p["pdf_fn"],@p["save_pdf_fn"]) if ok
           end
 
           # Delete temporary files

@@ -1,7 +1,7 @@
 ---
 title: "Text"
-teaching: ?
-exercises: ?
+teaching: 0
+exercises: 0
 questions:
 - "How can I write text in my LaTeX document ?"
 objectives:
@@ -9,13 +9,13 @@ objectives:
 - "Justify paragraphs"
 - "Work with ligns, paragraphes and pages"
 - "Include lists and tables"
-
 ---
+
 ## Fonts
 We know how to write simple plain text.
 Let's see how we can change the fonts used in LaTeX
-. 
-~~~
+ 
+
 {% latex filename=03-font-01 %}
 
 \documentclass[a4paper]{article}
@@ -36,7 +36,6 @@ Let's see how we can change the fonts used in LaTeX
 \end{document}
 
 {% endlatex %}
-~~~
 
 With the commands \textit{...} and \textbf{...}, you can modify parts of the text.
 There is another way to do the same thing, with the commands {\itshape ...} and {\bfseries}.

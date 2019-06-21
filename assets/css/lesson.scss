@@ -25,8 +25,9 @@ $color-solution:    #ded4b9 !default;
 $color-testimonial: #fc8dc1 !default;
 
 // LaTeX
-$color-latex: #b3b3cc !default;
+$color-latex-src: #b3b3cc !default;
 $color-latex-compil: #66ccff !default;
+$color-latex-prj: #ff66ff !default;
 
 //----------------------------------------
 // Specialized code blocks.
@@ -126,8 +127,9 @@ $codeblock-padding: 5px !default;
 .testimonial{ @include bkSetup($color-testimonial, "\e143"); }
 
 //LaTeX
-.latex{ @include bkSetup($color-latex, "\e065"); }
+.latex-src{ @include bkSetup($color-latex-src, "\e065"); }
 .latex-compil{ @include bkSetup($color-latex-compil, "\e210"); }
+.latex{ @include bkSetup($color-latex-src, "\e065"); }
 
 .callout h3,
 .challenge h3,

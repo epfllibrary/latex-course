@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-06-21 10:21:01 +0200">
+    <meta http-equiv="last-modified" content="2019-06-21 16:56:18 +0200">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -271,9 +271,11 @@
 
 <p>Here is the contents of the <code class="language-html highlighter-rouge">02-minimal.tex</code> file. It contains the minimal commands required to compile a Latex document. We will see a little further what does all of this.</p>
 
-<div class="latex">
-  <h2><a href="../latex/tex/02-minimal-helloworld.tex">02-minimal-helloworld.tex</a></h2>
-  <div class="language-latex highlighter-rouge"><pre class="highlight"><code>
+<div class="callout">
+  <h2>02-minimal-helloworld</h2>
+  <div class="latex-src">
+    <h2> Tex file : <a href="../latex/tex/02-minimal-helloworld.tex">02-minimal-helloworld.tex</a></h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
 
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
@@ -287,7 +289,9 @@
 
 <span class="nt">\end{document}</span>
 
-</code></pre>  </div>
+</code></pre></div>    </div>
+
+  </div>
   <div class="latex-compil">
     <h2> Compilation : <a href="../latex/pdf/02-minimal-helloworld.pdf">02-minimal-helloworld.pdf</a></h2>
     <p><img src="../latex/png/02-minimal-helloworld.png" /></p>
@@ -305,9 +309,11 @@
 
 <p>All the others environments are optional and you use them when you need, for example the environment <code class="language-html highlighter-rouge">itemize</code>`creates bullet point :</p>
 
-<div class="latex">
-  <h2><a href="../latex/tex/02-environment-example.tex">02-environment-example.tex</a></h2>
-  <div class="language-latex highlighter-rouge"><pre class="highlight"><code>
+<div class="callout">
+  <h2>02-environment-example</h2>
+  <div class="latex-src">
+    <h2> Tex file : <a href="../latex/tex/02-environment-example.tex">02-environment-example.tex</a></h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
 
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
@@ -327,7 +333,9 @@
 <span class="nt">\end{document}</span>
 
 
-</code></pre>  </div>
+</code></pre></div>    </div>
+
+  </div>
   <div class="latex-compil">
     <h2> Compilation : <a href="../latex/pdf/02-environment-example.pdf">02-environment-example.pdf</a></h2>
     <p><img src="../latex/png/02-environment-example.png" /></p>
@@ -343,12 +351,12 @@
 <p><code class="language-html highlighter-rouge">\textbf{this is bold}</code> is a command, it’s usally used for a short and localize modification, for example ```\textbf{}`` will change the text font inside {} and display it in bold.</p>
 
 <p>Before the <code class="language-html highlighter-rouge">document</code>environment there is several commands :</p>
-<div class="language-latex highlighter-rouge"><pre class="highlight"><code><span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
 
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
-</code></pre></div>
+</code></pre></div></div>
 
 <p><code class="language-html highlighter-rouge">\documentclass[a4paper]{article}</code> is a command that describe the template used for the document (here <code class="language-html highlighter-rouge">article</code>) the option <code class="language-html highlighter-rouge">a4paper</code> specified the size of the paper used</p>
 

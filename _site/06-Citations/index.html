@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-06-21 10:21:01 +0200">
+    <meta http-equiv="last-modified" content="2019-06-21 16:56:18 +0200">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -264,6 +264,56 @@
 </blockquote>
 
 <p>FIXME</p>
+<div class="callout">
+  <h2>06-citation-test</h2>
+  <div class="latex-src">
+    <h2> Tex file : <a href="../latex/tex/06-citation-test.tex">06-citation-test.tex</a></h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+<span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
+
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
+
+
+<span class="nt">\begin{document}</span>
+
+  Hello World
+
+  This paper<span class="k">\cite</span><span class="p">{</span>ARTICLE:1<span class="p">}</span> is really good
+
+
+
+  <span class="k">\bibliographystyle</span><span class="p">{</span>plain<span class="p">}</span>
+<span class="k">\bibliography</span><span class="p">{</span>06-citation-test<span class="p">}</span>
+
+
+<span class="nt">\end{document}</span>
+
+
+</code></pre></div>    </div>
+
+  </div>
+  <div class="latex-src">
+    <h2> Bib file : <a href="../latex/tex/06-citation-test.bib">06-citation-test.bib</a></h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+@ARTICLE<span class="p">{</span>ARTICLE:1,
+    AUTHOR="John Doe",
+    TITLE="Title",
+    JOURNAL="Journal",
+    YEAR="2017",
+<span class="p">}</span>
+
+</code></pre></div>    </div>
+
+  </div>
+  <div class="latex-compil">
+    <h2> Compilation : <a href="../latex/pdf/06-citation-test.pdf">06-citation-test.pdf</a></h2>
+    <p><img src="../latex/png/06-citation-test.png" /></p>
+  </div>
+
+</div>
 
 
 

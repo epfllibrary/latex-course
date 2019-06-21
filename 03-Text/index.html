@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-06-11 22:09:29 +0200">
+    <meta http-equiv="last-modified" content="2019-06-21 10:09:39 +0200">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -240,7 +240,7 @@
       <strong>Questions</strong>
       <ul>
 	
-	<li><p>Key question (FIXME)</p>
+	<li><p>How can I write text in my LaTeX document ?</p>
 </li>
 	
       </ul>
@@ -254,7 +254,16 @@
       <strong>Objectives</strong>
       <ul>
 	
-	<li><p>First learning objective. (FIXME)</p>
+	<li><p>Change fonts and their size</p>
+</li>
+	
+	<li><p>Justify paragraphs</p>
+</li>
+	
+	<li><p>Work with ligns, paragraphes and pages</p>
+</li>
+	
+	<li><p>Include lists and tables</p>
 </li>
 	
       </ul>
@@ -263,16 +272,53 @@
 
 </blockquote>
 
-<p>FIXME</p>
+<h2 id="fonts">Fonts</h2>
+<p>We know how to write simple plain text.
+Let’s see how we can change the fonts used in LaTeX</p>
+
+<div class="latex">
+  <h2><a href="../latex/tex/03-font-01.tex">03-font-01.tex</a></h2>
+  <div class="language-latex highlighter-rouge"><pre class="highlight"><code>
+
+<span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
+
+<span class="c">%\usepackage[T1]{fontenc}</span>
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+
+	Plain text
+
+	<span class="k">\textit</span><span class="p">{</span>Italic text<span class="p">}</span>
+
+	<span class="k">\textbf</span><span class="p">{</span>Bold text<span class="p">}</span>
+
+<span class="nt">\end{document}</span>
+
+
+</code></pre>  </div>
+  <div class="latex-compil">
+    <h2> Compilation : <a href="../latex/pdf/03-font-01.pdf">03-font-01.pdf</a></h2>
+    <p><img src="../latex/png/03-font-01.png" /></p>
+  </div>
+
+</div>
+
+<p>With the commands \textit{…} and \textbf{…}, you can modify parts of the text.
+There is another way to do the same thing, with the commands {\itshape …} and {\bfseries}.</p>
+
+<hr />
+
+<h2 id="keypoints">keypoints:</h2>
+<hr />
 
 
 
 <blockquote class="keypoints">
   <h2>Key Points</h2>
   <ul>
-    
-    <li><p>First key point. Brief Answer to questions. (FIXME)</p>
-</li>
     
   </ul>
 </blockquote>

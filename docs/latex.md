@@ -1,3 +1,4 @@
+# Principle
 Insert your latex between the latex block :
 
 ```
@@ -7,11 +8,12 @@ Insert your latex between the latex block :
 ```
 
 you can specified  options inside the latex
+
 {% latex filename=01-file fold_src=false %}
 
-List of options
-|options   |action   |value   |comments   |   
-|---|---|---|---|
+# List of options
+| options   | action   | value   | comments   |
+| --- | --- | --- | --- |
 |filename|the filename used|string without space|if not provided a generic (but unique) name will be used|
 |source|used another tex file source has source the text will be insered at the end of the source file|filname (with .tex)||
 |fold_comp|put an hide/show button to the compilation|true or false|false by default|

@@ -20,7 +20,6 @@ Let's see how we can change the fonts used in LaTeX
 
 \documentclass[a4paper]{article}
 
-%\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage[english]{babel}
@@ -38,9 +37,40 @@ Let's see how we can change the fonts used in LaTeX
 {% endlatex %}
 
 With the commands \textit{...} and \textbf{...}, you can modify parts of the text.
-There is another way to do the same thing, with the commands {\itshape ...} and {\bfseries}.
+There is another way to do the same thing, with the commands {\itshape ...} and {\bfseries ...}.
 
 
+
+{% latex filename=03-font-02 %}
+
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+
+\begin{document}
+
+        Plain text
+
+        \textit{Italic text}
+
+        \textbf{Bold text}
+
+\end{document}
+
+{% endlatex %}
+
+
+## Paragraphs
+
+## Page
+
+## List
+
+## Notes
+
+## Codes
 
 ---
 

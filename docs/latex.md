@@ -22,11 +22,9 @@ you can specified  options inside the latex
 |disp_src|display the source|true or false|true by default|
 |disp_comp|display the compilation (image)|true or false|true by default|
 |disp_bibp|display the bib|true or false|true by default|
-
 |down_tex|display the tex download link|true or false|true by default, if false the tex is not generated either|
 |down_pdf|display the pdf download link|true or false|true by default, if false the pdf is not generated either|
 |down_bib|display the bib download link|true or false|true by default, if false the bib is not generated either|
-
 |trim|trim the picture (remove white)|true or false|false by default (turn true with optimize)|
 |emptypage|add emptypage into the tex used with the picture (not in the download tex)|true or false|false by default (turn true with optimize)|
 
@@ -41,12 +39,13 @@ For that in the latex block you have to add
 <\bib>
 ```
 and insert the contents of your bib file between the tags. The ```.bib```file will be automatically added and compiled.
-**Be careful : ** You need to have the same file name in the ```\bibliography{}``` that you use with the ```filename=```variable.
+
+**Be careful :** You need to have the same file name in the ```\bibliography{}``` that you use with the ```filename=```variable.
 
 
 For example :
 ```
-{% latex filename=06-citation-test fold_comp=true %}
+{% latex filename=06-citation-test %}
 <bib>
 @ARTICLE{ARTICLE:1,
     AUTHOR="John Doe",

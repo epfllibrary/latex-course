@@ -10,7 +10,7 @@ keypoints:
 - "First key point. Brief Answer to questions. (FIXME)"
 ---
 FIXME
-{% latex filename=06-citation-test fold_comp=true %}
+{% latex filename=06-citation-test  %}
 <bib>
 @ARTICLE{ARTICLE:1,
     AUTHOR="John Doe",

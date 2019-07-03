@@ -270,8 +270,10 @@ module Jekyll
           end
 
           # Delete temporary files
-          Dir.glob(@@globals["temp_filename"] + ".*").each do |f|
-            File.delete(f)
+          if ok
+            Dir.glob(@@globals["temp_filename"] + ".*").each do |f|
+              File.delete(f)
+            end
           end
         end
 

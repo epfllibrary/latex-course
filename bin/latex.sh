@@ -15,4 +15,5 @@ read commit_desc
 
 git commit -m "$commit_title" -m "$commit_desc"
 git push
-git subtree push --prefix _site origin gh-pages
+#git subtree push --prefix _site origin gh-pages
+git push origin `git subtree split --prefix _site master`:gh-pages --force

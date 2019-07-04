@@ -229,6 +229,7 @@ module Jekyll
             # Compile the document to PNG
 
             ok = execute_cmd(@@globals["pdflatex_cmd"])
+            ok = execute_cmd(@@globals["pdflatex_cmd"])
             if bibuse
               ok = execute_cmd(@@globals["bib_cmd"])
               ok = execute_cmd(@@globals["pdflatex_cmd"])
@@ -260,7 +261,7 @@ module Jekyll
             file.puts(tex_compile)
             file.close
             ok = execute_cmd(@@globals["pdflatex_cmd"])
-
+            ok = execute_cmd(@@globals["pdflatex_cmd"])
             if bibuse
               ok = execute_cmd(@@globals["bib_cmd"])
               ok = execute_cmd(@@globals["pdflatex_cmd"])

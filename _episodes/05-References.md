@@ -1,4 +1,3 @@
-
 ---
 title: "References"
 teaching: 0

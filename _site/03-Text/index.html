@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-07-05 16:41:57 +0200">
+    <meta http-equiv="last-modified" content="2019-07-05 16:45:12 +0200">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -276,41 +276,50 @@
 <p>We know how to write simple plain text.
 Let’s see how we can change the fonts used in LaTeX</p>
 
-<div class="latex">
-  <h2><a href="../latex/tex/03-font-01.tex">03-font-01.tex</a></h2>
-  <div class="language-latex highlighter-rouge"><pre class="highlight"><code>
+<div class="callout">
+  <h2>03-font-01</h2>
+  <div class="latex-src">
+    <h2> Tex file : <a href="../latex/tex/03-font-01.tex">03-font-01.tex</a></h2>
+    <p>~~~</p>
 
-<span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
+    <p>\documentclass[a4paper]{article}</p>
 
-<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
-<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
-<span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
+    <p>\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}</p>
 
-<span class="nt">\begin{document}</span>
+    <p>\begin{document}</p>
 
-	Plain text
+    <div class="language-html highlighter-rouge"><pre class="highlight"><code>Plain text
 
-	<span class="k">\textit</span><span class="p">{</span>Italic text<span class="p">}</span>
+\textit{Italic text}
 
-	<span class="k">\textbf</span><span class="p">{</span>Bold text<span class="p">}</span>
+\textbf{Bold text}
+</code></pre>    </div>
 
-<span class="nt">\end{document}</span>
+    <p>\end{document}</p>
+
+    <div class="language-latex highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>: .language-latex<span class="p">}</span>
+
+&lt;/div&gt;
+&lt;div class="latex-compil" markdown="1"&gt; 
+&lt;h2&gt; Compilation : &lt;a href="../latex/pdf/03-font-01.pdf" &gt;03-font-01.pdf&lt;/a&gt;&lt;/h2&gt;
+&lt;img src="../latex/png/03-font-01.png" /&gt; 
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 
-</code></pre>  </div>
-  <div class="latex-compil">
-    <h2> Compilation : <a href="../latex/pdf/03-font-01.pdf">03-font-01.pdf</a></h2>
-    <p><img src="../latex/png/03-font-01.png" /></p>
-  </div>
+With the commands <span class="k">\textit</span><span class="p">{</span>...<span class="p">}</span> and <span class="k">\textbf</span><span class="p">{</span>...<span class="p">}</span>, you can modify parts of the text.
+There is another way to do the same thing, with the commands <span class="p">{</span><span class="k">\itshape</span> ...<span class="p">}</span> and <span class="p">{</span><span class="k">\bfseries</span> ...<span class="p">}</span>.
 
-</div>
 
-<p>With the commands \textit{…} and \textbf{…}, you can modify parts of the text.
-There is another way to do the same thing, with the commands {\itshape …} and {\bfseries …}.</p>
 
-<div class="latex">
-  <h2><a href="../latex/tex/03-font-02.tex">03-font-02.tex</a></h2>
-  <div class="language-latex highlighter-rouge"><pre class="highlight"><code>
+&lt;div class="callout" markdown="1"&gt; 
+&lt;h2&gt;03-font-02&lt;/h2&gt;
+&lt;div class="latex-src" markdown="1"&gt; 
+&lt;h2&gt; Tex file : &lt;a href="../latex/tex/03-font-02.tex" &gt;03-font-02.tex&lt;/a&gt;&lt;/h2&gt;  ~~~
+
 
 <span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
 
@@ -329,7 +338,9 @@ There is another way to do the same thing, with the commands {\itshape …} and 
 <span class="nt">\end{document}</span>
 
 
-</code></pre>  </div>
+</code></pre>    </div>
+
+  </div>
   <div class="latex-compil">
     <h2> Compilation : <a href="../latex/pdf/03-font-02.pdf">03-font-02.pdf</a></h2>
     <p><img src="../latex/png/03-font-02.png" /></p>

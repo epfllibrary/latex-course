@@ -10,7 +10,8 @@ module Jekyll
         "debug" => false,
         "density" => "300",
         "pdflatex_cmd" => "pdflatex -interaction=nonstopmode $texfile > /dev/null 2>&1",
-        "convert_cmd" => "convert -density $density -quality 90 $pdffile $pngfile > /dev/null 2>&1",
+        "convert_cmd" => "convert -append -density $density -quality 90 $pdffile $pngfile > /dev/null 2>&1",
+        "bib_cmd" => "bibtex $bibfile > /dev/null 2>&1",
         "temp_filename" => "latex_temp",
         "output_directory" => "/latex",
         "png_directory" => "/png",
@@ -21,9 +22,11 @@ module Jekyll
         "dst_dir" => "",
         "disp_src" => true,
         "disp_comp" => true,
+        "disp_bib" => true,
         "fold_src" => false,
         "fold_comp" => false,
         "down_tex" => true,
+        "down_bib" => true,
         "down_pdf" => true,
         "emptypage" => false,
         "trim" => false,
@@ -91,6 +94,8 @@ module Jekyll
 
         cmd = cmd.gsub("\$texfile", @p["tex_fn"])
         cmd = cmd.gsub("\$pdffile", @p["pdf_fn"])
+        cmd = cmd.gsub("\$bibfile", @p["bib_fn"])
+
         cmd = cmd.gsub("\$pngfile", @p["png_fn"])
         puts cmd if @@globals["debug"]
         system(cmd)
@@ -102,25 +107,35 @@ module Jekyll
         latex_source = super
         # fix initial configurations
         site = context.registers[:site]
+        #page = context.registers[:page]
         Tags::LatexBlock::init_globals(site)
         # prepare density and usepackages
         @p["density"] = @@globals["density"]
 
+        @p["force"] = false unless @p.key?("force")
+
         @p["disp_src"] = @@globals["disp_src"] unless @p.key?("disp_src")
         @p["disp_comp"] = @@globals["disp_comp"] unless @p.key?("disp_comp")
+        @p["disp_bib"] = @@globals["disp_bib"] unless @p.key?("disp_bib")
+
         @p["fold_src"] = @@globals["fold_src"] unless @p.key?("fold_src")
         @p["fold_comp"] = @@globals["fold_comp"] unless @p.key?("fold_comp")
-        @p["down_tex"] = @@globals["down_tex"] unless @p.key?("down_tex")
-        @p["down_pdf"] = @@globals["down_pdf"] unless @p.key?("down_pdf")
-        @p["optimize"] = @@globals["optimize"] unless @p.key?("optimize")
 
+        @p["down_tex"] = @@globals["down_tex"] unless @p.key?("down_tex")
+        @p["down_bib"] = @@globals["down_bib"] unless @p.key?("down_bib")
+        @p["down_pdf"] = @@globals["down_pdf"] unless @p.key?("down_pdf")
+
+        @p["optimize"] = @@globals["optimize"] unless @p.key?("optimize")
         #Convert string to bool
         @p["disp_src"] = @p["disp_src"].to_s == "true"
+        @p["disp_bib"] = @p["disp_bib"].to_s == "true"
         @p["disp_comp"] = @p["disp_comp"].to_s == "true"
+
         @p["fold_src"] = @p["fold_src"].to_s == "true"
         @p["fold_comp"] = @p["fold_comp"].to_s == "true"
         @p["down_tex"] = @p["down_tex"].to_s == "true"
         @p["down_pdf"] = @p["down_pdf"].to_s == "true"
+        @p["down_bib"] = @p["down_bib"].to_s == "true"
         @p["optimize"] = @p["optimize"].to_s == "true"
 
         if @p["optimize"]
@@ -136,9 +151,8 @@ module Jekyll
 
 
 
-
         src_disp=latex_source
-
+        # Source (insert in another file) managment
         if @p.key?("source")
           external_source=true
           source_file =File.join(@@globals["src_dir_tex"],@p["source"])
@@ -151,7 +165,15 @@ module Jekyll
           source_file = ""
 
         end
-        hash_p = Digest::MD5.hexdigest(@p.to_s+latex_source)
+        # Bitex managment
+        regexbib=/(<bib>)(.*?)(<\/bib>)/m
+        source_bib = latex_source.slice!(regexbib).to_s.slice!(regexbib,2).to_s
+        bibuse=false
+        unless source_bib.empty?
+          bibuse=true
+        end
+        #Calculate the hash of the actual box
+        hash_p = Digest::MD5.hexdigest(@p.to_s+latex_source+source_bib)
 
         if @p.key?("filename")
           filename = @p["filename"]
@@ -161,6 +183,7 @@ module Jekyll
         filename_png=filename + ".png"
         filename_pdf=filename + ".pdf"
         filename_tex=filename + ".tex"
+        filename_bib=filename + ".bib"
         filename_hash=filename + ".hash"
 
 
@@ -168,7 +191,7 @@ module Jekyll
         @p["png_fn"] = File.join(@@globals["src_dir_png"],filename_png)
         @p["save_pdf_fn"] = File.join(@@globals["src_dir_pdf"],filename_pdf)
         @p["save_tex_fn"] = File.join(@@globals["src_dir_tex"],filename_tex)
-
+        @p["save_bib_fn"] = File.join(@@globals["src_dir_tex"],filename_bib) #the bib file will be in the tex folder
         # if this LaTeX code is already compiled, skip its compilation
 
         needwork=true
@@ -179,7 +202,7 @@ module Jekyll
         end
 
         ok = true
-        if needwork
+        if needwork or @p["force"]
           puts "Compiling " + filename + " ..."
           #create hash File
           hash_file = File.new(@p["hash_fn"], "w")
@@ -188,38 +211,70 @@ module Jekyll
 
           @p["tex_fn"] = @@globals["temp_filename"] + ".tex"
           @p["pdf_fn"] = @@globals["temp_filename"] + ".pdf"
+          @p["bib_fn"] = @@globals["temp_filename"]
+          if bibuse
+            file = File.new(@p["bib_fn"]+ ".bib", "w")
+            file.puts(source_bib)
+            file.close
+          end
+
           if @p["disp_comp"]
             tex_compile=latex_source
-            tex_file = File.new(@p["tex_fn"], "w")
             tex_compile = tex_compile.gsub("\\begin{document}","\\begin{document}\n\\pagestyle{empty}\n") if @p["emptypage"] #add emptypage if enable
-            tex_file.puts(tex_compile)
-            tex_file.close
+            tex_compile = tex_compile.gsub("\\bibliography{"+filename+"}","\\bibliography{"+@@globals["temp_filename"]+"}") if bibuse # replace the filename by temp name for bibtex
+
+            file = File.new(@p["tex_fn"], "w")
+            file.puts(tex_compile)
+            file.close
             # Compile the document to PNG
 
             ok = execute_cmd(@@globals["pdflatex_cmd"])
+            ok = execute_cmd(@@globals["pdflatex_cmd"])
+            if bibuse
+              ok = execute_cmd(@@globals["bib_cmd"])
+              ok = execute_cmd(@@globals["pdflatex_cmd"])
+              ok = execute_cmd(@@globals["pdflatex_cmd"])
+            end
             execute_cmd(@@globals["convert_cmd"]) if ok
           end
 
           #Save tex file
           if @p["down_tex"]
-            tex_file = File.new(@p["save_tex_fn"], "w")
-            tex_file.puts(latex_source)
-            tex_file.close
+            file = File.new(@p["save_tex_fn"], "w")
+            file.puts(latex_source)
+            file.close
+          end
+
+          #Save bib file
+          if @p["down_bib"] and bibuse
+            file = File.new(@p["save_bib_fn"], "w")
+            file.puts(source_bib)
+            file.close
           end
 
           #Save pdf File
           if ok and @p["down_pdf"]
             tex_compile=latex_source
-            tex_file = File.new(@p["tex_fn"], "w")
-            tex_file.puts(latex_source)
-            tex_file.close
+            tex_compile = tex_compile.gsub("\\bibliography{"+filename+"}","\\bibliography{"+@@globals["temp_filename"]+"}") if bibuse # replace the filename by temp name for bibtex
+
+            file = File.new(@p["tex_fn"], "w")
+            file.puts(tex_compile)
+            file.close
             ok = execute_cmd(@@globals["pdflatex_cmd"])
+            ok = execute_cmd(@@globals["pdflatex_cmd"])
+            if bibuse
+              ok = execute_cmd(@@globals["bib_cmd"])
+              ok = execute_cmd(@@globals["pdflatex_cmd"])
+              ok = execute_cmd(@@globals["pdflatex_cmd"])
+            end
             FileUtils.cp(@p["pdf_fn"],@p["save_pdf_fn"]) if ok
           end
 
           # Delete temporary files
-          Dir.glob(@@globals["temp_filename"] + ".*").each do |f|
-            File.delete(f)
+          if ok
+            Dir.glob(@@globals["temp_filename"] + ".*").each do |f|
+              File.delete(f)
+            end
           end
         end
 
@@ -248,6 +303,14 @@ module Jekyll
             @@generated_files << st_file
             site.static_files << st_file
           end
+          # Save bib
+          if bibuse and @p["down_bib"]
+            st_file = Jekyll::StaticFile.new(site, site.source, tex_dir, filename_bib)
+            @@generated_files << st_file
+            site.static_files << st_file
+          end
+
+          #Save pdf
           if @p["down_pdf"]
             st_file = Jekyll::StaticFile.new(site, site.source, pdf_dir, filename_pdf)
             @@generated_files << st_file
@@ -259,27 +322,63 @@ module Jekyll
           png_path = File.join("..",png_dir, filename_png)
           pdf_path = File.join("..",pdf_dir, filename_pdf)
           tex_path = File.join("..",tex_dir, filename_tex)
+          bib_path = File.join("..",tex_dir, filename_bib)
+
+          #SOURCE DISPLAY
           resp=""
-          resp << "<div class=\"latex"
-          resp << " latex-foldable" if @p["fold_src"]
-          resp << "\" markdown=\"1\"> \n"
+          resp << "<div class=\"callout\" markdown=\"1\"> \n"
+          resp << "<h2>" + filename + "</h2>\n"
 
-          resp << "<h2>"
-          resp << "<a href=\""+tex_path + "\" >" if @p["down_tex"]
-          resp << filename_tex
-          resp << "</a>" if @p["down_tex"]
-          resp << "<span class='fold-unfold glyphicon glyphicon-collapse-down'></span>" if @p["fold_src"]
+          if @p["disp_src"] or @p["down_tex"]
+            resp << "<div class=\"latex-src"
+            resp << " latex-foldable" if @p["fold_src"]
+            resp << "\" markdown=\"1\"> \n"
 
-          resp << "</h2>\n"
-          resp << "<div class=\"latex-hide\" markdown=\"1\">\n" if @p["fold_src"]
+            resp << "<h2> Tex file : "
+            resp << "<a href=\""+tex_path + "\" >" if @p["down_tex"]
+            resp << filename_tex
+            resp << "</a>" if @p["down_tex"]
+            resp << "<span class='fold-unfold glyphicon glyphicon-collapse-down'></span>" if @p["fold_src"]
 
-          resp << "~~~\n" if @p["disp_src"]
-          resp << src_disp if @p["disp_src"]
-          resp << "\n~~~\n{: .language-latex}\n" if @p["disp_src"]
-          resp << "</div>\n" if @p["fold_src"]
+            resp << "</h2>  "
+            if @p["disp_src"]
+              resp << "<div class=\"latex-hide\" markdown=\"1\">\n" if @p["fold_src"]
 
+              resp << "~~~\n"
+              resp << src_disp
+              resp << "\n~~~\n{: .language-latex}\n"
 
+              resp << "</div>\n" if @p["fold_src"]
+            end
+            resp << "\n</div>\n"
 
+          end
+          #BIBTEX DISPLAY
+          if (@p["disp_bib"] or @p["down_bib"]) and bibuse
+            resp << "<div class=\"latex-src"
+            resp << " latex-foldable" if @p["fold_src"]
+            resp << "\" markdown=\"1\"> \n"
+
+            resp << "<h2> Bib file : "
+            resp << "<a href=\""+bib_path + "\" >" if @p["down_bib"]
+            resp << filename_bib
+            resp << "</a>" if @p["down_bib"]
+            resp << "<span class='fold-unfold glyphicon glyphicon-collapse-down'></span>" if @p["fold_src"]
+
+            resp << "</h2>\n"
+            if @p["disp_bib"]
+              resp << "<div class=\"latex-hide\" markdown=\"1\">\n" if @p["fold_src"]
+
+              resp << "~~~\n"
+              resp << source_bib
+              resp << "\n~~~\n{: .language-latex}\n"
+
+              resp << "</div>\n" if @p["fold_src"]
+            end
+            resp << "\n</div>\n"
+          end
+
+          #COMPILATION DISPLAY
           if @p["down_pdf"] or @p["disp_comp"]
             resp << "<div class=\"latex-compil"
             resp << " latex-foldable"if @p["fold_comp"]
@@ -299,7 +398,7 @@ module Jekyll
             resp << "\n</div>\n"
 
           end
-          resp << "\n</div>"
+          resp << "\n</div>\n"
         else
           # Generate a block of text in the post with the original source
           raise SyntaxError.new("Error compiling latex'")
@@ -308,9 +407,11 @@ module Jekyll
 
 
         end
+
         return resp
       end
     end
+
   end
 
   class Site

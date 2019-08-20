@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-07-05 16:45:12 +0200">
+    <meta http-equiv="last-modified" content="2019-08-20 14:32:24 +0200">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -264,44 +264,48 @@
 </blockquote>
 
 <p>FIXME</p>
-<div class="callout">
+<div class="challenge">
   <h2>06-citation-test</h2>
   <div class="latex-src">
     <h2> Tex file : <a href="../latex/tex/06-citation-test.tex">06-citation-test.tex</a></h2>
-    <p>~~~</p>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
-    <p>\documentclass[a4paper]{article}</p>
+<span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
 
-    <p>\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage[english]{babel}</p>
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
 
-    <p>\begin{document}</p>
 
-    <p>Hello World</p>
+<span class="nt">\begin{document}</span>
 
-    <p>This paper\cite{ARTICLE:1} is really good</p>
+  Hello World
 
-    <p>\bibliographystyle{plain}
-\bibliography{06-citation-test}</p>
+  This paper<span class="k">\cite</span><span class="p">{</span>ARTICLE:1<span class="p">}</span> is really good
 
-    <p>\end{document}</p>
 
-    <div class="language-html highlighter-rouge"><pre class="highlight"><code>{: .language-latex}
 
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"latex-src"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span> 
-<span class="nt">&lt;h2&gt;</span> Bib file : <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"../latex/tex/06-citation-test.bib"</span> <span class="nt">&gt;</span>06-citation-test.bib<span class="nt">&lt;/a&gt;&lt;/h2&gt;</span>
-</code></pre>    </div>
+  <span class="k">\bibliographystyle</span><span class="p">{</span>plain<span class="p">}</span>
+<span class="k">\bibliography</span><span class="p">{</span>06-citation-test<span class="p">}</span>
 
-    <p>@ARTICLE{ARTICLE:1,
-    AUTHOR=”John Doe”,
-    TITLE=”Title”,
-    JOURNAL=”Journal”,
-    YEAR=”2017”,
-}</p>
 
-    <p class="language-latex">~~~</p>
+<span class="nt">\end{document}</span>
+
+
+</code></pre></div>    </div>
+
+  </div>
+  <div class="latex-src">
+    <h2> Bib file : <a href="../latex/tex/06-citation-test.bib">06-citation-test.bib</a></h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+@ARTICLE<span class="p">{</span>ARTICLE:1,
+    AUTHOR="John Doe",
+    TITLE="Title",
+    JOURNAL="Journal",
+    YEAR="2017",
+<span class="p">}</span>
+
+</code></pre></div>    </div>
 
   </div>
   <div class="latex-compil">

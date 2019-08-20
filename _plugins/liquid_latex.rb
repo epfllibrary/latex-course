@@ -326,7 +326,7 @@ module Jekyll
 
           #SOURCE DISPLAY
           resp=""
-          resp << "<div class=\"callout\" markdown=\"1\"> \n"
+          resp << "<div class=\"challenge\" markdown=\"1\"> \n"
           resp << "<h2>" + filename + "</h2>\n"
 
           if @p["disp_src"] or @p["down_tex"]

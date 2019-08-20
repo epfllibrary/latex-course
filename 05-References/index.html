@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-07-05 16:45:12 +0200">
+    <meta http-equiv="last-modified" content="2019-08-20 14:32:24 +0200">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -278,62 +278,60 @@
 
 <p>The commands of the environment <code class="language-html highlighter-rouge">{thebibliography}</code> are embedded within LaTeX, for that reason these commands are integrated directly in your .tex file. This environment is useful for court bibliographies.The environment <code class="language-html highlighter-rouge">{thebibliography}</code> starts by <code class="language-html highlighter-rouge">\begin{thebibliography}</code> and ends by <code class="language-html highlighter-rouge">\end{thebibliography}</code>, each bibliography element is introduced by the command <code class="language-html highlighter-rouge">\bibitem</code>.</p>
 
-<div class="callout">
+<div class="challenge">
   <h2>05-ref-1</h2>
   <div class="latex-src">
     <h2> Tex file : <a href="../latex/tex/05-ref-1.tex">05-ref-1.tex</a></h2>
-    <p>~~~</p>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">\documentclass</span><span class="na">[12pt]</span><span class="p">{</span>article<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
 
-    <p>\documentclass[12pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage[english]{babel}</p>
 
-    <p>\begin{document}
-Open access is a part of Opening science evolution in scientific universe \cite{Bartling2014}.
-“Publish in Open Access is synonym to make its publication freely accessible to everyone. In February 2019, EPFL has adopted an Open Access Policy that clearly expresses the institutional position on Open Access to scientific
-publication. An amendment to the publication agreement and an email template are also available for EPFL authors as negotiation tools with publishers.” \cite{EPFLlibrary2019}
- \begin{thebibliography}{1}
-  \bibitem{Bartling2014}
+<span class="nt">\begin{document}</span>
+Open access is a part of Opening science evolution in scientific universe <span class="k">\cite</span><span class="p">{</span>Bartling2014<span class="p">}</span>.
+"Publish in Open Access is synonym to make its publication freely accessible to everyone. In February 2019, EPFL has adopted an Open Access Policy that clearly expresses the institutional position on Open Access to scientific
+publication. An amendment to the publication agreement and an email template are also available for EPFL authors as negotiation tools with publishers." <span class="k">\cite</span><span class="p">{</span>EPFLlibrary2019<span class="p">}</span>
+ <span class="nt">\begin{thebibliography}</span><span class="p">{</span>1<span class="p">}</span>
+  <span class="k">\bibitem</span><span class="p">{</span>Bartling2014<span class="p">}</span>
   S. Bartling and S. Frieske, Opening science: the evolving guide on how the Internet is changing research,
   collaboration and scholarly publishing. Cham: SpringerOpen, 2014.
-  \bibitem{EPFLlibrary2019}
+  <span class="k">\bibitem</span><span class="p">{</span>EPFLlibrary2019<span class="p">}</span>
   EPFL Library, Publish in Open Access. [online]. [Accessed 2 July 2019]. Available from:
-  \end{thebibliography}
-\end{document}</p>
+  <span class="nt">\end{thebibliography}</span>
+<span class="nt">\end{document}</span>
 
-    <div class="language-latex highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>: .language-latex<span class="p">}</span>
+</code></pre></div>    </div>
 
-&lt;/div&gt;
-&lt;div class="latex-compil" markdown="1"&gt; 
-&lt;h2&gt; Compilation : &lt;a href="../latex/pdf/05-ref-1.pdf" &gt;05-ref-1.pdf&lt;/a&gt;&lt;/h2&gt;
-&lt;img src="../latex/png/05-ref-1.png" /&gt; 
-&lt;/div&gt;
+  </div>
+  <div class="latex-compil">
+    <h2> Compilation : <a href="../latex/pdf/05-ref-1.pdf">05-ref-1.pdf</a></h2>
+    <p><img src="../latex/png/05-ref-1.png" /></p>
+  </div>
 
-&lt;/div&gt;
+</div>
 
+<p><strong><em>The command <code class="language-html highlighter-rouge">\bibitem</code> for the final bibliography and <code class="language-html highlighter-rouge">\cite</code> for the in-text citations</em></strong></p>
 
-***The command ```<span class="k">\bibitem</span>``` for the final bibliography and ```<span class="k">\cite</span>``` for the in-text citations***
-
-The basic syntax for using ```<span class="k">\bibitem</span>``` is ```<span class="k">\bibitem</span><span class="na">[label]</span><span class="p">{</span>key<span class="p">}</span>```
+<p>The basic syntax for using <code class="language-html highlighter-rouge">\bibitem</code> is <code class="language-html highlighter-rouge">\bibitem[label]{key}</code>
 The optional parameter [label] allow you to customize the labeling system for your bibliography entry. Without introducing this parameter, the entries will follow a numerical order as in the previous example.
-The compulsory parameter <span class="p">{</span>key<span class="p">}</span> allow to link commands ```<span class="k">\bibitem</span>``` and ```<span class="k">\cite</span>```.
-In-text citations are introduced by the commands cite<span class="p">{</span>key<span class="p">}</span> as in the previous example ``cite<span class="p">{</span>Barkling2014<span class="p">}</span> linking it
-with the bibliographic item containing the same key in the final bibliography.
+The compulsory parameter {key} allow to link commands <code class="language-html highlighter-rouge">\bibitem</code> and <code class="language-html highlighter-rouge">\cite</code>.
+In-text citations are introduced by the commands cite{key} as in the previous example ``cite{Barkling2014} linking it
+with the bibliographic item containing the same key in the final bibliography.</p>
 
-***Setting the indentation and width of labels in the final bibliography***
+<p><strong><em>Setting the indentation and width of labels in the final bibliography</em></strong></p>
 
-The command ```<span class="nt">\begin{thebibliography}</span><span class="p">{}</span>``` requires a mandatory argument. If you do not set this parameter, an error message
+<p>The command <code class="language-html highlighter-rouge">\begin{thebibliography}{}</code> requires a mandatory argument. If you do not set this parameter, an error message
 is diplayed. If you do not set it correctly the indentation of the final bibliography will be chaotic. In fact,
 this argument determines the width of the widest bibliographic label and the amount of indentation of
-the final bibliography.
+the final bibliography.</p>
 
-
-&lt;div class="callout" markdown="1"&gt; 
-&lt;h2&gt;05-ref2&lt;/h2&gt;
-&lt;div class="latex-src" markdown="1"&gt; 
-&lt;h2&gt; Tex file : &lt;a href="../latex/tex/05-ref2.tex" &gt;05-ref2.tex&lt;/a&gt;&lt;/h2&gt;  ~~~
-
+<div class="challenge">
+  <h2>05-ref2</h2>
+  <div class="latex-src">
+    <h2> Tex file : <a href="../latex/tex/05-ref2.tex">05-ref2.tex</a></h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
@@ -347,7 +345,7 @@ the final bibliography.
   <span class="nt">\end{thebibliography}</span>
 <span class="nt">\end{document}</span>
 
-</code></pre>    </div>
+</code></pre></div>    </div>
 
   </div>
   <div class="latex-compil">

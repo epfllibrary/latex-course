@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-08-20 14:32:24 +0200">
+    <meta http-equiv="last-modified" content="2019-10-30 12:10:49 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -137,6 +137,10 @@
             
             <li><a href="../07-Maths/index.html">Maths</a></li>
             
+            <li><a href="../08-Supplemental-zotero/index.html">Supplemental : Zotero and Latex</a></li>
+            
+            <li><a href="../09_Supplental_collaborative/index.html">Supplemental : Collaborative latex</a></li>
+            
 	    <li role="separator" class="divider"></li>
             <li><a href="../aio.html">All in one page (Beta)</a></li>
           </ul>
@@ -209,7 +213,7 @@
   <div class="col-xs-1">
     <h3 class="text-right">
       
-      <a href="../"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
+      <a href="../08-Supplemental-zotero/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
       
     </h3>
   </div>
@@ -232,15 +236,15 @@
 
   <div class="row">
     <div class="col-md-3">
-      <strong>Teaching:</strong> 0 min
+      <strong>Teaching:</strong> 10 min
       <br/>
-      <strong>Exercises:</strong> 0 min
+      <strong>Exercises:</strong> 10 min
     </div>
     <div class="col-md-9">
       <strong>Questions</strong>
       <ul>
 	
-	<li><p>Key question (FIXME)</p>
+	<li><p>How to write equation with Latex</p>
 </li>
 	
       </ul>
@@ -254,7 +258,10 @@
       <strong>Objectives</strong>
       <ul>
 	
-	<li><p>First learning objective. (FIXME)</p>
+	<li><p>Discover the math environment</p>
+</li>
+	
+	<li><p>Write equations</p>
 </li>
 	
       </ul>
@@ -263,7 +270,78 @@
 
 </blockquote>
 
-<p>FIXME</p>
+<p>As the rest of Latex mathematics have their own environments, mostly two kinds of environment allow you to make the distinction between textual and mathematical content.
+The way to write mathematical equation is a little bit different than text and will be described after.</p>
+
+<h2 id="maths-environments">Maths Environments</h2>
+
+<p>Inline formulas insert mathematical symbols right into a sentence, in this case, Latex uses dollar signs (<code class="language-html highlighter-rouge">$some equation$</code>) are used to delimit mathematical content.</p>
+
+<p>If an expression needs particular attention, as when displaying important steps or results, mathematical symbols can appear on their own line using the <code class="language-html highlighter-rouge">equation</code>environment, with this environment equations are numbered automatically, and can be referenced.</p>
+
+<div class="challenge">
+  <h2>07-maths-environment</h2>
+  <div class="latex-src">
+    <h2> Tex file : <a href="../latex/tex/07-maths-environment.tex">07-maths-environment.tex</a></h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
+
+
+for any integer <span class="p">$</span><span class="nb">i</span><span class="p">$</span> the real number <span class="p">$</span><span class="nb">x</span><span class="p">_</span><span class="nb">i</span><span class="p">^</span><span class="m">2</span><span class="p">$</span>
+
+<span class="nt">\begin{equation}</span>
+    y=f(x)
+<span class="nt">\end{equation}</span>
+
+
+</code></pre></div>    </div>
+
+  </div>
+  <div class="latex-compil">
+    <h2> Compilation : <a href="../latex/pdf/07-maths-environment.pdf">07-maths-environment.pdf</a></h2>
+    <p><img src="../latex/png/07-maths-environment.png" /></p>
+  </div>
+
+</div>
+
+<p>Both environment use the same way to write maths.</p>
+
+<h2 id="how-to-write-math">How to write math</h2>
+
+<p>A wealth of mathematical symbols and formatting commands are available in LaTeX. Some can readily be used with plain LaTeX, others are defined in specialized packages.</p>
+
+<div class="challenge">
+  <h2>07-maths-writing</h2>
+  <div class="latex-src">
+    <h2> Tex file : <a href="../latex/tex/07-maths-writing.tex">07-maths-writing.tex</a></h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
+
+
+Greek letters: <span class="p">$</span><span class="nv">\alpha</span><span class="nb">,  </span><span class="nv">\beta</span><span class="nb">, </span><span class="nv">\gamma</span><span class="nb">, </span><span class="nv">\Gamma</span><span class="p">$</span>
+
+Fractions and integrals: <span class="p">$</span><span class="nv">\int</span><span class="p">_{</span><span class="o">-</span><span class="nv">\infty</span><span class="p">}^{</span><span class="o">+</span><span class="nv">\infty</span><span class="p">}</span><span class="nb"> e</span><span class="p">^{</span><span class="nb"> </span><span class="o">-</span><span class="nv">\frac</span><span class="p">{</span><span class="nb">x</span><span class="p">^</span><span class="m">2</span><span class="p">}{</span><span class="m">2</span><span class="p">}}</span><span class="nb"> dx</span><span class="p">$</span>
+
+Set and logic symbols: <span class="p">$</span><span class="nv">\forall</span><span class="nb">, </span><span class="nv">\exists</span><span class="nb">, </span><span class="nv">\in</span><span class="p">$</span>
+
+Arrows: <span class="p">$</span><span class="nv">\mapsto</span><span class="nb">, </span><span class="nv">\rightarrow</span><span class="p">$</span>
+
+
+</code></pre></div>    </div>
+
+  </div>
+  <div class="latex-compil">
+    <h2> Compilation : <a href="../latex/pdf/07-maths-writing.pdf">07-maths-writing.pdf</a></h2>
+    <p><img src="../latex/png/07-maths-writing.png" /></p>
+  </div>
+
+</div>
+
+<p>You can use <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">Wikibook Latex Math</a> to see all the possibilities.</p>
+
+<p><strong>TODO</strong></p>
+<ul>
+  <li>Text ?</li>
+  <li>Exercices ?</li>
+</ul>
 
 
 
@@ -271,7 +349,7 @@
   <h2>Key Points</h2>
   <ul>
     
-    <li><p>First key point. Brief Answer to questions. (FIXME)</p>
+    <li><p>You can write equation within the text using the <code class="language-html highlighter-rouge">$$</code> or within a separate space using the <code class="language-html highlighter-rouge">equation</code>environment</p>
 </li>
     
   </ul>
@@ -308,7 +386,7 @@
   <div class="col-xs-1">
     <h3 class="text-right">
       
-      <a href="../"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
+      <a href="../08-Supplemental-zotero/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
       
     </h3>
   </div>

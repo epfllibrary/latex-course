@@ -31,6 +31,7 @@ module Jekyll
         "emptypage" => false,
         "trim" => false,
         "optimize" => true,
+        "minimal" => false,
       }
 
 
@@ -97,7 +98,7 @@ module Jekyll
         cmd = cmd.gsub("\$bibfile", @p["bib_fn"])
 
         cmd = cmd.gsub("\$pngfile", @p["png_fn"])
-        puts cmd if @@globals["debug"]
+#        puts cmd
         system(cmd)
         return ($?.exitstatus == 0)
       end
@@ -138,6 +139,8 @@ module Jekyll
         @p["down_bib"] = @p["down_bib"].to_s == "true"
         @p["optimize"] = @p["optimize"].to_s == "true"
 
+        @p["minimal"] = @p["minimal"].to_s == "true"
+
         if @p["optimize"]
           @p["trim"] = true
           @p["emptypage"] = true
@@ -152,8 +155,16 @@ module Jekyll
 
 
         src_disp=latex_source
+
+        if @p["minimal"]
+          source_file =File.join(site.config["source"],"_layouts","minimal.tex")
+          source_tex = File.readlines(source_file).join
+          add_txt="%<-----> ADDED to minimal <----->\n"
+          latex_source=source_tex.gsub("\\end{document}\n",add_txt + latex_source+"\\end{document}\n")
+          src_disp=add_txt+src_disp
+
         # Source (insert in another file) managment
-        if @p.key?("source")
+        elsif @p.key?("source")
           external_source=true
           source_file =File.join(@@globals["src_dir_tex"],@p["source"])
           source_tex = File.readlines(source_file).join
@@ -235,7 +246,7 @@ module Jekyll
               ok = execute_cmd(@@globals["pdflatex_cmd"])
               ok = execute_cmd(@@globals["pdflatex_cmd"])
             end
-            execute_cmd(@@globals["convert_cmd"]) if ok
+            ok=execute_cmd(@@globals["convert_cmd"]) if ok
           end
 
           #Save tex file

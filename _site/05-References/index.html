@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-08-20 14:32:24 +0200">
+    <meta http-equiv="last-modified" content="2019-10-30 12:10:49 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -137,6 +137,10 @@
             
             <li><a href="../07-Maths/index.html">Maths</a></li>
             
+            <li><a href="../08-Supplemental-zotero/index.html">Supplemental : Zotero and Latex</a></li>
+            
+            <li><a href="../09_Supplental_collaborative/index.html">Supplemental : Collaborative latex</a></li>
+            
 	    <li role="separator" class="divider"></li>
             <li><a href="../aio.html">All in one page (Beta)</a></li>
           </ul>
@@ -232,15 +236,18 @@
 
   <div class="row">
     <div class="col-md-3">
-      <strong>Teaching:</strong> 0 min
+      <strong>Teaching:</strong> 10 min
       <br/>
-      <strong>Exercises:</strong> 0 min
+      <strong>Exercises:</strong> 5 min
     </div>
     <div class="col-md-9">
       <strong>Questions</strong>
       <ul>
 	
-	<li><p>How can I introduce in-text citations and bibliographies in my LaTeX document?</p>
+	<li><p>How do I manage cross reference inside a document ?</p>
+</li>
+	
+	<li><p>How do I make a table of contents</p>
 </li>
 	
       </ul>
@@ -254,16 +261,10 @@
       <strong>Objectives</strong>
       <ul>
 	
-	<li><p>Create in-text citations</p>
+	<li><p>Cite my Figure, Table, Equations or even Chapters for example inside my document</p>
 </li>
 	
-	<li><p>Create final bibliographies</p>
-</li>
-	
-	<li><p>Create bibliography’s datasets</p>
-</li>
-	
-	<li><p>Change bibliography’s styles</p>
+	<li><p>Create a table of contents</p>
 </li>
 	
       </ul>
@@ -272,92 +273,62 @@
 
 </blockquote>
 
-<p>This part of the course displays how LaTeX deals with bibliography and in-text citations: by using the environment <code class="language-html highlighter-rouge">{thebibliography}</code> and by using BibTeX.</p>
+<p>References in latex are internal citation in your document, they allow you to refer to another part of the document easily, for example you might want to write <em>“as I explained in the Figure : xxx”</em> and replace the <em>xxx</em> by the correct value.</p>
 
-<p><strong>The environment <code class="language-html highlighter-rouge">{thebibliography}</code></strong></p>
+<p>In order to do that you need to put a tag to the element you want to refer it can be anything like a float, an equation, a chapter etc… the command to specify a tag is <code class="language-html highlighter-rouge">\label{}</code> and the parameter is the name of the tag. The parameter can be anything you like (it’s usually a good practice to have a naming convention).</p>
 
-<p>The commands of the environment <code class="language-html highlighter-rouge">{thebibliography}</code> are embedded within LaTeX, for that reason these commands are integrated directly in your .tex file. This environment is useful for court bibliographies.The environment <code class="language-html highlighter-rouge">{thebibliography}</code> starts by <code class="language-html highlighter-rouge">\begin{thebibliography}</code> and ends by <code class="language-html highlighter-rouge">\end{thebibliography}</code>, each bibliography element is introduced by the command <code class="language-html highlighter-rouge">\bibitem</code>.</p>
+<p>The command to get the position of the label is <code class="language-html highlighter-rouge">\ref{}</code>and the parameter is the name of the tag defined in the label described before.  You can put the command anywhere in the document. The command <code class="language-html highlighter-rouge">\pageref{}</code> will display the number of the page in which is the label.</p>
+
+<blockquote class="callout">
+  <h2 id="table-of-contents">Table of contents</h2>
+  <p>By using the right command to described your document like <code class="language-html highlighter-rouge">\part{}</code>,<code class="language-html highlighter-rouge">\chapter{}</code>, <code class="language-html highlighter-rouge">\section{}</code>,<code class="language-html highlighter-rouge">\subsection{}</code>,<code class="language-html highlighter-rouge">\subsubsection{}</code>,<code class="language-html highlighter-rouge">\paragraph{}</code>.</p>
+
+  <p>You can generate the table of contents of your document by using the <code class="language-html highlighter-rouge">\tableofcontents</code> command.</p>
+
+  <p>Other tables can be generated like <code class="language-html highlighter-rouge">\listoffigures</code> or <code class="language-html highlighter-rouge">\listoftables</code>they will generate the list of figure or tables (float).</p>
+</blockquote>
 
 <div class="challenge">
-  <h2>05-ref-1</h2>
+  <h2>05-reference</h2>
   <div class="latex-src">
-    <h2> Tex file : <a href="../latex/tex/05-ref-1.tex">05-ref-1.tex</a></h2>
-    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="k">\documentclass</span><span class="na">[12pt]</span><span class="p">{</span>article<span class="p">}</span>
-<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
-<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
-<span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
+    <h2> Tex file : <a href="../latex/tex/05-reference.tex">05-reference.tex</a></h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
 
 
-<span class="nt">\begin{document}</span>
-Open access is a part of Opening science evolution in scientific universe <span class="k">\cite</span><span class="p">{</span>Bartling2014<span class="p">}</span>.
-"Publish in Open Access is synonym to make its publication freely accessible to everyone. In February 2019, EPFL has adopted an Open Access Policy that clearly expresses the institutional position on Open Access to scientific
-publication. An amendment to the publication agreement and an email template are also available for EPFL authors as negotiation tools with publishers." <span class="k">\cite</span><span class="p">{</span>EPFLlibrary2019<span class="p">}</span>
- <span class="nt">\begin{thebibliography}</span><span class="p">{</span>1<span class="p">}</span>
-  <span class="k">\bibitem</span><span class="p">{</span>Bartling2014<span class="p">}</span>
-  S. Bartling and S. Frieske, Opening science: the evolving guide on how the Internet is changing research,
-  collaboration and scholarly publishing. Cham: SpringerOpen, 2014.
-  <span class="k">\bibitem</span><span class="p">{</span>EPFLlibrary2019<span class="p">}</span>
-  EPFL Library, Publish in Open Access. [online]. [Accessed 2 July 2019]. Available from:
-  <span class="nt">\end{thebibliography}</span>
-<span class="nt">\end{document}</span>
+<span class="k">\tableofcontents</span>
+
+<span class="k">\newpage</span>
+
+We will analyze the result using the carpentry method in Section <span class="k">\ref</span><span class="p">{</span>sec:analysis<span class="p">}</span>, then will present the results in the Section <span class="k">\ref</span><span class="p">{</span>sec:results<span class="p">}</span>.
+
+<span class="k">\section</span><span class="p">{</span>Analysis<span class="p">}</span><span class="k">\label</span><span class="p">{</span>sec:analysis<span class="p">}</span>
+
+All the the analysis has been done using Python and Latex and are resume in the Figure <span class="k">\ref</span><span class="p">{</span>fig:analysis<span class="p">}</span>
+
+<span class="nt">\begin{figure}</span>
+<span class="k">\includegraphics</span><span class="na">[width=5cm]</span><span class="p">{</span>fig/phd050611s<span class="p">}</span>
+<span class="k">\caption</span><span class="p">{</span>A beautiful figure that explain everything (from : http://phdcomics.com/comics/archive.php?comicid=1431)<span class="p">}</span>
+<span class="k">\label</span><span class="p">{</span>fig:analysis<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+
+<span class="k">\section</span><span class="p">{</span>Results<span class="p">}</span><span class="k">\label</span><span class="p">{</span>sec:results<span class="p">}</span>
+
+Bla bla bla
+
+<span class="k">\section</span><span class="p">{</span>Conclusion<span class="p">}</span><span class="k">\label</span><span class="p">{</span>sec:conclusion<span class="p">}</span>
+
+As described in the Section <span class="k">\ref</span><span class="p">{</span>sec:analysis<span class="p">}</span> and <span class="k">\ref</span><span class="p">{</span>sec:results<span class="p">}</span> respectively on page <span class="k">\pageref</span><span class="p">{</span>sec:analysis<span class="p">}</span> and <span class="k">\pageref</span><span class="p">{</span>sec:results<span class="p">}</span> we can conclude that reference is a great tool.
+
 
 </code></pre></div>    </div>
 
   </div>
   <div class="latex-compil">
-    <h2> Compilation : <a href="../latex/pdf/05-ref-1.pdf">05-ref-1.pdf</a></h2>
-    <p><img src="../latex/png/05-ref-1.png" /></p>
+    <h2> Compilation : <a href="../latex/pdf/05-reference.pdf">05-reference.pdf</a></h2>
+    <p><img src="../latex/png/05-reference.png" /></p>
   </div>
 
 </div>
-
-<p><strong><em>The command <code class="language-html highlighter-rouge">\bibitem</code> for the final bibliography and <code class="language-html highlighter-rouge">\cite</code> for the in-text citations</em></strong></p>
-
-<p>The basic syntax for using <code class="language-html highlighter-rouge">\bibitem</code> is <code class="language-html highlighter-rouge">\bibitem[label]{key}</code>
-The optional parameter [label] allow you to customize the labeling system for your bibliography entry. Without introducing this parameter, the entries will follow a numerical order as in the previous example.
-The compulsory parameter {key} allow to link commands <code class="language-html highlighter-rouge">\bibitem</code> and <code class="language-html highlighter-rouge">\cite</code>.
-In-text citations are introduced by the commands cite{key} as in the previous example ``cite{Barkling2014} linking it
-with the bibliographic item containing the same key in the final bibliography.</p>
-
-<p><strong><em>Setting the indentation and width of labels in the final bibliography</em></strong></p>
-
-<p>The command <code class="language-html highlighter-rouge">\begin{thebibliography}{}</code> requires a mandatory argument. If you do not set this parameter, an error message
-is diplayed. If you do not set it correctly the indentation of the final bibliography will be chaotic. In fact,
-this argument determines the width of the widest bibliographic label and the amount of indentation of
-the final bibliography.</p>
-
-<div class="challenge">
-  <h2>05-ref2</h2>
-  <div class="latex-src">
-    <h2> Tex file : <a href="../latex/tex/05-ref2.tex">05-ref2.tex</a></h2>
-    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
-<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
-<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
-<span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
-
-<span class="nt">\begin{document}</span>
-  This is before reading <span class="k">\cite</span><span class="p">{</span>Chevalier<span class="p">}</span>
-  <span class="nt">\begin{thebibliography}</span><span class="p">{</span>abcd<span class="p">}</span>
-   <span class="k">\bibitem</span><span class="na">[0001]</span><span class="p">{</span>Chevalier<span class="p">}</span>, Céline, LaTeX pour l'impatient,
-   H<span class="k">\&amp;</span>K, 2007. Paris
-  <span class="nt">\end{thebibliography}</span>
-<span class="nt">\end{document}</span>
-
-</code></pre></div>    </div>
-
-  </div>
-  <div class="latex-compil">
-    <h2> Compilation : <a href="../latex/pdf/05-ref2.pdf">05-ref2.pdf</a></h2>
-    <p><img src="../latex/png/05-ref2.png" /></p>
-  </div>
-
-</div>
-
-<p>If you use the environment <code class="language-html highlighter-rouge">{the bibliography}</code> in a document defined as an article, the title of your final
-bibliography will be “References”/en and “Références”/fr, but for a document defined as a book or a report
-“Bibliography”/en and “Biblographie”/fr.</p>
 
 
 
@@ -365,7 +336,16 @@ bibliography will be “References”/en and “Références”/fr, but for a do
   <h2>Key Points</h2>
   <ul>
     
-    <li><p>BiBTeX, in-text citations, bibliography, LaTeX, references, bibliographic styles</p>
+    <li><p>the <code class="language-html highlighter-rouge">\label{key}</code> command add a tag</p>
+</li>
+    
+    <li><p>the <code class="language-html highlighter-rouge">\ref{key}</code> command will place the correct number of the label <code class="language-html highlighter-rouge">key</code> during compilation</p>
+</li>
+    
+    <li><p>the <code class="language-html highlighter-rouge">\pageref{key}</code> command will put the page of the label <code class="language-html highlighter-rouge">key</code> during compilation</p>
+</li>
+    
+    <li><p>the <code class="language-html highlighter-rouge">\tableofcontents</code> command will be replace by the table of contents of the document</p>
 </li>
     
   </ul>

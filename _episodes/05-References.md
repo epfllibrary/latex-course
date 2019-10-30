@@ -1,81 +1,64 @@
 ---
 title: "References"
-teaching: 0
-exercises: 0
+teaching: 10
+exercises: 5
 questions:
-- "How can I introduce in-text citations and bibliographies in my LaTeX document?"
+- "How do I manage cross reference inside a document ?"
+- "How do I make a table of contents"
 objectives:
-- "Create in-text citations"
-- "Create final bibliographies"
-- "Create bibliography's datasets"
-- "Change bibliography's styles"
+- "Cite my Figure, Table, Equations or even Chapters for example inside my document"
+- "Create a table of contents"
 keypoints:
-- "BiBTeX, in-text citations, bibliography, LaTeX, references, bibliographic styles"
+- "the ```\\label{key}``` command add a tag"
+- "the ```\\ref{key}``` command will place the correct number of the label ```key``` during compilation"
+- "the ```\\pageref{key}``` command will put the page of the label ```key``` during compilation"
+- "the ```\\tableofcontents``` command will be replace by the table of contents of the document"
+
 ---
 
-This part of the course displays how LaTeX deals with bibliography and in-text citations: by using the environment ```{thebibliography}``` and by using BibTeX.
+References in latex are internal citation in your document, they allow you to refer to another part of the document easily, for example you might want to write _"as I explained in the Figure : xxx"_ and replace the _xxx_ by the correct value.
 
-**The environment ```{thebibliography}```**
+In order to do that you need to put a tag to the element you want to refer it can be anything like a float, an equation, a chapter etc... the command to specify a tag is ```\label{}``` and the parameter is the name of the tag. The parameter can be anything you like (it's usually a good practice to have a naming convention).
 
-
-The commands of the environment ```{thebibliography}``` are embedded within LaTeX, for that reason these commands are integrated directly in your .tex file. This environment is useful for court bibliographies.The environment ```{thebibliography}``` starts by ```\begin{thebibliography}``` and ends by ```\end{thebibliography}```, each bibliography element is introduced by the command ```\bibitem```.
-
-
-{% latex filename=05-ref-1 fold_src=false %}
-\documentclass[12pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage[english]{babel}
+The command to get the position of the label is ```\ref{}```and the parameter is the name of the tag defined in the label described before.  You can put the command anywhere in the document. The command ```\pageref{}``` will display the number of the page in which is the label.
 
 
-\begin{document}
-Open access is a part of Opening science evolution in scientific universe \cite{Bartling2014}.
-"Publish in Open Access is synonym to make its publication freely accessible to everyone. In February 2019, EPFL has adopted an Open Access Policy that clearly expresses the institutional position on Open Access to scientific
-publication. An amendment to the publication agreement and an email template are also available for EPFL authors as negotiation tools with publishers." \cite{EPFLlibrary2019}
- \begin{thebibliography}{1}
-  \bibitem{Bartling2014}
-  S. Bartling and S. Frieske, Opening science: the evolving guide on how the Internet is changing research,
-  collaboration and scholarly publishing. Cham: SpringerOpen, 2014.
-  \bibitem{EPFLlibrary2019}
-  EPFL Library, Publish in Open Access. [online]. [Accessed 2 July 2019]. Available from:
-  \end{thebibliography}
-\end{document}
+
+> ## Table of contents
+> By using the right command to described your document like ```\part{}```,```\chapter{}```, ```\section{}```,```\subsection{}```,```\subsubsection{}```,```\paragraph{}```.
+>
+> You can generate the table of contents of your document by using the ```\tableofcontents``` command.
+>
+> Other tables can be generated like ```\listoffigures``` or ```\listoftables```they will generate the list of figure or tables (float).
+{: .callout}
+
+
+{% latex filename=05-reference minimal=true %}
+
+\tableofcontents
+
+\newpage
+
+We will analyze the result using the carpentry method in Section \ref{sec:analysis}, then will present the results in the Section \ref{sec:results}.
+
+\section{Analysis}\label{sec:analysis}
+
+All the the analysis has been done using Python and Latex and are resume in the Figure \ref{fig:analysis}
+
+\begin{figure}
+\includegraphics[width=5cm]{fig/phd050611s}
+\caption{A beautiful figure that explain everything (from : http://phdcomics.com/comics/archive.php?comicid=1431)}
+\label{fig:analysis}
+\end{figure}
+
+\section{Results}\label{sec:results}
+
+Bla bla bla
+
+\section{Conclusion}\label{sec:conclusion}
+
+As described in the Section \ref{sec:analysis} and \ref{sec:results} respectively on page \pageref{sec:analysis} and \pageref{sec:results} we can conclude that reference is a great tool.
+
 {% endlatex %}
-
-***The command ```\bibitem``` for the final bibliography and ```\cite``` for the in-text citations***
-
-The basic syntax for using ```\bibitem``` is ```\bibitem[label]{key}```
-The optional parameter [label] allow you to customize the labeling system for your bibliography entry. Without introducing this parameter, the entries will follow a numerical order as in the previous example.
-The compulsory parameter {key} allow to link commands ```\bibitem``` and ```\cite```.
-In-text citations are introduced by the commands cite{key} as in the previous example ``cite{Barkling2014} linking it
-with the bibliographic item containing the same key in the final bibliography.
-
-***Setting the indentation and width of labels in the final bibliography***
-
-The command ```\begin{thebibliography}{}``` requires a mandatory argument. If you do not set this parameter, an error message
-is diplayed. If you do not set it correctly the indentation of the final bibliography will be chaotic. In fact,
-this argument determines the width of the widest bibliographic label and the amount of indentation of
-the final bibliography.
-
-
-{% latex filename=05-ref2 %}
-\documentclass[a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage[english]{babel}
-
-\begin{document}
-  This is before reading \cite{Chevalier}
-  \begin{thebibliography}{abcd}
-   \bibitem[0001]{Chevalier}, Céline, LaTeX pour l'impatient,
-   H\&K, 2007. Paris
-  \end{thebibliography}
-\end{document}
-{% endlatex %}
-
-
-If you use the environment ```{the bibliography}``` in a document defined as an article, the title of your final
-bibliography will be "References"/en and "Références"/fr, but for a document defined as a book or a report
-"Bibliography"/en and "Biblographie"/fr.
 
 {% include links.md %}

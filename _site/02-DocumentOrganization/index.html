@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-08-20 14:32:24 +0200">
+    <meta http-equiv="last-modified" content="2019-10-30 12:10:49 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -137,6 +137,10 @@
             
             <li><a href="../07-Maths/index.html">Maths</a></li>
             
+            <li><a href="../08-Supplemental-zotero/index.html">Supplemental : Zotero and Latex</a></li>
+            
+            <li><a href="../09_Supplental_collaborative/index.html">Supplemental : Collaborative latex</a></li>
+            
 	    <li role="separator" class="divider"></li>
             <li><a href="../aio.html">All in one page (Beta)</a></li>
           </ul>
@@ -232,9 +236,9 @@
 
   <div class="row">
     <div class="col-md-3">
-      <strong>Teaching:</strong> 0 min
+      <strong>Teaching:</strong> 15 min
       <br/>
-      <strong>Exercises:</strong> 0 min
+      <strong>Exercises:</strong> 5 min
     </div>
     <div class="col-md-9">
       <strong>Questions</strong>
@@ -271,6 +275,15 @@
 
 <p>Here is the contents of the <code class="language-html highlighter-rouge">02-minimal.tex</code> file. It contains the minimal commands required to compile a Latex document. We will see a little further what does all of this.</p>
 
+<blockquote class="callout">
+  <h2 id="compilation">Compilation</h2>
+  <p>If you use a editor that integrates latex software you usually can called the compilation options inside the software.</p>
+
+  <p>In texmaker you can compile by clicking by selecting PdfLatex option and then click on the <strong>Run</strong> button or use the <strong>Tools</strong> menu</p>
+
+  <p>If you want to use the terminal the command is <code class="language-html highlighter-rouge">pdflatex your_file.txt</code> it will genrate a PDF file with the same name than your .tex file.</p>
+</blockquote>
+
 <div class="challenge">
   <h2>02-minimal-helloworld</h2>
   <div class="latex-src">
@@ -281,7 +294,7 @@
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
-
+<span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span>
 
 <span class="nt">\begin{document}</span>
 
@@ -299,7 +312,7 @@
 
 </div>
 
-<p>When we compile it only “Hello World” appears the others things are inputs for the compiler : they give instructions or add new capabilities, they are not displayed after compilation.</p>
+<p>When we compile only “Hello World” appears, the others things are inputs for the compiler : they give instructions or add new capabilities, they are not displayed after compilation.</p>
 
 <p>Environments define a “block” all the text inside this block will be transformed according to what the block do.</p>
 
@@ -323,6 +336,7 @@
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span>
 
 <span class="nt">\begin{document}</span>
   This text is before  
@@ -366,6 +380,8 @@ A command is usually used for a short and localized modification, for example <c
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span>
+
 </code></pre></div></div>
 
 <ul>
@@ -380,11 +396,13 @@ A command is usually used for a short and localized modification, for example <c
     <li>For example <code class="language-html highlighter-rouge">\usepackage[utf8]{inputenc}</code> loads the <code class="language-html highlighter-rouge">ìnputenc</code> package with the <code class="language-html highlighter-rouge">utf8</code>option (this is is for character encoding)</li>
     <li><code class="language-html highlighter-rouge">\usepackage{lmodern}</code> specify that we are using the <code class="language-html highlighter-rouge">lmodern</code> fonts packages.</li>
     <li><code class="language-html highlighter-rouge">\usepackage[english]{babel}</code> loads the package <code class="language-html highlighter-rouge">babel</code> that takes care of the specific typography for the language (here <code class="language-html highlighter-rouge">english</code> you can change the option if you are typing in another language for example <code class="language-html highlighter-rouge">french</code> or <code class="language-html highlighter-rouge">german</code>).</li>
+    <li><code class="language-html highlighter-rouge">\usepackage{graphicx}</code> loads the package that allow to include external image to the document.</li>
   </ul>
 
   <p>A list of packages can be found on the <a href="https://www.ctan.org/">CTAN webpage</a> you can find package based on their name or topics.</p>
 </blockquote>
 
+<p><strong>TODO</strong> Faire quelques exercices</p>
 <blockquote class="challenge">
   <h2 id="try-by-our-self">Try by our self</h2>
   <p>Try this code</p>

@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-08-20 14:32:24 +0200">
+    <meta http-equiv="last-modified" content="2019-10-30 12:10:49 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -137,6 +137,10 @@
             
             <li><a href="../07-Maths/index.html">Maths</a></li>
             
+            <li><a href="../08-Supplemental-zotero/index.html">Supplemental : Zotero and Latex</a></li>
+            
+            <li><a href="../09_Supplental_collaborative/index.html">Supplemental : Collaborative latex</a></li>
+            
 	    <li role="separator" class="divider"></li>
             <li><a href="../aio.html">All in one page (Beta)</a></li>
           </ul>
@@ -232,15 +236,15 @@
 
   <div class="row">
     <div class="col-md-3">
-      <strong>Teaching:</strong> 0 min
+      <strong>Teaching:</strong> 20 min
       <br/>
-      <strong>Exercises:</strong> 0 min
+      <strong>Exercises:</strong> 10 min
     </div>
     <div class="col-md-9">
       <strong>Questions</strong>
       <ul>
 	
-	<li><p>Key question (FIXME)</p>
+	<li><p>How can I introduce in-text citations and bibliographies in my LaTeX document?</p>
 </li>
 	
       </ul>
@@ -254,7 +258,16 @@
       <strong>Objectives</strong>
       <ul>
 	
-	<li><p>First learning objective. (FIXME)</p>
+	<li><p>Create in-text citations</p>
+</li>
+	
+	<li><p>Create final bibliographies</p>
+</li>
+	
+	<li><p>Create bibliography’s datasets</p>
+</li>
+	
+	<li><p>Change bibliography’s styles</p>
 </li>
 	
       </ul>
@@ -263,7 +276,100 @@
 
 </blockquote>
 
-<p>FIXME</p>
+<p>This part of the course displays how LaTeX deals with bibliography and in-text citations: by using the environment <code class="language-html highlighter-rouge">{thebibliography}</code> and by using BibTeX.</p>
+
+<h2 id="the-environment-thebibliography">The environment <code class="language-html highlighter-rouge">{thebibliography}</code></h2>
+
+<p>The commands of the environment <code class="language-html highlighter-rouge">{thebibliography}</code> are embedded within LaTeX, these commands are integrated directly in your .tex file. This environment is useful for court bibliographies.</p>
+
+<p>Each bibliography element is introduced by the command <code class="language-html highlighter-rouge">\bibitem</code>.</p>
+
+<div class="challenge">
+  <h2>06-ref-1</h2>
+  <div class="latex-src">
+    <h2> Tex file : <a href="../latex/tex/06-ref-1.tex">06-ref-1.tex</a></h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
+
+
+Open access is a part of Opening science evolution in scientific universe <span class="k">\cite</span><span class="p">{</span>Bartling2014<span class="p">}</span>.
+"Publish in Open Access is synonym to make its publication freely accessible to everyone. In February 2019, EPFL has adopted an Open Access Policy that clearly expresses the institutional position on Open Access to scientific
+publication. An amendment to the publication agreement and an email template are also available for EPFL authors as negotiation tools with publishers." <span class="k">\cite</span><span class="p">{</span>EPFLlibrary2019<span class="p">}</span>.
+ <span class="nt">\begin{thebibliography}</span><span class="p">{</span>10<span class="p">}</span>
+  <span class="k">\bibitem</span><span class="p">{</span>Bartling2014<span class="p">}</span>
+  S. Bartling and S. Frieske, Opening science: the evolving guide on how the Internet is changing research, collaboration and scholarly publishing. Cham: SpringerOpen, 2014.
+  <span class="k">\bibitem</span><span class="p">{</span>EPFLlibrary2019<span class="p">}</span>
+  EPFL Library, Publish in Open Access. [online]. [Accessed 2 July 2019]. Available from:
+  <span class="nt">\end{thebibliography}</span>
+
+</code></pre></div>    </div>
+
+  </div>
+  <div class="latex-compil">
+    <h2> Compilation : <a href="../latex/pdf/06-ref-1.pdf">06-ref-1.pdf</a></h2>
+    <p><img src="../latex/png/06-ref-1.png" /></p>
+  </div>
+
+</div>
+
+<p class="callout">The basic syntax for using <code class="language-html highlighter-rouge">\bibitem</code> is <code class="language-html highlighter-rouge">\bibitem[label]{key}</code>
+The optional parameter <code class="language-html highlighter-rouge">[label]</code> allows you to customize the labeling system for your bibliography entry. Without introducing this parameter, the entries will follow a numerical order as in the previous example.
+The compulsory parameter <code class="language-html highlighter-rouge">{key}</code> allows to link commands <code class="language-html highlighter-rouge">\bibitem</code> and <code class="language-html highlighter-rouge">\cite</code>.
+In-text citations are introduced by the commands <code class="language-html highlighter-rouge">cite{key}</code> as in the previous example <code class="language-html highlighter-rouge">cite{Barkling2014}</code>. linking it with the bibliographic item containing the same key in the final bibliography.</p>
+
+<blockquote class="callout">
+  <h2 id="setting-the-indentation-and-width-of-labels-in-the-final-bibliography">Setting the indentation and width of labels in the final bibliography</h2>
+  <p>The command <code class="language-html highlighter-rouge">\begin{thebibliography}{}</code> requires a mandatory argument. If you do not set this parameter, an error message is displayed. If you do not set it correctly the indentation of the final bibliography will be chaotic. In fact, this argument determines the width of the widest bibliographic label and the amount of indentation of the final bibliography.</p>
+</blockquote>
+
+<p>If you use the environment <code class="language-html highlighter-rouge">{the bibliography}</code> in a document defined as an article, the title of your final
+bibliography will be “References” in English or  “Références” if you define your document as French, but for a document defined as a book or a report it will display
+“Bibliography”/en or “Biblographie”/fr.</p>
+
+<h2 id="using-bibtex">Using BiBTeX</h2>
+
+<p>For larger document or/and easier management of the bibliography, Latex can be coupled with BiBTeX.
+With BiBTeX, the bibliography database is contained in a <code class="language-html highlighter-rouge">.bib</code> file.
+The BiBTeX is a text file that contains the publication information, you can write it by hand but there is multiple software that can manages them for you graphicaly such as <a href="https://www.jabref.org/">Jabref</a> , <a href="https://www.zotero.org/">Zotero</a> or <a href="https://www.mendeley.com/">Mendeley</a></p>
+
+<p>An bibliography entry looks like this :</p>
+
+<figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex">@article{greenwade93,
+    author  = "Greenwade, George D.",
+    title   = "The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN})",
+    year    = "1993",
+    journal = "TUGBoat",
+    volume  = "14",
+    number  = "3",
+    pages   = "342--351"
+}</code></pre></figure>
+
+<p>Here the <code class="language-html highlighter-rouge">@article</code> specify the <a href="http://newton.ex.ac.uk/tex/pack/bibtex/btxdoc/node6.html">category</a> of the publication, then <code class="language-html highlighter-rouge">greenwade93</code>is the key that will be use within the <code class="language-html highlighter-rouge">cite{}</code>command in the latex document.</p>
+
+<p>The other field (author, title….) describe the citation, it’s possible to have many <a href="http://newton.ex.ac.uk/tex/pack/bibtex/btxdoc/node7.html">fields</a> inside a BiBTeX entry, some might not be displayed by LaTeX depending of the chosen style of citation inside the document.</p>
+
+<p>Including the BiBTeX file inside a LaTeX document is done with two commands :</p>
+
+<figure class="highlight"><pre><code class="language-latex" data-lang="latex"><span class="k">\bibliographystyle</span><span class="p">{}</span>
+<span class="k">\bibliography</span><span class="p">{}</span></code></pre></figure>
+
+<p><code class="language-html highlighter-rouge">\bibliographystyle{}</code> specify the style of the citation, it’s possible to <a href="http://chgarms.com/archives/87">create your style</a> or to use <a href="https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles">already implemented style</a>.</p>
+
+<p><code class="language-html highlighter-rouge">\bibliography{}</code> just contains the name of the BiBTeX file (without the .bib)</p>
+
+<blockquote class="callout">
+  <h2 id="bibtex-and-compilation">BiBTeX and compilation</h2>
+  <p>In order to use a BiBTeX file, the compilation process changes a little bit, indeed it’s necessary to called the <code class="language-html highlighter-rouge">bibtex</code>command between multiple compilation to include the reference inside your document.
+This is the commands you need to run :</p>
+  <ol>
+    <li><code class="language-html highlighter-rouge">pdflatex latexfile</code></li>
+    <li><code class="language-html highlighter-rouge">bibtex latexfile</code></li>
+    <li><code class="language-html highlighter-rouge">pdflatex latexfile</code></li>
+    <li><code class="language-html highlighter-rouge">pdflatex latexfile</code></li>
+  </ol>
+
+  <p>This (heavy) ways is not always easy and it can be automatically done by texmaker, you can check and configure the <strong>quick build</strong> to do those actions for you.</p>
+</blockquote>
+
 <div class="challenge">
   <h2>06-citation-test</h2>
   <div class="latex-src">
@@ -285,7 +391,7 @@
 
 
 
-  <span class="k">\bibliographystyle</span><span class="p">{</span>plain<span class="p">}</span>
+<span class="k">\bibliographystyle</span><span class="p">{</span>plain<span class="p">}</span>
 <span class="k">\bibliography</span><span class="p">{</span>06-citation-test<span class="p">}</span>
 
 
@@ -321,7 +427,10 @@
   <h2>Key Points</h2>
   <ul>
     
-    <li><p>First key point. Brief Answer to questions. (FIXME)</p>
+    <li><p>For short bibliography you can use the <code class="language-html highlighter-rouge">{thebibliography}</code> environment</p>
+</li>
+    
+    <li><p>Long or more robust bibliography yuou can use a BiBTeX linked with your document</p>
 </li>
     
   </ul>

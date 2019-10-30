@@ -19,6 +19,7 @@ you can specified  options inside the latex
 |fold_comp|put an hide/show button to the compilation|true or false|false by default|
 |src_comp|put an hide/show button to the source and compilation|true or false|false by default|
 |optimize|auto cut the generated image by adding emptypage into the tex and to trim the picture (remove white)|true or false|true by default|
+|minimal|add a minimal latex file (in _layouts/minimal.tex) so only the important commands are displayed|true or false|false by default|
 |disp_src|display the source|true or false|true by default|
 |disp_comp|display the compilation (image)|true or false|true by default|
 |disp_bibp|display the bib|true or false|true by default|

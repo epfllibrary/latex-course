@@ -1,7 +1,7 @@
 ---
 title: "Document Organization"
-teaching: 0
-exercises: 0
+teaching: 15
+exercises: 5
 questions:
 - "How is organized a Latex document ?"
 - "What are the minimal commands needed to compile?"
@@ -16,13 +16,22 @@ keypoints:
 
 Here is the contents of the ``02-minimal.tex`` file. It contains the minimal commands required to compile a Latex document. We will see a little further what does all of this.
 
+> ## Compilation
+> If you use a editor that integrates latex software you usually can called the compilation options inside the software.
+>
+>In texmaker you can compile by clicking by selecting PdfLatex option and then click on the **Run** button or use the **Tools** menu
+>
+> If you want to use the terminal the command is ```pdflatex your_file.txt``` it will genrate a PDF file with the same name than your .tex file.
+{: .callout}
+
+
 {% latex filename=02-minimal-helloworld %}
 \documentclass[a4paper]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage[english]{babel}
-
+\usepackage{graphicx}
 
 \begin{document}
 
@@ -31,7 +40,7 @@ Here is the contents of the ``02-minimal.tex`` file. It contains the minimal com
 \end{document}
 {% endlatex %}
 
-When we compile it only "Hello World" appears the others things are inputs for the compiler : they give instructions or add new capabilities, they are not displayed after compilation.
+When we compile only "Hello World" appears, the others things are inputs for the compiler : they give instructions or add new capabilities, they are not displayed after compilation.
 
 Environments define a "block" all the text inside this block will be transformed according to what the block do.
 
@@ -50,6 +59,7 @@ For example the environment ```itemize``` creates bullet point and a bullet poin
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage[english]{babel}
+\usepackage{graphicx}
 
 \begin{document}
   This text is before  
@@ -86,6 +96,8 @@ Before the ```document```environment there is several commands :
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage[english]{babel}
+\usepackage{graphicx}
+
 ~~~
 {: .language-latex}
 
@@ -98,6 +110,7 @@ Before the ```document```environment there is several commands :
 > * For example ```\usepackage[utf8]{inputenc}``` loads the ```ìnputenc``` package with the ```utf8```option (this is is for character encoding)
 > * ```\usepackage{lmodern}``` specify that we are using the ```lmodern``` fonts packages.
 > * ```\usepackage[english]{babel}``` loads the package ```babel``` that takes care of the specific typography for the language (here ```english``` you can change the option if you are typing in another language for example ```french``` or ```german```).
+> * ```\usepackage{graphicx}``` loads the package that allow to include external image to the document.
 >
 >
 > A list of packages can be found on the [CTAN webpage](https://www.ctan.org/) you can find package based on their name or topics.
@@ -107,7 +120,7 @@ Before the ```document```environment there is several commands :
 
 
 
-
+**TODO** Faire quelques exercices
 > ## Try by our self
 > Try this code
 > > ## Solution

@@ -1,15 +1,106 @@
 ---
 title: "Citations"
-teaching: 0
-exercises: 0
+teaching: 20
+exercises: 10
 questions:
-- "Key question (FIXME)"
+- "How can I introduce in-text citations and bibliographies in my LaTeX document?"
 objectives:
-- "First learning objective. (FIXME)"
+- "Create in-text citations"
+- "Create final bibliographies"
+- "Create bibliography's datasets"
+- "Change bibliography's styles"
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- "For short bibliography you can use the ```{thebibliography}``` environment"
+- "Long or more robust bibliography yuou can use a BiBTeX linked with your document"
 ---
-FIXME
+
+This part of the course displays how LaTeX deals with bibliography and in-text citations: by using the environment ```{thebibliography}``` and by using BibTeX.
+
+## The environment ```{thebibliography}```
+
+
+The commands of the environment ```{thebibliography}``` are embedded within LaTeX, these commands are integrated directly in your .tex file. This environment is useful for court bibliographies.
+
+Each bibliography element is introduced by the command ```\bibitem```.
+
+
+{% latex minimal=true filename=06-ref-1 %}
+
+Open access is a part of Opening science evolution in scientific universe \cite{Bartling2014}.
+"Publish in Open Access is synonym to make its publication freely accessible to everyone. In February 2019, EPFL has adopted an Open Access Policy that clearly expresses the institutional position on Open Access to scientific
+publication. An amendment to the publication agreement and an email template are also available for EPFL authors as negotiation tools with publishers." \cite{EPFLlibrary2019}.
+ \begin{thebibliography}{10}
+  \bibitem{Bartling2014}
+  S. Bartling and S. Frieske, Opening science: the evolving guide on how the Internet is changing research, collaboration and scholarly publishing. Cham: SpringerOpen, 2014.
+  \bibitem{EPFLlibrary2019}
+  EPFL Library, Publish in Open Access. [online]. [Accessed 2 July 2019]. Available from:
+  \end{thebibliography}
+{% endlatex %}
+
+The basic syntax for using ```\bibitem``` is ```\bibitem[label]{key}```
+The optional parameter ```[label]``` allows you to customize the labeling system for your bibliography entry. Without introducing this parameter, the entries will follow a numerical order as in the previous example.
+The compulsory parameter ```{key}``` allows to link commands ```\bibitem``` and ```\cite```.
+In-text citations are introduced by the commands ```cite{key}``` as in the previous example ```cite{Barkling2014}```. linking it with the bibliographic item containing the same key in the final bibliography.
+{: .callout}
+
+
+> ## Setting the indentation and width of labels in the final bibliography
+> The command ```\begin{thebibliography}{}``` requires a mandatory argument. If you do not set this parameter, an error message is displayed. If you do not set it correctly the indentation of the final bibliography will be chaotic. In fact, this argument determines the width of the widest bibliographic label and the amount of indentation of the final bibliography.
+{: .callout}
+
+
+
+If you use the environment ```{the bibliography}``` in a document defined as an article, the title of your final
+bibliography will be "References" in English or  "Références" if you define your document as French, but for a document defined as a book or a report it will display
+"Bibliography"/en or "Biblographie"/fr.
+
+## Using BiBTeX
+
+For larger document or/and easier management of the bibliography, Latex can be coupled with BiBTeX.
+With BiBTeX, the bibliography database is contained in a ```.bib``` file.
+The BiBTeX is a text file that contains the publication information, you can write it by hand but there is multiple software that can manages them for you graphicaly such as [Jabref](https://www.jabref.org/) , [Zotero](https://www.zotero.org/) or [Mendeley](https://www.mendeley.com/)
+
+An bibliography entry looks like this :
+
+{% highlight bibtex %}
+@article{greenwade93,
+    author  = "Greenwade, George D.",
+    title   = "The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN})",
+    year    = "1993",
+    journal = "TUGBoat",
+    volume  = "14",
+    number  = "3",
+    pages   = "342--351"
+}
+{% endhighlight %}
+
+
+Here the ```@article``` specify the [category](http://newton.ex.ac.uk/tex/pack/bibtex/btxdoc/node6.html) of the publication, then ```greenwade93```is the key that will be use within the ```cite{}```command in the latex document.
+
+The other field (author, title....) describe the citation, it's possible to have many [fields](http://newton.ex.ac.uk/tex/pack/bibtex/btxdoc/node7.html) inside a BiBTeX entry, some might not be displayed by LaTeX depending of the chosen style of citation inside the document.
+
+Including the BiBTeX file inside a LaTeX document is done with two commands :
+
+{% highlight latex %}
+\bibliographystyle{}
+\bibliography{}
+{% endhighlight %}
+
+```\bibliographystyle{}``` specify the style of the citation, it's possible to [create your style](http://chgarms.com/archives/87) or to use [already implemented style](https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles).
+
+```\bibliography{} ``` just contains the name of the BiBTeX file (without the .bib)
+
+> ## BiBTeX and compilation
+> In order to use a BiBTeX file, the compilation process changes a little bit, indeed it's necessary to called the ```bibtex```command between multiple compilation to include the reference inside your document.
+> This is the commands you need to run :
+> 1. ```pdflatex latexfile```
+> 2. ```bibtex latexfile```
+> 3. ```pdflatex latexfile```
+> 4. ```pdflatex latexfile```
+>
+> This (heavy) ways is not always easy and it can be automatically done by texmaker, you can check and configure the **quick build** to do those actions for you.
+{: .callout}
+
 {% latex filename=06-citation-test  %}
 <bib>
 @ARTICLE{ARTICLE:1,
@@ -34,7 +125,7 @@ FIXME
 
 
 
-  \bibliographystyle{plain}
+\bibliographystyle{plain}
 \bibliography{06-citation-test}
 
 

@@ -1,4 +1,4 @@
-I"è$<p>Here is the contents of the <code class="language-html highlighter-rouge">02-minimal.tex</code> file. It contains the minimal commands required to compile a Latex document. We will see a little further what does all of this.</p>
+I"ï)<p>Here is the contents of the <code class="language-html highlighter-rouge">02-minimal.tex</code> file. It contains the minimal commands required to compile a Latex document. We will see a little further what does all of this.</p>
 
 <blockquote class="callout">
   <h2 id="compilation">Compilation</h2>
@@ -126,6 +126,21 @@ A command is usually used for a short and localized modification, for example <c
 
   <p>A list of packages can be found on the <a href="https://www.ctan.org/">CTAN webpage</a> you can find package based on their name or topics.</p>
 </blockquote>
+
+<h2 id="documentclass"><code class="language-html highlighter-rouge">\documentclass</code></h2>
+<p>The <code class="language-html highlighter-rouge">documentclass</code> command has to be on the top of the document it defines how the document will look like :
+By default latex support different type of documents such as :</p>
+<ul>
+  <li><code class="language-html highlighter-rouge">letter</code> : for letter (mail)</li>
+  <li><code class="language-html highlighter-rouge">article</code> : for publication (journal)</li>
+  <li><code class="language-html highlighter-rouge">report</code> : for middle size publication like master thesis</li>
+  <li><code class="language-html highlighter-rouge">book</code> : for huge publication
+Changing the style of document change the way the document looks like and also some features might be disabled (for example you cannot defined chapters within article)</li>
+</ul>
+
+<p>As we shaw, the options in the documentclass can defined the paper size, it‚Äôs also possible to define a global font size for the entire document, or if the document is double sided.
+for example :
+<code class="language-html highlighter-rouge">\documentclass[a4paper,12pt,twoside]{report}</code> will generate a report with font size of 12pt on A4 paper double sided.</p>
 
 <p><strong>TODO</strong> Faire quelques exercices</p>
 <blockquote class="challenge">

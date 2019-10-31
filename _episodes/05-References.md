@@ -9,6 +9,7 @@ objectives:
 - "Cite my Figure, Table, Equations or even Chapters for example inside my document"
 - "Create a table of contents"
 keypoints:
+- "```\\part{}```,```\\chapter{}```, ```\\section{}```,```\\subsection{}```,```\\subsubsection{}```,```\\paragraph{}``` are used to specify the hierarchical structure of the document"
 - "the ```\\label{key}``` command add a tag"
 - "the ```\\ref{key}``` command will place the correct number of the label ```key``` during compilation"
 - "the ```\\pageref{key}``` command will put the page of the label ```key``` during compilation"
@@ -25,9 +26,15 @@ The command to get the position of the label is ```\ref{}```and the parameter is
 
 
 > ## Table of contents
-> By using the right command to described your document like ```\part{}```,```\chapter{}```, ```\section{}```,```\subsection{}```,```\subsubsection{}```,```\paragraph{}```.
+> To define the hierarchical structure of the document Latex provides special commands that defined chapter, section, etc :
+> * ```\part{}```
+> * ```\chapter{}```
+> *  ```\section{}```,
+> * ```\subsection{}```
+> * ```\subsubsection{}```
+> * ```\paragraph{}```
 >
-> You can generate the table of contents of your document by using the ```\tableofcontents``` command.
+> You can generate the table of contents of your document automatically during the compilation by using the ```\tableofcontents``` command.
 >
 > Other tables can be generated like ```\listoffigures``` or ```\listoftables```they will generate the list of figure or tables (float).
 {: .callout}

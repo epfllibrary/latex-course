@@ -1,4 +1,4 @@
-I"�<p>References in latex are internal citation in your document, they allow you to refer to another part of the document easily, for example you might want to write <em>“as I explained in the Figure : xxx”</em> and replace the <em>xxx</em> by the correct value.</p>
+I"�<p>References in latex are internal citation in your document, they allow you to refer to another part of the document easily, for example you might want to write <em>“as I explained in the Figure : xxx”</em> and replace the <em>xxx</em> by the correct value.</p>
 
 <p>In order to do that you need to put a tag to the element you want to refer it can be anything like a float, an equation, a chapter etc… the command to specify a tag is <code class="language-html highlighter-rouge">\label{}</code> and the parameter is the name of the tag. The parameter can be anything you like (it’s usually a good practice to have a naming convention).</p>
 
@@ -6,9 +6,17 @@
 
 <blockquote class="callout">
   <h2 id="table-of-contents">Table of contents</h2>
-  <p>By using the right command to described your document like <code class="language-html highlighter-rouge">\part{}</code>,<code class="language-html highlighter-rouge">\chapter{}</code>, <code class="language-html highlighter-rouge">\section{}</code>,<code class="language-html highlighter-rouge">\subsection{}</code>,<code class="language-html highlighter-rouge">\subsubsection{}</code>,<code class="language-html highlighter-rouge">\paragraph{}</code>.</p>
+  <p>To define the hierarchical structure of the document Latex provides special commands that defined chapter, section, etc :</p>
+  <ul>
+    <li><code class="language-html highlighter-rouge">\part{}</code></li>
+    <li><code class="language-html highlighter-rouge">\chapter{}</code></li>
+    <li><code class="language-html highlighter-rouge">\section{}</code>,</li>
+    <li><code class="language-html highlighter-rouge">\subsection{}</code></li>
+    <li><code class="language-html highlighter-rouge">\subsubsection{}</code></li>
+    <li><code class="language-html highlighter-rouge">\paragraph{}</code></li>
+  </ul>
 
-  <p>You can generate the table of contents of your document by using the <code class="language-html highlighter-rouge">\tableofcontents</code> command.</p>
+  <p>You can generate the table of contents of your document automatically during the compilation by using the <code class="language-html highlighter-rouge">\tableofcontents</code> command.</p>
 
   <p>Other tables can be generated like <code class="language-html highlighter-rouge">\listoffigures</code> or <code class="language-html highlighter-rouge">\listoftables</code>they will generate the list of figure or tables (float).</p>
 </blockquote>

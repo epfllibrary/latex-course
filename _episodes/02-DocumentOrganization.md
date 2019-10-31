@@ -117,6 +117,19 @@ Before the ```document```environment there is several commands :
 {: .callout}
 
 
+## ```\documentclass```
+The ```documentclass``` command has to be on the top of the document it defines how the document will look like :
+By default latex support different type of documents such as :
+* ```letter``` : for letter (mail)
+* ```article``` : for publication (journal)
+* ```report``` : for middle size publication like master thesis
+* ```book``` : for huge publication
+Changing the style of document change the way the document looks like and also some features might be disabled (for example you cannot defined chapters within article)
+
+As we shaw, the options in the documentclass can defined the paper size, it's also possible to define a global font size for the entire document, or if the document is double sided.
+for example :
+```\documentclass[a4paper,12pt,twoside]{report}``` will generate a report with font size of 12pt on A4 paper double sided.
+
 
 
 

@@ -3,23 +3,23 @@ title: "Document Organization"
 teaching: 15
 exercises: 5
 questions:
-- "How is organized a Latex document ?"
+- "How is a LaTeX document organized?"
 - "What are the minimal commands needed to compile?"
 objectives:
 - "Understand what are commands, environments and packages"
-- "Compile a simple Latex file"
+- "Compile a simple LaTeX file"
 
 keypoints:
-- "A Latex document is composed of commands (they start with \\ ), environments (starts with \\begin{envname} and stop with \\end{envname})"
-- "Packages are tools to add new functionalities to Latex, a list of packages can be found on the [CTAN webpage](https://www.ctan.org/) and we use the \\usepackage command to load them"
+- "A LaTeX document is composed of commands (they start with \\ ), environments (starts with \\begin{envname} and stop with \\end{envname})"
+- "Packages are tools to add new functionalities to LaTeX, a list of packages can be found on the [CTAN webpage](https://www.ctan.org/) and we use the \\usepackage command to load them"
 ---
 
-Here is the contents of the ``02-minimal.tex`` file. It contains the minimal commands required to compile a Latex document. We will see a little further what does all of this.
+Below, you will get to know the minimal commands required to compile a LaTeX document. We will see a little further what each command does.
 
 > ## Compilation
-> If you use a editor that integrates latex software you usually can called the compilation options inside the software.
+> If you use an editor that integrates LaTeX software, you can usually call the compilation options inside the software.
 >
->In texmaker you can compile by clicking by selecting PdfLatex option and then click on the **Run** button or use the **Tools** menu
+>In texmaker, you can compile by clicking by selecting PdfLatex option and then click on the **Run** button or use the **Tools** menu
 >
 > If you want to use the terminal the command is ```pdflatex your_file.txt``` it will genrate a PDF file with the same name than your .tex file.
 {: .callout}

@@ -1,6 +1,6 @@
-# Introduction to LaTeX (Work in progress)
+# Introduction to LaTeX
 
-This repository generates the corresponding lesson website from [The Carpentries](https://carpentries.org/) repertoire of lessons. 
+This repository generates the corresponding lesson website for [EPFL Library](https://go.epfl.ch/library)'s course "Introduction to LaTeX". It is based on the templates from [The Carpentries](https://carpentries.org/) repertoire of lessons. Course website is available at [https://epfllibrary.github.io/latex-course/](https://epfllibrary.github.io/latex-course/)
 
 ## Contributing
 
@@ -26,6 +26,6 @@ A list of contributors to the lesson can be found in [AUTHORS](AUTHORS)
 
 ## Citation
 
-To cite this lesson, please consult with [CITATION](CITATION)
+To cite this lesson, please check [CITATION](CITATION.md)
 
 [lesson-example]: https://carpentries.github.io/lesson-example

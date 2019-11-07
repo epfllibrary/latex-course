@@ -172,6 +172,62 @@ and then the data analysis was done by ...
 
 {% endlatex %}
 
-**TODO** : Exercices
+> ## Align paragraph
+>
+> I would like to right-aligned  my text .
+>
+> In order to do that I need to write :
+>
+> 1. ~~~
+>    \begin{flushright}
+>      This text will be right-aligned
+>    \end{flushright}
+>    ~~~
+>    {: .language-latex}
+>    
+> 2. ~~~
+>    \begin{alignright}
+>      This text will be right-aligned
+>    \end{alignright}
+>    ~~~
+>    {: .language-latex}
+>
+> 3. ~~~
+>    \flushright{This text will be right-aligned}
+>    ~~~
+>    {: .language-latex}
+>    
+>>    
+> > ## Solution
+> > 1. Is correct : The text will be right-aligned
+> > 2. The name of the environment is ```flushright```
+> > 3. In order to align I need to use an environment not a command
+> {: .solution}
+{: .challenge}
+
+> ## New page
+>
+> I would like to write a book, with normal font size of 14pt and two-sided.
+> Put some text and add a page that starts on a odd side and put again some text on this page.
+>
+>
+> Please try to write the corresponding source file.
+>
+> > ## Solution
+> > ~~~
+> > \documentclass[a4paper,14pt,twoside]{book}
+> > \usepackage[utf8]{inputenc}
+> > \usepackage{lmodern}
+> > \usepackage[english]{babel}
+> > \usepackage{graphicx}
+> > \begin{document}
+> > This is my example text. I like latex
+> > \cleardoublepage
+> > This is another chapter of my Latex life
+> > \end{document}
+> > ~~~
+> >{: .language-latex}
+> {: .solution}
+{: .challenge}
 
 {% include links.md %}

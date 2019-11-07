@@ -1,4 +1,4 @@
-I"A)<p>Below, you will get to know the minimal commands required to compile a LaTeX document. We will see a little further what each command does.</p>
+I"@<p>Below, you will get to know the minimal commands required to compile a LaTeX document. We will see a little further what each command does.</p>
 
 <blockquote class="callout">
   <h2 id="compilation">Compilation</h2>
@@ -142,14 +142,141 @@ Changing the style of document change the way the document looks like and also s
 for example :
 <code class="language-html highlighter-rouge">\documentclass[a4paper,12pt,twoside]{report}</code> will generate a report with font size of 12pt on A4 paper double sided.</p>
 
-<p><strong>TODO</strong> Faire quelques exercices</p>
+<h2 id="exercices">Exercices</h2>
+
 <blockquote class="challenge">
-  <h2 id="try-by-our-self">Try by our self</h2>
-  <p>Try this code</p>
+  <h2 id="using-environments">Using Environments</h2>
+
+  <p>To insert quote LaTeX provides the <code class="language-html highlighter-rouge">quote</code>environment.</p>
+
+  <p>In order to use it I need to write :</p>
+
+  <ol>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{quote}</span>
+ Veni vidi vici (Jules Cesear)
+<span class="k">\end</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\begin</span><span class="na">[quote]</span>
+ Veni vidi vici (Jules Cesear)
+<span class="k">\end</span><span class="na">[quote]</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{quote}</span>
+ Veni vidi vici (Jules Cesear)
+<span class="nt">\end{quote}</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{quotes}</span>
+ Veni vidi vici (Jules Cesear)
+<span class="nt">\end{quotes}</span>
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
   <blockquote class="solution">
     <h2 id="solution">Solution</h2>
-    <p>blabla
-blabla</p>
+
+    <ol>
+      <li>You need to specify what is ending</li>
+      <li>The name of the environment is a mandatory parameter, it’s written inside brackets <code class="language-html highlighter-rouge">{}</code></li>
+      <li>Is correct: the quote will appear correctly</li>
+      <li>The name of the environment is <code class="language-html highlighter-rouge">quote</code>not <code class="language-html highlighter-rouge">quotes</code></li>
+    </ol>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="using-commands">Using Commands</h2>
+
+  <p>I would like to have the word <strong>cat</strong> in italic and the word <strong>dog</strong> in bold.
+the italic command (as we will see later) is <code class="language-html highlighter-rouge">textit</code></p>
+
+  <p>In order to do that I need to write :</p>
+
+  <ol>
+    <li>
+      <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>My \textbf{cat} is cutter than my \textit{dog}.
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\begin[quote]
+ My \textit{cat} is cutter than my \textbf{dog}.
+\end[quote]
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\begin{quote}
+ My \textit(cat) is cutter than my \textbf{dog}.
+\end{quote}
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\begin{quote}
+ My /textit{cat} is cutter than my \textbf{dog}.
+\end{quote}
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution-1">Solution</h2>
+
+    <ol>
+      <li>Cat will be bold and dog in italic</li>
+      <li>Is correct : Cat will be italic and dog in bold</li>
+      <li>mandatory parameters are written inside brackets <code class="language-html highlighter-rouge">{}</code></li>
+      <li>A command always starts with backslash <code class="language-html highlighter-rouge">\</code></li>
+    </ol>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="using-packages">Using packages</h2>
+
+  <p>I would like to use the package <code class="language-html highlighter-rouge">listings</code> to write a bit code in Python.</p>
+
+  <p>The package uses the <code class="language-html highlighter-rouge">lstlisting</code>environment</p>
+
+  <p>the used language for the code is defined in an option <code class="language-html highlighter-rouge">language=Python</code></p>
+
+  <p>Please try to include the package, call the environment and specify the option</p>
+
+  <p>The code I want to include is :</p>
+  <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Calculate the average
+round1 = int(raw_input("Enter score for round 1: "))
+round2 = int(raw_input("Enter score for round 2: "))
+round3 = int(raw_input("Enter score for round 3: "))   
+# Calculate the average
+average = (round1 + round2 + round3) / 3
+# Print out the test score
+print "the average score is: ", average
+</code></pre></div>  </div>
+  <blockquote class="solution">
+    <h2 id="solution-2">Solution</h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>listings<span class="p">}</span>
+<span class="nt">\begin{document}</span>
+<span class="nt">\begin{lstlisting}</span>[language=Python]
+# Get three test score
+round1 = int(raw<span class="p">_</span>input("Enter score for round 1: "))
+round2 = int(raw<span class="p">_</span>input("Enter score for round 2: "))
+round3 = int(raw<span class="p">_</span>input("Enter score for round 3: "))
+# Calculate the average
+average = (round1 + round2 + round3) / 3
+# Print out the test score
+print "the average score is: ", average
+<span class="nt">\end{lstlisting}</span>
+<span class="nt">\end{document}</span>
+</code></pre></div>    </div>
   </blockquote>
 </blockquote>
 

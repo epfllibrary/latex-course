@@ -131,14 +131,134 @@ for example :
 ```\documentclass[a4paper,12pt,twoside]{report}``` will generate a report with font size of 12pt on A4 paper double sided.
 
 
+## Exercices
 
-
-**TODO** Faire quelques exercices
-> ## Try by our self
-> Try this code
+> ## Using Environments
+>
+> To insert quote LaTeX provides the ```quote```environment.
+>
+> In order to use it I need to write :
+>
+> 1. ~~~
+>    \begin{quote}
+>     Veni vidi vici (Jules Cesear)
+>    \end
+>    ~~~
+>    {: .language-latex}
+>
+> 2. ~~~
+>    \begin[quote]
+>     Veni vidi vici (Jules Cesear)
+>    \end[quote]
+>    ~~~
+>    {: .language-latex}
+>
+> 3. ~~~
+>    \begin{quote}
+>     Veni vidi vici (Jules Cesear)
+>    \end{quote}
+>    ~~~
+>    {: .language-latex}
+>
+> 4. ~~~
+>    \begin{quotes}
+>     Veni vidi vici (Jules Cesear)
+>    \end{quotes}
+>    ~~~
+>    {: .language-latex}
+>
 > > ## Solution
-> > blabla
-> > blabla
+> >
+> > 1. You need to specify what is ending
+> > 2. The name of the environment is a mandatory parameter, it's written inside brackets ```{}```
+> > 3. Is correct: the quote will appear correctly
+> > 4. The name of the environment is ```quote```not ```quotes```
+> {: .solution}
+{: .challenge}
+
+> ## Using Commands
+>
+> I would like to have the word **cat** in italic and the word **dog** in bold.
+> the italic command (as we will see later) is ```textit```
+>
+> In order to do that I need to write :
+>
+> 1. ~~~
+>    My \textbf{cat} is cutter than my \textit{dog}.
+>    ~~~
+>    
+>
+> 2. ~~~
+>    \begin[quote]
+>     My \textit{cat} is cutter than my \textbf{dog}.
+>    \end[quote]
+>    ~~~
+>    
+>
+> 3. ~~~
+>    \begin{quote}
+>     My \textit(cat) is cutter than my \textbf{dog}.
+>    \end{quote}
+>    ~~~
+>    
+> 4. ~~~
+>    \begin{quote}
+>     My /textit{cat} is cutter than my \textbf{dog}.
+>    \end{quote}
+>    ~~~
+>    
+> > ## Solution
+> >
+> > 1. Cat will be bold and dog in italic
+> > 2. Is correct : Cat will be italic and dog in bold
+> > 3. mandatory parameters are written inside brackets ```{}```
+> > 4. A command always starts with backslash ```\```
+> {: .solution}
+{: .challenge}
+
+> ## Using packages
+>
+> I would like to use the package ```listings``` to write a bit code in Python.
+>
+> The package uses the ```lstlisting```environment
+>
+> the used language for the code is defined in an option ```language=Python```
+>
+> Please try to include the package, call the environment and specify the option
+>
+> The code I want to include is :
+>    ~~~
+> # Calculate the average
+> round1 = int(raw_input("Enter score for round 1: "))
+> round2 = int(raw_input("Enter score for round 2: "))
+> round3 = int(raw_input("Enter score for round 3: "))   
+> # Calculate the average
+> average = (round1 + round2 + round3) / 3
+> # Print out the test score
+> print "the average score is: ", average
+>    ~~~
+> > ## Solution
+> > ~~~
+> > \documentclass[a4paper]{article}
+> > \usepackage[utf8]{inputenc}
+> > \usepackage{lmodern}
+> > \usepackage[english]{babel}
+> > \usepackage{graphicx}
+> > \usepackage{listings}
+> > \begin{document}
+> > \begin{lstlisting}[language=Python]
+> > # Get three test score
+> > round1 = int(raw_input("Enter score for round 1: "))
+> > round2 = int(raw_input("Enter score for round 2: "))
+> > round3 = int(raw_input("Enter score for round 3: "))
+> > # Calculate the average
+> > average = (round1 + round2 + round3) / 3
+> > # Print out the test score
+> > print "the average score is: ", average
+> > \end{lstlisting}
+> > \end{document}
+> > ~~~
+> >{: .language-latex}
 > {: .solution}
 {: .challenge}
 

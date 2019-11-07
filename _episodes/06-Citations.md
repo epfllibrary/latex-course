@@ -24,7 +24,7 @@ The commands of the environment ```{thebibliography}``` are embedded within LaTe
 Each bibliography element is introduced by the command ```\bibitem```.
 
 
-{% latex minimal=true filename=06-ref-1 %}
+{% latex minimal=true filename=06-citations-01 %}
 
 Open access is a part of Opening science evolution in scientific universe \cite{Bartling2014}.
 "Publish in Open Access is synonym to make its publication freely accessible to everyone. In February 2019, EPFL has adopted an Open Access Policy that clearly expresses the institutional position on Open Access to scientific
@@ -35,6 +35,7 @@ publication. An amendment to the publication agreement and an email template are
   \bibitem{EPFLlibrary2019}
   EPFL Library, Publish in Open Access. [online]. [Accessed 2 July 2019]. Available from:
   \end{thebibliography}
+  
 {% endlatex %}
 
 The basic syntax for using ```\bibitem``` is ```\bibitem[label]{key}```
@@ -101,7 +102,7 @@ Including the BiBTeX file inside a LaTeX document is done with two commands :
 > This (heavy) ways is not always easy and it can be automatically done by texmaker, you can check and configure the **quick build** to do those actions for you.
 {: .callout}
 
-{% latex filename=06-citation-test  %}
+{% latex filename=06-citations-02  %}
 <bib>
 @ARTICLE{ARTICLE:1,
     AUTHOR="John Doe",
@@ -126,7 +127,7 @@ Including the BiBTeX file inside a LaTeX document is done with two commands :
 
 
 \bibliographystyle{plain}
-\bibliography{06-citation-test}
+\bibliography{06-citations-02}
 
 
 \end{document}

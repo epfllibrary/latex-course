@@ -11,7 +11,7 @@ objectives:
 - "Include lists and tables"
 keypoints:
 - "Font size can be changed using  ```\\tiny```, ```\\small```, ```\\normalsize```, ```\\large```, ```\\Large```, ```\\LARGE```, ```\\huge```, ```\\Huge```"
-- "To have your text in italic : ```\\textit{...}``` or in bold :  ```\\textbf{...}``` "
+- "To have your text in italic : ```\\textit``` or in bold :  ```\\textbf``` "
 - "Ordered lists use the ```enumerate``` environment non-ordered the ```itemize```. Item list are defined with ```\\item```"
 - "New page is added with ```\\newpage```"
 ---
@@ -43,14 +43,14 @@ Let's see how we can change the fonts used in LaTeX
 With the commands ```\textit{...}``` and ```\textbf{...}```, you can modify parts of the text.
 
 The size of the font can be changed by : (from the smallest to the biggest)
-* ```\tiny```
-* ```\small```
-* ```\normalsize```
-* ```\large```
-* ```\Large```
-* ```\LARGE```
-* ```\huge```
-* ```\Huge```
+* ```\tiny{...}```
+* ```\small{...}```
+* ```\normalsize{...}```
+* ```\large{...}```
+* ```\Large{...}```
+* ```\LARGE{...}```
+* ```\huge{...}```
+* ```\Huge{...}```
 
 The size of the font is relative to size specified in the ```documentclass```
 

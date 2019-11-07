@@ -1,0 +1,59 @@
+I"f<h2 id="floats">Floats</h2>
+<p>LateX manages two kind of floats, the figures and the tables, they are called floats because they can be inserted anywhere in the documents and referenced in the text (like Figure 1).</p>
+
+<p>Figure and Table are managed the same way, they just have their distinct numbering.</p>
+
+<p>Figure use the environment <code class="language-html highlighter-rouge">figure</code> and Tables the environment <code class="language-html highlighter-rouge">table</code>.</p>
+
+<p>A legend can be defined with the <code class="language-html highlighter-rouge">\caption{}</code>command inside the float environment.</p>
+
+<blockquote class="callout">
+  <h2 id="howto-include-external-pictures">HOWTO include external pictures</h2>
+  <p>To include external picture file you need to use the <code class="language-html highlighter-rouge">\includegraphics{}</code> command. The parameter contains the path to the picture (where is stored the file).
+The optional parameter can specify the figure size for example <code class="language-html highlighter-rouge">with=5cm</code> will fix the width of the picture and adjust the height accordingly.</p>
+</blockquote>
+
+<div class="challenge">
+  <h2>04-figure-01</h2>
+  <div class="latex-src">
+    <h2> Tex file : <a href="../latex/tex/04-figure-01.tex">04-figure-01.tex</a></h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
+
+
+  <span class="nt">\begin{figure}</span>
+  <span class="k">\includegraphics</span><span class="na">[width=5cm]</span><span class="p">{</span>fig/phd051608s<span class="p">}</span>
+  <span class="k">\caption</span><span class="p">{</span>Where you sit in class/seminar. And what it says about you (from : http://phdcomics.com/comics/archive.php?comicid=1017)<span class="p">}</span>
+  <span class="nt">\end{figure}</span>
+
+  
+</code></pre></div>    </div>
+
+  </div>
+  <div class="latex-compil">
+    <h2> Compilation : <a href="../latex/pdf/04-figure-01.pdf">04-figure-01.pdf</a></h2>
+    <p><img src="../latex/png/04-figure-01.png" /></p>
+  </div>
+
+</div>
+
+<blockquote class="callout">
+  <h2 id="change-the-position-of-floats">Change the position of floats</h2>
+  <p>By default if you don’t specified anything LaTex will move the float where it thinks it will be the best. You can specify where you want to have the float by adding option in the environment.</p>
+
+  <p>For example <code class="language-html highlighter-rouge">\begin{figure}[ht]</code> means that you want the figure to where you define it (with <code class="language-html highlighter-rouge">h</code> : here) and a the top of the page (with <code class="language-html highlighter-rouge">t</code>:top).</p>
+
+  <p>The possible commands  are :</p>
+  <ul>
+    <li><code class="language-html highlighter-rouge">b</code> : bottom of the page</li>
+    <li><code class="language-html highlighter-rouge">t</code> : top of the page</li>
+    <li><code class="language-html highlighter-rouge">h</code> : here</li>
+    <li><code class="language-html highlighter-rouge">H</code> : forced here</li>
+    <li><code class="language-html highlighter-rouge">p</code> : create a page of floats</li>
+  </ul>
+
+  <p>By default (if you don’t put any indication) LaTex uses <code class="language-html highlighter-rouge">[tbp]</code></p>
+</blockquote>
+
+<h2 id="tables">Tables</h2>
+
+:ET

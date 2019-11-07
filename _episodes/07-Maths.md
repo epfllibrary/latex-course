@@ -22,7 +22,7 @@ Inline formulas insert mathematical symbols right into a sentence, in this case,
 If an expression needs particular attention, as when displaying important steps or results, mathematical symbols can appear on their own line using the ```equation```environment, with this environment equations are numbered automatically, and can be referenced.
 
 
-{% latex filename=07-maths-environment minimal=true %}
+{% latex filename=07-maths-01 minimal=true %}
 
 for any integer $i$ the real number $x_i^2$
 
@@ -38,7 +38,7 @@ Both environment use the same way to write maths.
 
 A wealth of mathematical symbols and formatting commands are available in LaTeX. Some can readily be used with plain LaTeX, others are defined in specialized packages.
 
-{% latex filename=07-maths-writing minimal=true %}
+{% latex filename=07-maths-02 minimal=true %}
 
 Greek letters: $\alpha,  \beta, \gamma, \Gamma$
 

@@ -1,4 +1,4 @@
-# Conmmands with make
+# Commands with make
 
 ```make site```: compile the Jekyll
 

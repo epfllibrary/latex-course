@@ -56,5 +56,35 @@ A legend can be defined with the ```\caption{}```command inside the float enviro
 
 ## Tables
 
+Table are managed by the ```tabular```environment. The ```04-table-01.tex``` file below shows an example of a small table.
+
+{% latex filename=04-table-01  %}
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+
+\begin{document}
+This is my table :
+
+
+\begin{tabular}{|l|r|c|}
+   Name & Age & Size \\
+   \hline
+   Alice & 8 years & 120 cm \\
+   Bob & 10 years & 145 cm \\
+\end{tabular}
+
+\end{document}
+{% endlatex %}
+
+The parameter of the ```tabular```environment : ```{|l|r|c|}``` represents the number of columns (here 3), the letter (l,c,or r) represents the alignment of each column (left, centered or right). The vertical separator ```|``` will draw a vertical line.
+
+Each line is ended by ```\\``` and each row is separated by ```&```
+
+To draw a horizontal line, you can use the ```\hline```command.
+
 
 {% include links.md %}

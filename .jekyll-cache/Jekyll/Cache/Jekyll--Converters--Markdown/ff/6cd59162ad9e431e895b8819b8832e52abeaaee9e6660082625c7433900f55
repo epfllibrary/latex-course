@@ -1,4 +1,4 @@
-I"f<h2 id="floats">Floats</h2>
+I"o<h2 id="floats">Floats</h2>
 <p>LateX manages two kind of floats, the figures and the tables, they are called floats because they can be inserted anywhere in the documents and referenced in the text (like Figure 1).</p>
 
 <p>Figure and Table are managed the same way, they just have their distinct numbering.</p>
@@ -18,7 +18,6 @@ The optional parameter can specify the figure size for example <code class="lang
   <div class="latex-src">
     <h2> Tex file : <a href="../latex/tex/04-figure-01.tex">04-figure-01.tex</a></h2>
     <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
-
 
   <span class="nt">\begin{figure}</span>
   <span class="k">\includegraphics</span><span class="na">[width=5cm]</span><span class="p">{</span>fig/phd051608s<span class="p">}</span>
@@ -55,5 +54,48 @@ The optional parameter can specify the figure size for example <code class="lang
 </blockquote>
 
 <h2 id="tables">Tables</h2>
+
+<p>Table are managed by the <code class="language-html highlighter-rouge">tabular</code>environment. The <code class="language-html highlighter-rouge">04-table-01.tex</code> file below shows an example of a small table.</p>
+
+<div class="challenge">
+  <h2>04-table-01</h2>
+  <div class="latex-src">
+    <h2> Tex file : <a href="../latex/tex/04-table-01.tex">04-table-01.tex</a></h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
+
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+This is my table :
+
+
+<span class="nt">\begin{tabular}</span><span class="p">{</span>|l|r|c|<span class="p">}</span>
+   Name <span class="p">&amp;</span> Age <span class="p">&amp;</span> Size <span class="k">\\</span>
+   <span class="k">\hline</span>
+   Alice <span class="p">&amp;</span> 8 years <span class="p">&amp;</span> 120 cm <span class="k">\\</span>
+   Bob <span class="p">&amp;</span> 10 years <span class="p">&amp;</span> 145 cm <span class="k">\\</span>
+<span class="nt">\end{tabular}</span>
+
+<span class="nt">\end{document}</span>
+
+</code></pre></div>    </div>
+
+  </div>
+  <div class="latex-compil">
+    <h2> Compilation : <a href="../latex/pdf/04-table-01.pdf">04-table-01.pdf</a></h2>
+    <p><img src="../latex/png/04-table-01.png" /></p>
+  </div>
+
+</div>
+
+<p>The parameter of the <code class="language-html highlighter-rouge">tabular</code>environment : <code class="language-html highlighter-rouge">{|l|r|c|}</code> represents the number of columns (here 3), the letter (l,c,or r) represents the alignment of each column (left, centered or right). The vertical separator <code class="language-html highlighter-rouge">|</code> will draw a vertical line.</p>
+
+<p>Each line is ended by <code class="language-html highlighter-rouge">\\</code> and each row is separated by <code class="language-html highlighter-rouge"><span class="err">&amp;</span></code></p>
+
+<p>To draw a horizontal line, you can use the <code class="language-html highlighter-rouge">\hline</code>command.</p>
 
 :ET

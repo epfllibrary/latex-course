@@ -159,8 +159,8 @@ module Jekyll
         if @p["minimal"]
           source_file =File.join(site.config["source"],"_layouts","minimal.tex")
           source_tex = File.readlines(source_file).join
-          add_txt="%<-----> ADDED to minimal <----->\n"
-          latex_source=source_tex.gsub("\\end{document}\n",add_txt + latex_source+"\\end{document}\n")
+          add_txt='%<-----> ADDED to minimal <----->'
+          latex_source=source_tex.gsub('\end{document}',add_txt + latex_source+'\end{document}')
           src_disp=add_txt+src_disp
 
         # Source (insert in another file) managment

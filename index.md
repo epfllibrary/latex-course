@@ -8,12 +8,12 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 
 {% comment %} This is a comment in Liquid {% endcomment %}
 
-## Why learning Latex ?
+## Why learn Latex ?
 
-For multiple reason :
+For multiple reasons :
 * You want to write beautiful documents
 * You want to write a thesis, a book or an article
-* You want to manage citation
+* You want to manage citations
 * You want to write equations
 * You like to learn cool things !
 
@@ -22,7 +22,7 @@ If you recognize yourself in those lines, this class is for you ! This class wil
 
 > ## Prerequisites
 >
-> This course present a introduction to latex, you just need to know what is a text file and a PDF.
+> This course present a introduction to Latex, you just need to know what is a text file and a PDF.
 {: .prereq}
 
 {% include links.md %}

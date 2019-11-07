@@ -1,10 +1,10 @@
-I"R<h2 id="install-latex">Install LaTeX</h2>
+I"Š<h2 id="install-latex">Install LaTeX</h2>
 
 <p>Latex is composed of many softwares working together, in order to use them easily it exists what we call distribution : they combine all the needed tools in one big package.</p>
 
 <h3 id="install-latex-windows">Install Latex Windows</h3>
 
-<p>Download and install the windows texlive version(install-tl-windows.exe) <a href="https://tug.org/texlive/acquire-netinstall.html">https://tug.org/texlive/acquire-netinstall.html</a></p>
+<p>Download and install the windows texlive version(install-tl-windows.exe) <a href="https://tug.org/texlive/acquire-netinstall.html">https://tug.org/texlive/acquire-netinstall.html</a>. This is the distribution we will use during the class.</p>
 
 <p>You can also install the texmaker gui <a href="https://www.xm1math.net/texmaker">https://www.xm1math.net/texmaker</a></p>
 <h3 id="install-latex-macos">Install Latex MacOs</h3>

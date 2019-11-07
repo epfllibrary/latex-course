@@ -1,10 +1,10 @@
-I"•)<p>Here is the contents of the <code class="language-html highlighter-rouge">02-minimal.tex</code> file. It contains the minimal commands required to compile a Latex document. We will see a little further what does all of this.</p>
+I"A)<p>Below, you will get to know the minimal commands required to compile a LaTeX document. We will see a little further what each command does.</p>
 
 <blockquote class="callout">
   <h2 id="compilation">Compilation</h2>
-  <p>If you use a editor that integrates latex software you usually can called the compilation options inside the software.</p>
+  <p>If you use an editor that integrates LaTeX software, you can usually call the compilation options inside the software.</p>
 
-  <p>In texmaker you can compile by clicking by selecting PdfLatex option and then click on the <strong>Run</strong> button or use the <strong>Tools</strong> menu</p>
+  <p>In texmaker, you can compile by clicking by selecting PdfLatex option and then click on the <strong>Run</strong> button or use the <strong>Tools</strong> menu</p>
 
   <p>If you want to use the terminal the command is <code class="language-html highlighter-rouge">pdflatex your_file.txt</code> it will genrate a PDF file with the same name than your .tex file.</p>
 </blockquote>

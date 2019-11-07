@@ -8,7 +8,7 @@ Latex is composed of many softwares working together, in order to use them easil
 
 ### Install Latex Windows
 
-Download and install the windows texlive version(install-tl-windows.exe) <https://tug.org/texlive/acquire-netinstall.html>
+Download and install the windows texlive version(install-tl-windows.exe) <https://tug.org/texlive/acquire-netinstall.html>. This is the distribution we will use during the class.
 
 You can also install the texmaker gui <https://www.xm1math.net/texmaker>
 ### Install Latex MacOs

@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-10-31 15:41:47 +0100">
+    <meta http-equiv="last-modified" content="2019-11-07 08:49:32 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -123,7 +123,7 @@
           <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
           <ul class="dropdown-menu">
             
-            <li><a href="../01-LatexPrinciples/index.html">Latex Principles</a></li>
+            <li><a href="../01-LatexPrinciples/index.html">LaTeX Principles</a></li>
             
             <li><a href="../02-DocumentOrganization/index.html">Document Organization</a></li>
             
@@ -300,35 +300,34 @@
   <h2>05-reference</h2>
   <div class="latex-src">
     <h2> Tex file : <a href="../latex/tex/05-reference.tex">05-reference.tex</a></h2>
-    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
+    <p>~~~
+%&lt;—–&gt; ADDED to minimal &lt;—–&gt;</p>
 
+    <p>\tableofcontents</p>
 
-<span class="k">\tableofcontents</span>
+    <p>\newpage</p>
 
-<span class="k">\newpage</span>
+    <p>We will analyze the result using the carpentry method in Section \ref{sec:analysis}, then will present the results in the Section \ref{sec:results}.</p>
 
-We will analyze the result using the carpentry method in Section <span class="k">\ref</span><span class="p">{</span>sec:analysis<span class="p">}</span>, then will present the results in the Section <span class="k">\ref</span><span class="p">{</span>sec:results<span class="p">}</span>.
+    <p>\section{Analysis}\label{sec:analysis}</p>
 
-<span class="k">\section</span><span class="p">{</span>Analysis<span class="p">}</span><span class="k">\label</span><span class="p">{</span>sec:analysis<span class="p">}</span>
+    <p>All the the analysis has been done using Python and Latex and are resume in the Figure \ref{fig:analysis}</p>
 
-All the the analysis has been done using Python and Latex and are resume in the Figure <span class="k">\ref</span><span class="p">{</span>fig:analysis<span class="p">}</span>
+    <p>\begin{figure}
+\includegraphics[width=5cm]{fig/phd050611s}
+\caption{A beautiful figure that explain everything (from : http://phdcomics.com/comics/archive.php?comicid=1431)}
+\label{fig:analysis}
+\end{figure}</p>
 
-<span class="nt">\begin{figure}</span>
-<span class="k">\includegraphics</span><span class="na">[width=5cm]</span><span class="p">{</span>fig/phd050611s<span class="p">}</span>
-<span class="k">\caption</span><span class="p">{</span>A beautiful figure that explain everything (from : http://phdcomics.com/comics/archive.php?comicid=1431)<span class="p">}</span>
-<span class="k">\label</span><span class="p">{</span>fig:analysis<span class="p">}</span>
-<span class="nt">\end{figure}</span>
+    <p>\section{Results}\label{sec:results}</p>
 
-<span class="k">\section</span><span class="p">{</span>Results<span class="p">}</span><span class="k">\label</span><span class="p">{</span>sec:results<span class="p">}</span>
+    <p>Bla bla bla</p>
 
-Bla bla bla
+    <p>\section{Conclusion}\label{sec:conclusion}</p>
 
-<span class="k">\section</span><span class="p">{</span>Conclusion<span class="p">}</span><span class="k">\label</span><span class="p">{</span>sec:conclusion<span class="p">}</span>
+    <p>As described in the Section \ref{sec:analysis} and \ref{sec:results} respectively on page \pageref{sec:analysis} and \pageref{sec:results} we can conclude that reference is a great tool.</p>
 
-As described in the Section <span class="k">\ref</span><span class="p">{</span>sec:analysis<span class="p">}</span> and <span class="k">\ref</span><span class="p">{</span>sec:results<span class="p">}</span> respectively on page <span class="k">\pageref</span><span class="p">{</span>sec:analysis<span class="p">}</span> and <span class="k">\pageref</span><span class="p">{</span>sec:results<span class="p">}</span> we can conclude that reference is a great tool.
-
-
-</code></pre></div>    </div>
+    <p class="language-latex">~~~</p>
 
   </div>
   <div class="latex-compil">

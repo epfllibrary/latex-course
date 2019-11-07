@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-10-31 15:41:47 +0100">
+    <meta http-equiv="last-modified" content="2019-11-07 08:49:32 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -123,7 +123,7 @@
           <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
           <ul class="dropdown-menu">
             
-            <li><a href="../01-LatexPrinciples/index.html">Latex Principles</a></li>
+            <li><a href="../01-LatexPrinciples/index.html">LaTeX Principles</a></li>
             
             <li><a href="../02-DocumentOrganization/index.html">Document Organization</a></li>
             
@@ -284,56 +284,55 @@ Let’s see how we can change the fonts used in LaTeX</p>
   <h2>03-font-01</h2>
   <div class="latex-src">
     <h2> Tex file : <a href="../latex/tex/03-font-01.tex">03-font-01.tex</a></h2>
-    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <p>~~~</p>
 
-<span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
+    <p>\documentclass[a4paper]{article}</p>
 
-<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
-<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
-<span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
+    <p>\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}</p>
 
-<span class="nt">\begin{document}</span>
+    <p>\begin{document}</p>
 
-	Plain text
+    <div class="language-html highlighter-rouge"><pre class="highlight"><code>Plain text
 
-	<span class="k">\textit</span><span class="p">{</span>Italic text<span class="p">}</span>
+\textit{Italic text}
 
-	<span class="k">\textbf</span><span class="p">{</span>Bold text<span class="p">}</span>
+\textbf{Bold text}
+</code></pre>    </div>
 
-<span class="nt">\end{document}</span>
+    <p>\end{document}</p>
+
+    <div class="language-latex highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>: .language-latex<span class="p">}</span>
+
+&lt;/div&gt;
+&lt;div class="latex-compil" markdown="1"&gt; 
+&lt;h2&gt; Compilation : &lt;a href="../latex/pdf/03-font-01.pdf" &gt;03-font-01.pdf&lt;/a&gt;&lt;/h2&gt;
+&lt;img src="../latex/png/03-font-01.png" /&gt; 
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 
-</code></pre></div>    </div>
+With the commands ```<span class="k">\textit</span><span class="p">{</span>...<span class="p">}</span>``` and ```<span class="k">\textbf</span><span class="p">{</span>...<span class="p">}</span>```, you can modify parts of the text.
 
-  </div>
-  <div class="latex-compil">
-    <h2> Compilation : <a href="../latex/pdf/03-font-01.pdf">03-font-01.pdf</a></h2>
-    <p><img src="../latex/png/03-font-01.png" /></p>
-  </div>
+The size of the font can be changed by : (from the smallest to the biggest)
+* ```<span class="k">\tiny</span>```
+* ```<span class="k">\small</span>```
+* ```<span class="k">\normalsize</span>```
+* ```<span class="k">\large</span>```
+* ```<span class="k">\Large</span>```
+* ```<span class="k">\LARGE</span>```
+* ```<span class="k">\huge</span>```
+* ```<span class="k">\Huge</span>```
 
-</div>
+The size of the font is relative to size specified in the ```documentclass```
 
-<p>With the commands <code class="language-html highlighter-rouge">\textit{...}</code> and <code class="language-html highlighter-rouge">\textbf{...}</code>, you can modify parts of the text.</p>
+&lt;div class="challenge" markdown="1"&gt; 
+&lt;h2&gt;03-font-02&lt;/h2&gt;
+&lt;div class="latex-src" markdown="1"&gt; 
+&lt;h2&gt; Tex file : &lt;a href="../latex/tex/03-font-02.tex" &gt;03-font-02.tex&lt;/a&gt;&lt;/h2&gt;  ~~~
 
-<p>The size of the font can be changed by : (from the smallest to the biggest)</p>
-<ul>
-  <li><code class="language-html highlighter-rouge">\tiny</code></li>
-  <li><code class="language-html highlighter-rouge">\small</code></li>
-  <li><code class="language-html highlighter-rouge">\normalsize</code></li>
-  <li><code class="language-html highlighter-rouge">\large</code></li>
-  <li><code class="language-html highlighter-rouge">\Large</code></li>
-  <li><code class="language-html highlighter-rouge">\LARGE</code></li>
-  <li><code class="language-html highlighter-rouge">\huge</code></li>
-  <li><code class="language-html highlighter-rouge">\Huge</code></li>
-</ul>
-
-<p>The size of the font is relative to size specified in the <code class="language-html highlighter-rouge">documentclass</code></p>
-
-<div class="challenge">
-  <h2>03-font-02</h2>
-  <div class="latex-src">
-    <h2> Tex file : <a href="../latex/tex/03-font-02.tex">03-font-02.tex</a></h2>
-    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
 <span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
 
@@ -358,7 +357,7 @@ Let’s see how we can change the fonts used in LaTeX</p>
 <span class="nt">\end{document}</span>
 
 
-</code></pre></div>    </div>
+</code></pre>    </div>
 
   </div>
   <div class="latex-compil">
@@ -377,56 +376,58 @@ Let’s see how we can change the fonts used in LaTeX</p>
   <h2>03-para-01</h2>
   <div class="latex-src">
     <h2> Tex file : <a href="../latex/tex/03-para-01.tex">03-para-01.tex</a></h2>
-    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
+    <p>~~~
+%&lt;—–&gt; ADDED to minimal &lt;—–&gt;</p>
 
-
-<span class="nt">\begin{flushright}</span>
+    <p>\begin{flushright}
 This text will be right-aligned
-<span class="nt">\end{flushright}</span>
+\end{flushright}</p>
 
-<span class="nt">\begin{center}</span>
+    <p>\begin{center}
 This text will be centered
-<span class="nt">\end{center}</span>
+\end{center}</p>
 
-<span class="nt">\begin{flushleft}</span>
+    <p>\begin{flushleft}
 This text will be left-aligned
-<span class="nt">\end{flushleft}</span>
+\end{flushleft}</p>
 
-This line
-and this line will be attached
+    <p>This line
+and this line will be attached</p>
 
-This line
+    <p>This line</p>
 
-and this line will be separated
+    <p>and this line will be separated</p>
 
-This line <span class="k">\newline</span>
-And this line will be separated
+    <p>This line \newline
+And this line will be separated</p>
+
+    <div class="language-latex highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>: .language-latex<span class="p">}</span>
+
+&lt;/div&gt;
+&lt;div class="latex-compil" markdown="1"&gt; 
+&lt;h2&gt; Compilation : &lt;a href="../latex/pdf/03-para-01.pdf" &gt;03-para-01.pdf&lt;/a&gt;&lt;/h2&gt;
+&lt;img src="../latex/png/03-para-01.png" /&gt; 
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 
-</code></pre></div>    </div>
+## Page
 
-  </div>
-  <div class="latex-compil">
-    <h2> Compilation : <a href="../latex/pdf/03-para-01.pdf">03-para-01.pdf</a></h2>
-    <p><img src="../latex/png/03-para-01.png" /></p>
-  </div>
+To create a new page just put ```<span class="k">\newpage</span>```, if you have a double sided document the command ```<span class="k">\cleardoublepage</span>```will make sure that the new page will be an odd page.
 
-</div>
+## List
+LaTeX manage two kind of lists, list that are numbered or the list that are not.
+The numbered list uses the environment ```enumerate```and the non-ordered the environment ```itemize```
+For both environment a new element of the list is defined with the ```<span class="k">\item</span>``` command.
 
-<h2 id="page">Page</h2>
 
-<p>To create a new page just put <code class="language-html highlighter-rouge">\newpage</code>, if you have a double sided document the command <code class="language-html highlighter-rouge">\cleardoublepage</code>will make sure that the new page will be an odd page.</p>
 
-<h2 id="list">List</h2>
-<p>LaTeX manage two kind of lists, list that are numbered or the list that are not.
-The numbered list uses the environment <code class="language-html highlighter-rouge">enumerate</code>and the non-ordered the environment <code class="language-html highlighter-rouge">itemize</code>
-For both environment a new element of the list is defined with the <code class="language-html highlighter-rouge">\item</code> command.</p>
-
-<div class="challenge">
-  <h2>03-list-01</h2>
-  <div class="latex-src">
-    <h2> Tex file : <a href="../latex/tex/03-list-01.tex">03-list-01.tex</a></h2>
-    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
+&lt;div class="challenge" markdown="1"&gt; 
+&lt;h2&gt;03-list-01&lt;/h2&gt;
+&lt;div class="latex-src" markdown="1"&gt; 
+&lt;h2&gt; Tex file : &lt;a href="../latex/tex/03-list-01.tex" &gt;03-list-01.tex&lt;/a&gt;&lt;/h2&gt;  ~~~
+<span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
 
 
 <span class="nt">\begin{enumerate}</span>
@@ -435,7 +436,7 @@ For both environment a new element of the list is defined with the <code class="
 <span class="nt">\end{enumerate}</span>
 
 
-</code></pre></div>    </div>
+</code></pre>    </div>
 
   </div>
   <div class="latex-compil">
@@ -451,40 +452,40 @@ For both environment a new element of the list is defined with the <code class="
   <h2>03-list-02</h2>
   <div class="latex-src">
     <h2> Tex file : <a href="../latex/tex/03-list-02.tex">03-list-02.tex</a></h2>
-    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
+    <p>~~~
+%&lt;—–&gt; ADDED to minimal &lt;—–&gt;</p>
+
+    <p>\begin{itemize}
+	\item One entry in the list
+	\item[-] Another entry in the list with a -
+\end{itemize}</p>
+
+    <div class="language-latex highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>: .language-latex<span class="p">}</span>
+
+&lt;/div&gt;
+&lt;div class="latex-compil" markdown="1"&gt; 
+&lt;h2&gt; Compilation : &lt;a href="../latex/pdf/03-list-02.pdf" &gt;03-list-02.pdf&lt;/a&gt;&lt;/h2&gt;
+&lt;img src="../latex/png/03-list-02.png" /&gt; 
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 
-<span class="nt">\begin{itemize}</span>
-	<span class="k">\item</span> One entry in the list
-	<span class="k">\item</span><span class="na">[-]</span> Another entry in the list with a -
-<span class="nt">\end{itemize}</span>
+## Footnotes
 
+Footnotes can be added with the command ```<span class="k">\footnote</span><span class="p">{}</span>``` with the content of your note inside the <span class="p">{</span>], put the command in your text where you want the number of the footnote (without space) and LaTeX will automatically put the note at the bottom of the page with automatic numbering.
 
-</code></pre></div>    </div>
-
-  </div>
-  <div class="latex-compil">
-    <h2> Compilation : <a href="../latex/pdf/03-list-02.pdf">03-list-02.pdf</a></h2>
-    <p><img src="../latex/png/03-list-02.png" /></p>
-  </div>
-
-</div>
-
-<h2 id="footnotes">Footnotes</h2>
-
-<p>Footnotes can be added with the command <code class="language-html highlighter-rouge">\footnote{}</code> with the content of your note inside the {], put the command in your text where you want the number of the footnote (without space) and LaTeX will automatically put the note at the bottom of the page with automatic numbering.</p>
-
-<div class="challenge">
-  <h2>03-footnotes-01</h2>
-  <div class="latex-src">
-    <h2> Tex file : <a href="../latex/tex/03-footnotes-01.tex">03-footnotes-01.tex</a></h2>
-    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
+&lt;div class="challenge" markdown="1"&gt; 
+&lt;h2&gt;03-footnotes-01&lt;/h2&gt;
+&lt;div class="latex-src" markdown="1"&gt; 
+&lt;h2&gt; Tex file : &lt;a href="../latex/tex/03-footnotes-01.tex" &gt;03-footnotes-01.tex&lt;/a&gt;&lt;/h2&gt;  ~~~
+<span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
 
 
 I'm always correct and always I always say the truth<span class="k">\footnote</span><span class="p">{</span>Even when I'm lying<span class="p">}</span>
 
 
-</code></pre></div>    </div>
+</code></pre>    </div>
 
   </div>
   <div class="latex-compil latex-foldable">
@@ -505,22 +506,22 @@ I'm always correct and always I always say the truth<span class="k">\footnote</s
   <h2>03-code-01</h2>
   <div class="latex-src">
     <h2> Tex file : <a href="../latex/tex/03-code-01.tex">03-code-01.tex</a></h2>
-    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
+    <p>~~~
+%&lt;—–&gt; ADDED to minimal &lt;—–&gt;</p>
 
-Here is my code that does a lot of beautiful work
+    <p>Here is my code that does a lot of beautiful work</p>
 
-<span class="nt">\begin{verbatim}</span>
+    <p>\begin{verbatim}
 if i&lt;0 then
 	j = j + 1
 else
 	j = j - 1
 endif
-<span class="nt">\end{verbatim}</span>
+\end{verbatim}</p>
 
-and then the data analysis was done by ...
+    <p>and then the data analysis was done by …</p>
 
-
-</code></pre></div>    </div>
+    <p class="language-latex">~~~</p>
 
   </div>
   <div class="latex-compil">

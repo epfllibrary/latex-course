@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-11-07 09:20:50 +0100">
+    <meta http-equiv="last-modified" content="2019-11-07 15:04:33 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -526,7 +526,66 @@ and then the data analysis was done by ...
 
 </div>
 
-<p><strong>TODO</strong> : Exercices</p>
+<blockquote class="challenge">
+  <h2 id="align-paragraph">Align paragraph</h2>
+
+  <p>I would like to right-aligned  my text .</p>
+
+  <p>In order to do that I need to write :</p>
+
+  <ol>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{flushright}</span>
+  This text will be right-aligned
+<span class="nt">\end{flushright}</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{alignright}</span>
+  This text will be right-aligned
+<span class="nt">\end{alignright}</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\flushright</span><span class="p">{</span>This text will be right-aligned<span class="p">}</span>
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
+  <blockquote class="solution">
+
+    <h2 id="solution">Solution</h2>
+    <ol>
+      <li>Is correct : The text will be right-aligned</li>
+      <li>The name of the environment is <code class="language-html highlighter-rouge">flushright</code></li>
+      <li>In order to align I need to use an environment not a command</li>
+    </ol>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="new-page">New page</h2>
+
+  <p>I would like to write a book, with normal font size of 14pt and two-sided.
+Put some text and add a page that starts on a odd side and put again some text on this page.</p>
+
+  <p>Please try to write the corresponding source file.</p>
+
+  <blockquote class="solution">
+    <h2 id="solution-1">Solution</h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="na">[a4paper,14pt,twoside]</span><span class="p">{</span>book<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span>
+<span class="nt">\begin{document}</span>
+This is my example text. I like latex
+<span class="k">\cleardoublepage</span>
+This is another chapter of my Latex life
+<span class="nt">\end{document}</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
 
 
 

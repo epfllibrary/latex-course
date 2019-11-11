@@ -18,7 +18,8 @@ keypoints:
 
 ## Fonts
 We know how to write simple plain text.
-Let's see how we can change the fonts used in LaTeX
+Let's see how we can change the fonts used in LaTeX.
+
 
 {% latex filename=03-font-01 %}
 
@@ -82,7 +83,6 @@ The size of the font is relative to size specified in the ```documentclass```
 
 ## Paragraphs
 You may have realized that LaTeX doesn't jump to a new line when you press enter in your source file this is because you need to jump at least two lines for LaTex to jump one (it will ignore the extra lines you add). You can also jump line by using the ```\\``` at this end of the line.
-
 
 By default LaTeX justify the paragraph it is possible to change that inside a environment ```flushright``` ```center``` or ```flushleft```
 

@@ -3,10 +3,10 @@ title: "References"
 teaching: 10
 exercises: 5
 questions:
-- "How do I manage cross reference inside a document ?"
-- "How do I make a table of contents"
+- "How do I manage cross referencing inside a document ?"
+- "How do I make a table of contents?"
 objectives:
-- "Cite my Figure, Table, Equations or even Chapters for example inside my document"
+- "Refer to my figures, tables, equations or even chapters from within my document"
 - "Create a table of contents"
 keypoints:
 - "```\\part{}```,```\\chapter{}```, ```\\section{}```,```\\subsection{}```,```\\subsubsection{}```,```\\paragraph{}``` are used to specify the hierarchical structure of the document"
@@ -17,16 +17,16 @@ keypoints:
 
 ---
 
-References in latex are internal citation in your document, they allow you to refer to another part of the document easily, for example you might want to write _"as I explained in the Figure : xxx"_ and replace the _xxx_ by the correct value.
+References in LaTeX are internal links within your document. They allow you to refer to another part of the document easily. For instance, you might want to write _"as I explained in the figure : xxx"_ and replace the _xxx_ by the correct value.
 
-In order to do that you need to put a tag to the element you want to refer it can be anything like a float, an equation, a chapter etc... the command to specify a tag is ```\label{}``` and the parameter is the name of the tag. The parameter can be anything you like (it's usually a good practice to have a naming convention).
+In order to do that, you need to insert a tag to the element you want to refer to. It can be anything like a float, an equation, a chapter, etc. The command to specify a tag is ```\label{}``` and the parameter is the name of the tag. The parameter can be anything you like (it's usually a good practice to have a naming convention).
 
 The command to get the position of the label is ```\ref{}```and the parameter is the name of the tag defined in the label described before.  You can put the command anywhere in the document. The command ```\pageref{}``` will display the number of the page in which is the label.
 
 
 
 > ## Table of contents
-> To define the hierarchical structure of the document Latex provides special commands that defined chapter, section, etc :
+> To define the hierarchical structure of the document LaTeX provides special commands that defined chapter, section, etc. :
 > * ```\part{}```
 > * ```\chapter{}```
 > *  ```\section{}```,

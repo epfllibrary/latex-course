@@ -26,17 +26,17 @@ The command to get the position of the label is ```\ref{}```and the parameter is
 
 
 > ## Table of contents
-> To define the hierarchical structure of the document LaTeX provides special commands that defined chapter, section, etc. :
+> To define the hierarchical structure of the document LaTeX provides special commands that defines chapter, section, etc. :
 > * ```\part{}```
 > * ```\chapter{}```
-> *  ```\section{}```,
+> * ```\section{}```
 > * ```\subsection{}```
 > * ```\subsubsection{}```
 > * ```\paragraph{}```
 >
 > You can generate the table of contents of your document automatically during the compilation by using the ```\tableofcontents``` command.
 >
-> Other tables can be generated like ```\listoffigures``` or ```\listoftables```they will generate the list of figure or tables (float).
+> Other tables can be generated like ```\listoffigures``` or ```\listoftables```they will generate the list of figures or tables (float).
 {: .callout}
 
 
@@ -46,11 +46,11 @@ The command to get the position of the label is ```\ref{}```and the parameter is
 
 \newpage
 
-We will analyze the result using the carpentry method in Section \ref{sec:analysis}, then will present the results in the Section \ref{sec:results}.
+We will analyze the result using the Carpentry method in section \ref{sec:analysis}, then will present the results in section \ref{sec:results}.
 
 \section{Analysis}\label{sec:analysis}
 
-All the the analysis has been done using Python and Latex and are resume in the Figure \ref{fig:analysis}
+All the the analysis has been done using Python and LaTeX and are summarized in figure \ref{fig:analysis}
 
 \begin{figure}
 \includegraphics[width=5cm]{fig/phd050611s}
@@ -60,12 +60,16 @@ All the the analysis has been done using Python and Latex and are resume in the 
 
 \section{Results}\label{sec:results}
 
-Bla bla bla
+Bla bla bla [...]
 
 \section{Conclusion}\label{sec:conclusion}
 
-As described in the Section \ref{sec:analysis} and \ref{sec:results} respectively on page \pageref{sec:analysis} and \pageref{sec:results} we can conclude that reference is a great tool.
+As described in section \ref{sec:analysis} and \ref{sec:results} respectively on page \pageref{sec:analysis} and \pageref{sec:results}, we can conclude that reference in LaTeX is a great feature.
 
 {% endlatex %}
+
+## Exercises
+
+
 
 {% include links.md %}

@@ -169,16 +169,15 @@ else
 endif
 \end{verbatim}
 
-and then the data analysis was done by ...
+and then the data analysis was done by [...].
 
 {% endlatex %}
 
 ## Exercises
 
-> ## Align paragraph
->
-> I would like to right-aligned  my text .
->
+> ## Table of content 
+> To do
+> >
 > In order to do that I need to write :
 >
 > 1. ~~~

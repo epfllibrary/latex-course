@@ -101,17 +101,15 @@ To draw a horizontal line, you can use the ```\hline```command.
 >>
 > > ## Solution
 > > Possible solution : 
-> >	~~~
-> >	\begin{tabular}{|l|c|c}
-> >		\cline{2-3} & Paris & Oslo \\
-> >		\hline
-> >		Rome & 1447 km & 2565 km \\ 
-> > 		Prague & 1061 km & 1202 km \\
-> >	\end{tabular}
-> >	~~~
-> >	 {: .language-latex}
-> 
->
+> >~~~
+> >\begin{tabular}{|l|c|c}
+> >\cline{2-3} & Paris & Oslo \\
+> >\hline
+> >Rome & 1447 km & 2565 km \\ 
+> >Prague & 1061 km & 1202 km \\
+> >\end{tabular}
+> >~~~
+> >{: .language-latex}
 > {: .solution}
 {: .challenge}
 

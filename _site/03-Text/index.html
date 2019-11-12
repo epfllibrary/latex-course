@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-11-07 18:46:47 +0100">
+    <meta http-equiv="last-modified" content="2019-11-12 11:54:42 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -274,7 +274,7 @@
 
 <h2 id="fonts">Fonts</h2>
 <p>We know how to write simple plain text.
-Let’s see how we can change the fonts used in LaTeX</p>
+Let’s see how we can change the fonts used in LaTeX.</p>
 
 <div class="challenge">
   <h2>03-font-01</h2>
@@ -309,9 +309,10 @@ Let’s see how we can change the fonts used in LaTeX</p>
 
 </div>
 
-<p>With the commands <code class="language-html highlighter-rouge">\textit{...}</code> and <code class="language-html highlighter-rouge">\textbf{...}</code>, you can modify parts of the text.</p>
+<p>With the commands <code class="language-html highlighter-rouge">\textit{...}</code> and <code class="language-html highlighter-rouge">\textbf{...}</code>, you can modify parts of the text. 
+Keep in mind that such modifications are useful to emphazise your point but should be used consistently and parsimoniously.</p>
 
-<p>The size of the font can be changed by : (from the smallest to the biggest)</p>
+<p>The size of the font can be changed with the following commands : (from the smallest to the biggest)</p>
 <ul>
   <li><code class="language-html highlighter-rouge">\tiny{...}</code></li>
   <li><code class="language-html highlighter-rouge">\small{...}</code></li>
@@ -323,7 +324,7 @@ Let’s see how we can change the fonts used in LaTeX</p>
   <li><code class="language-html highlighter-rouge">\Huge{...}</code></li>
 </ul>
 
-<p>The size of the font is relative to size specified in the <code class="language-html highlighter-rouge">documentclass</code></p>
+<p>The size of the font is relative to the size specified in the <code class="language-html highlighter-rouge">documentclass</code></p>
 
 <div class="challenge">
   <h2>03-font-02</h2>
@@ -365,9 +366,10 @@ Let’s see how we can change the fonts used in LaTeX</p>
 </div>
 
 <h2 id="paragraphs">Paragraphs</h2>
-<p>You may have realized that LaTeX doesn’t jump to a new line when you press enter in your source file this is because you need to jump at least two lines for LaTex to jump one (it will ignore the extra lines you add). You can also jump line by using the <code class="language-html highlighter-rouge">\\</code> at this end of the line.</p>
+<p>You may have realized that LaTeX doesn’t jump to a new line when you press enter in your source file. This is because, you need to jump at least two lines in the source file for LaTex to jump one in the compiled document
+ (it will ignore the extra lines you add). You can also jump line by using the <code class="language-html highlighter-rouge">\\</code> at this end of the line.</p>
 
-<p>By default LaTeX justify the paragraph it is possible to change that inside a environment <code class="language-html highlighter-rouge">flushright</code> <code class="language-html highlighter-rouge">center</code> or <code class="language-html highlighter-rouge">flushleft</code></p>
+<p>By default, LaTeX justifies the paragraph. It is possible to change that inside an  environment: <code class="language-html highlighter-rouge">flushright</code> <code class="language-html highlighter-rouge">center</code> or <code class="language-html highlighter-rouge">flushleft</code></p>
 
 <div class="challenge">
   <h2>03-para-01</h2>
@@ -410,12 +412,12 @@ And this line will be separated
 
 <h2 id="page">Page</h2>
 
-<p>To create a new page just put <code class="language-html highlighter-rouge">\newpage</code>, if you have a double sided document the command <code class="language-html highlighter-rouge">\cleardoublepage</code>will make sure that the new page will be an odd page.</p>
+<p>To create a new page, insert <code class="language-html highlighter-rouge">\newpage</code>. If you have a double sided document, the command <code class="language-html highlighter-rouge">\cleardoublepage</code>will make sure that the new page will be an odd page.</p>
 
 <h2 id="list">List</h2>
-<p>LaTeX manage two kind of lists, list that are numbered or the list that are not.
-The numbered list uses the environment <code class="language-html highlighter-rouge">enumerate</code>and the non-ordered the environment <code class="language-html highlighter-rouge">itemize</code>
-For both environment a new element of the list is defined with the <code class="language-html highlighter-rouge">\item</code> command.</p>
+<p>LaTeX manages two kinds of lists: lists that are numbered or lists that are not.
+The numbered list uses the environment <code class="language-html highlighter-rouge">enumerate</code>and the non-ordered list uses the environment <code class="language-html highlighter-rouge">itemize</code>
+For both environments a new element of the list is defined with the <code class="language-html highlighter-rouge">\item</code> command.</p>
 
 <div class="challenge">
   <h2>03-list-01</h2>
@@ -465,7 +467,8 @@ For both environment a new element of the list is defined with the <code class="
 
 <h2 id="footnotes">Footnotes</h2>
 
-<p>Footnotes can be added with the command <code class="language-html highlighter-rouge">\footnote{}</code> with the content of your note inside the {], put the command in your text where you want the number of the footnote (without space) and LaTeX will automatically put the note at the bottom of the page with automatic numbering.</p>
+<p>Footnotes can be added with the command <code class="language-html highlighter-rouge">\footnote{}</code> with the content of your note inside the {}. Put the command in your text, where you want the number of the footnote to appear (without space)
+ and LaTeX will automatically put the note at the bottom of the page with automatic numbering.</p>
 
 <div class="challenge">
   <h2>03-footnotes-01</h2>
@@ -473,7 +476,7 @@ For both environment a new element of the list is defined with the <code class="
     <h2> Tex file : <a href="../latex/tex/03-footnotes-01.tex">03-footnotes-01.tex</a></h2>
     <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
 
-I'm always correct and always I always say the truth<span class="k">\footnote</span><span class="p">{</span>Even when I'm lying<span class="p">}</span>
+I'm always correct and I always say the truth<span class="k">\footnote</span><span class="p">{</span>Even when I'm lying<span class="p">}</span>
 
 
 </code></pre></div>    </div>
@@ -491,7 +494,7 @@ I'm always correct and always I always say the truth<span class="k">\footnote</s
 
 <h2 id="code">Code</h2>
 
-<p>If you want to write programs (code) inside your document you can use the <code class="language-html highlighter-rouge">verbatim</code>environment.</p>
+<p>If you want to write code inside your document, you can use the <code class="language-html highlighter-rouge">verbatim</code>environment.</p>
 
 <div class="challenge">
   <h2>03-code-01</h2>
@@ -508,7 +511,7 @@ else
 endif
 <span class="nt">\end{verbatim}</span>
 
-and then the data analysis was done by ...
+and then the data analysis was done by [...].
 
 
 </code></pre></div>    </div>
@@ -521,12 +524,15 @@ and then the data analysis was done by ...
 
 </div>
 
+<h2 id="exercises">Exercises</h2>
+
 <blockquote class="challenge">
-  <h2 id="align-paragraph">Align paragraph</h2>
+  <h2 id="table-of-content">Table of content</h2>
+  <p>To do</p>
+  <blockquote>
 
-  <p>I would like to right-aligned  my text .</p>
-
-  <p>In order to do that I need to write :</p>
+    <p>In order to do that I need to write :</p>
+  </blockquote>
 
   <ol>
     <li>

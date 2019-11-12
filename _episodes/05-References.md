@@ -46,6 +46,7 @@ The command to get the position of the label is ```\ref{}```and the parameter is
 
 \newpage
 
+Some introductory sentences, followed by the context of the work and information about the structure of the document. [...]
 We will analyze the result using the Carpentry method in section \ref{sec:analysis}, then will present the results in section \ref{sec:results}.
 
 \section{Analysis}\label{sec:analysis}
@@ -70,6 +71,39 @@ As described in section \ref{sec:analysis} and \ref{sec:results} respectively on
 
 ## Exercises
 
+> ## Add list of figures
+> 
+> At the end of my document, I would like to add a list of figures. Which command do I use ?
+>
+> 1. \listfigures{}
+>
+> 2. \begin{list}
+>
+> 3. \listoffigures
+>
+> > ## Solution
+> > 1. Does not exist.
+> > 2. Is the environment to create lists but does not automate the action.
+> > 3. Is correct. Works the same way as ```\tableofcontents```.
+> >
+> {: .solution}
+{: .challenge}
 
+> ## Subsections, sections and chapters
+>
+> Your are writing a report. 
+> In your first chapter "State of the art", you would like to include a section called "Methodology". In this section, there are two subsections, "Information sources" and "Selection criterias". How can you include this structure ?
+>
+> > ## Solution
+> > ~~~
+> > \chapter{State of the Art}
+> > \section{Methodology}
+> > \subsection{Information sources}
+> > \subsection{Selection criteria}
+> > ~~~
+> > {: .language-latex}
+> > Note : For ```\chapter{}``` to work, your document must be a book or a report.
+> {: .solution}
+{: .challenge}
 
 {% include links.md %}

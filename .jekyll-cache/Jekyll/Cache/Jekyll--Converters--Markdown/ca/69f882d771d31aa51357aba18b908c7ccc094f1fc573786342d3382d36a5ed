@@ -1,4 +1,4 @@
-I"C	<h2 id="what-it-is">What it is</h2>
+I"N	<h2 id="what-it-is">What it is</h2>
 
 <p>LaTeX is a typesetting system, you can use it for writing articles, books, thesis or any kind of written document.</p>
 
@@ -14,7 +14,7 @@
 
 <p>As the author, you edit a source file which is just a simple text file, containing your text along with formatting commands. Those commands will be read during the compilation and will lead to the final document.</p>
 
-<p><strong>TODO</strong> Graphique presentant le principe</p>
+<p><img src="../fig/compilation.png" alt="compilation principle" /></p>
 
 <h2 id="who-does-what">Who does what</h2>
 
@@ -23,7 +23,7 @@
 <p>The compilation is in charge of the layout. It will translate your intentions into graphical design using pre-established style sheets and adhering to typographic conventions.</p>
 
 <h2 id="why-it-is-nice">Why it is nice</h2>
-<p>By separating the content (the text and the formating) from the form (how it will look like) LaTeX has a lot of nice features that are hard to beat :</p>
+<p>By separating the content (the text and the formatting) from the form (how it will look like) LaTeX has a lot of nice features that are hard to beat :</p>
 
 <ul>
   <li>The document will always looks nice, because the pre-established style are designed to be functional and readable</li>

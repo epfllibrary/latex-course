@@ -1,4 +1,4 @@
-I"Š<h2 id="install-latex">Install LaTeX</h2>
+I"®<h2 id="install-latex">Install LaTeX</h2>
 
 <p>Latex is composed of many softwares working together, in order to use them easily it exists what we call distribution : they combine all the needed tools in one big package.</p>
 
@@ -28,5 +28,9 @@
 <h4 id="fedora-and-yum-based-distribution">Fedora and yum based distribution</h4>
 
 <p><code class="language-html highlighter-rouge">yum install texlive-scheme-full</code></p>
+
+<h2 id="download-example-files-optionnal">Download example files (optionnal)</h2>
+
+<p>You can download all the .tex file used in this course : <a href="https://github.com/epfllibrary/latex-examples/archive/master.zip">https://github.com/epfllibrary/latex-examples/archive/master.zip</a></p>
 
 :ET

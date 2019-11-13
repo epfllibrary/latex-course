@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-11-07 18:46:47 +0100">
+    <meta http-equiv="last-modified" content="2019-11-11 10:00:21 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -331,11 +331,118 @@ Arrows: <span class="p">$</span><span class="nv">\mapsto</span><span class="nb">
 
 <p>You can use <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">Wikibook Latex Math</a> to see all the possibilities.</p>
 
-<p><strong>TODO</strong></p>
-<ul>
-  <li>Text ?</li>
-  <li>Exercices ?</li>
-</ul>
+<h2 id="text-in-math-mode">Text in math mode</h2>
+
+<p>Writing text in math mode can be tricky as math mode removes the spacing between words:</p>
+
+<div class="challenge">
+  <h2>07-maths-03</h2>
+  <div class="latex-src">
+    <h2> Tex file : <a href="../latex/tex/07-maths-03.tex">07-maths-03.tex</a></h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
+
+The mathematical formatting does not suit plan text:
+<span class="nt">\begin{equation}</span>
+	This is plan text in math mode.
+<span class="nt">\end{equation}</span>
+You have to switch back to text mode inside the math environment:
+<span class="nt">\begin{equation}</span>
+	<span class="k">\textrm</span><span class="p">{</span>This is plan text in math mode.<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+This can be useful in equations incorporating comments, explanations, etc. :
+<span class="nt">\begin{equation}</span>
+	f(x) = <span class="k">\left\{</span> <span class="nt">\begin{array}</span><span class="p">{</span>l<span class="p">}</span> <span class="k">\textrm</span><span class="p">{$</span><span class="m">1</span><span class="p">$</span> if <span class="p">$</span><span class="nb">x</span><span class="p">$</span> is odd,<span class="p">}</span> <span class="k">\\</span>
+<span class="k">\textrm</span><span class="p">{$</span><span class="m">0</span><span class="p">$</span> if <span class="p">$</span><span class="nb">x</span><span class="p">$</span> is even.<span class="p">}</span> <span class="nt">\end{array}</span><span class="k">\right</span>.
+<span class="nt">\end{equation}</span>
+
+</code></pre></div>    </div>
+
+  </div>
+  <div class="latex-compil">
+    <h2> Compilation : <a href="../latex/pdf/07-maths-03.pdf">07-maths-03.pdf</a></h2>
+    <p><img src="../latex/png/07-maths-03.png" /></p>
+  </div>
+
+</div>
+
+<p>## Examples / Exercices</p>
+<div class="challenge">
+  <h2>07-maths-examples</h2>
+  <div class="latex-src">
+    <h2> Tex file : <a href="../latex/tex/07-maths-examples.tex">07-maths-examples.tex</a></h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
+
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+<span class="k">\section</span><span class="p">{</span>Exercises<span class="p">}</span>
+All examples below can done more easily and prettily using advanced packages, but the solutions proposed only make use of standard <span class="k">\LaTeX</span> tools.
+
+<span class="k">\subsection</span><span class="p">{</span>Parentheses<span class="p">}</span>
+Braces
+<span class="nt">\begin{equation}</span>
+	X = <span class="k">\{</span>1,2,3,4<span class="k">\}</span>
+<span class="nt">\end{equation}</span>
+Square brackets
+<span class="nt">\begin{equation}</span>
+	X[1]
+<span class="nt">\end{equation}</span>
+Parentheses
+<span class="nt">\begin{equation}</span>
+	f(x):= y / (1-x)<span class="p">^</span>2
+<span class="nt">\end{equation}</span>
+<span class="k">\subsection</span><span class="p">{</span>Dots<span class="p">}</span>
+<span class="nt">\begin{equation}</span>
+	X = <span class="k">\{</span>1,<span class="k">\dots</span>,4<span class="k">\}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\subsection</span><span class="p">{</span>Matrices<span class="p">}</span>
+<span class="nt">\begin{equation}</span>
+	A = <span class="k">\left</span>( <span class="nt">\begin{array}</span><span class="p">{</span>cc<span class="p">}</span> 1  <span class="p">&amp;</span> 2 <span class="k">\\</span> 3 <span class="p">&amp;</span> 4 <span class="nt">\end{array}</span> <span class="k">\right</span>)
+<span class="nt">\end{equation}</span>
+<span class="k">\subsection</span><span class="p">{</span>summary<span class="p">}</span>
+<span class="nt">\begin{equation}</span>
+	A = <span class="k">\left</span>( <span class="nt">\begin{array}</span><span class="p">{</span>ccc<span class="p">}</span> a<span class="p">_{</span>11<span class="p">}</span> <span class="p">&amp;</span> <span class="k">\cdots</span> <span class="p">&amp;</span> a<span class="p">_{</span>1n<span class="p">}</span> <span class="k">\\</span> <span class="k">\vdots</span> <span class="p">&amp;</span> <span class="p">&amp;</span> <span class="k">\vdots</span> <span class="k">\\</span> a<span class="p">_{</span>m1<span class="p">}</span> <span class="p">&amp;</span> <span class="k">\cdots</span> <span class="p">&amp;</span> a<span class="p">_{</span>mn<span class="p">}</span><span class="nt">\end{array}</span> <span class="k">\right</span>)
+<span class="nt">\end{equation}</span>
+<span class="k">\subsection</span><span class="p">{</span>Predefined Symbols<span class="p">}</span>
+<span class="nt">\begin{equation}</span>
+	<span class="k">\pi</span>, <span class="k">\pm\infty</span>, <span class="k">\emptyset</span>, <span class="k">\varepsilon</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\subsection</span><span class="p">{</span>Predefined functions<span class="p">}</span>
+Frequently used functions like sinus, cosinus, limit, infimum, supremum, etc. should not appear in math mode's italic style, that os reserved fro variables.
+
+Sinus
+<span class="nt">\begin{equation}</span>
+	<span class="k">\sin</span>(<span class="k">\pi</span>)
+<span class="nt">\end{equation}</span>
+Limit
+<span class="nt">\begin{equation}</span>
+	<span class="k">\lim</span><span class="p">_{</span>x<span class="k">\rightarrow</span> 0<span class="p">_{</span>+<span class="p">}}</span> <span class="k">\frac</span><span class="p">{</span><span class="k">\sin</span>(x)<span class="p">}{</span>x<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\subsection</span><span class="p">{</span>Sums and integrals<span class="p">}</span>
+Sums
+<span class="nt">\begin{equation}</span>
+	<span class="k">\sum</span><span class="p">_{</span>i=1<span class="p">}^{</span>N<span class="p">}</span>i = <span class="k">\frac</span><span class="p">{</span>N(N+1)<span class="p">}{</span>2<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+Integrals
+<span class="nt">\begin{equation}</span>
+	<span class="k">\int</span><span class="p">_{</span>-<span class="k">\infty</span><span class="p">}^{</span>+<span class="k">\infty</span><span class="p">}</span>e<span class="p">^{</span>-<span class="k">\frac</span><span class="p">{</span>x<span class="p">^</span>2<span class="p">}{</span>2<span class="p">}}</span>
+<span class="nt">\end{equation}</span>
+<span class="nt">\end{document}</span>
+
+
+</code></pre></div>    </div>
+
+  </div>
+  <div class="latex-compil">
+    <h2> Compilation : <a href="../latex/pdf/07-maths-examples.pdf">07-maths-examples.pdf</a></h2>
+    <p><img src="../latex/png/07-maths-examples.png" /></p>
+  </div>
+
+</div>
 
 
 

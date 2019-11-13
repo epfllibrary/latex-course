@@ -7,26 +7,25 @@ questions:
 objectives:
 - "Create in-text citations"
 - "Create final bibliographies"
-- "Create bibliography's datasets"
-- "Change bibliography's styles"
+- "Create bibliography datasets"
+- "Change bibliography styles"
 keypoints:
-- "For short bibliography you can use the ```{thebibliography}``` environment"
-- "Long or more robust bibliography yuou can use a BiBTeX linked with your document"
+- "For short bibliographies,you can use the ```{thebibliography}``` environment"
+- "Long or more robust bibliographies need BiBTeX linked with your document"
 ---
 
-This part of the course displays how LaTeX deals with bibliography and in-text citations: by using the environment ```{thebibliography}``` and by using BibTeX.
+This part of the course displays how LaTeX deals with bibliographies and in-text citations: by using the environment ```{thebibliography}``` and by using BibTeX.
 
 ## The environment ```{thebibliography}```
 
+The commands of the environment ```{thebibliography}``` are embedded within LaTeX, these commands are integrated directly in your .tex file. This environment is useful for short bibliographies.
 
-The commands of the environment ```{thebibliography}``` are embedded within LaTeX, these commands are integrated directly in your .tex file. This environment is useful for court bibliographies.
-
-Each bibliography element is introduced by the command ```\bibitem```.
+Each bibliography element is introduced by the command ```\bibitem```, as shown below.
 
 
 {% latex minimal=true filename=06-citations-01 %}
 
-Open access is a part of Opening science evolution in scientific universe \cite{Bartling2014}.
+Open access is a part of oOening science evolution in scientific universe \cite{Bartling2014}.
 "Publish in Open Access is synonym to make its publication freely accessible to everyone. In February 2019, EPFL has adopted an Open Access Policy that clearly expresses the institutional position on Open Access to scientific
 publication. An amendment to the publication agreement and an email template are also available for EPFL authors as negotiation tools with publishers." \cite{EPFLlibrary2019}.
  \begin{thebibliography}{10}
@@ -46,22 +45,23 @@ In-text citations are introduced by the commands ```cite{key}``` as in the previ
 
 
 > ## Setting the indentation and width of labels in the final bibliography
-> The command ```\begin{thebibliography}{}``` requires a mandatory argument. If you do not set this parameter, an error message is displayed. If you do not set it correctly the indentation of the final bibliography will be chaotic. In fact, this argument determines the width of the widest bibliographic label and the amount of indentation of the final bibliography.
+> The command ```\begin{thebibliography}{}``` requires a mandatory argument. If you do not set this parameter, an error message is displayed. If you do not set it correctly, the indentation of the final 
+bibliography will be chaotic. In fact, this argument determines the width of the widest bibliographic label and the amount of indentation of the final bibliography.
 {: .callout}
 
 
-
 If you use the environment ```{the bibliography}``` in a document defined as an article, the title of your final
-bibliography will be "References" in English or  "Références" if you define your document as French, but for a document defined as a book or a report it will display
+bibliography will be "References" in English or "Références" if you define your document as French, but for a document defined as a book or a report it will display
 "Bibliography"/en or "Biblographie"/fr.
 
 ## Using BiBTeX
 
-For larger document or/and easier management of the bibliography, Latex can be coupled with BiBTeX.
+For larger document or/and easier management of the bibliography, LaTeX can be coupled with BiBTeX.
 With BiBTeX, the bibliography database is contained in a ```.bib``` file.
-The BiBTeX is a text file that contains the publication information, you can write it by hand but there is multiple software that can manages them for you graphicaly such as [Jabref](https://www.jabref.org/) , [Zotero](https://www.zotero.org/) or [Mendeley](https://www.mendeley.com/)
+The BiBTeX is a text file that contains the publication information, you can write it by hand but there is multiple software that can manages them for you graphically such as [Jabref](https://www.jabref.org/),
+ [Zotero](https://www.zotero.org/) or [Mendeley](https://www.mendeley.com/)
 
-An bibliography entry looks like this :
+A bibliography entry looks like this :
 
 {% highlight bibtex %}
 @article{greenwade93,
@@ -92,14 +92,15 @@ Including the BiBTeX file inside a LaTeX document is done with two commands :
 ```\bibliography{} ``` just contains the name of the BiBTeX file (without the .bib)
 
 > ## BiBTeX and compilation
-> In order to use a BiBTeX file, the compilation process changes a little bit, indeed it's necessary to called the ```bibtex```command between multiple compilation to include the reference inside your document.
+>
+> In order to use a BiBTeX file, the compilation process changes a little bit. Indeed, it's necessary to call the ```bibtex```command between compilations to include the reference inside your document.
 > This is the commands you need to run :
 > 1. ```pdflatex latexfile```
 > 2. ```bibtex latexfile```
 > 3. ```pdflatex latexfile```
 > 4. ```pdflatex latexfile```
 >
-> This (heavy) ways is not always easy and it can be automatically done by texmaker, you can check and configure the **quick build** to do those actions for you.
+> This (heavy) way is not always easy and it can be automatically done by texmaker, you can check and configure the **quick build** to do those actions for you.
 {: .callout}
 
 {% latex filename=06-citations-02  %}
@@ -123,8 +124,6 @@ Including the BiBTeX file inside a LaTeX document is done with two commands :
   Hello World
 
   This paper\cite{ARTICLE:1} is really good
-
-
 
 \bibliographystyle{plain}
 \bibliography{06-citations-02}

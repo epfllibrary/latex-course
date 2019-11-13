@@ -21,7 +21,7 @@ Below, you will get to know the minimal commands required to compile a LaTeX doc
 >
 >In texmaker, you can compile by clicking by selecting PdfLatex option and then click on the **Run** button or use the **Tools** menu
 >
-> If you want to use the terminal the command is ```pdflatex your_file.txt``` it will genrate a PDF file with the same name than your .tex file.
+> If you want to use the terminal, the command is ```pdflatex your_file.txt``` it will genrate a PDF file with the same name as your .tex file.
 {: .callout}
 
 
@@ -40,19 +40,19 @@ Below, you will get to know the minimal commands required to compile a LaTeX doc
 \end{document}
 {% endlatex %}
 
-When we compile only "Hello World" appears, the others things are inputs for the compiler : they give instructions or add new capabilities, they are not displayed after compilation.
+When we compile, only "Hello World" appears. The others things typed in the document are inputs for the compiler : they give instructions or add new capabilities, they are not displayed after compilation.
 
-Environments define a "block" all the text inside this block will be transformed according to what the block do.
+Environments define a "block": all the text inside this block will be transformed according to what the environment does.
 
-An environment always start with ```\begin{}``` and stop with ```\end{}``` inside the ```{}``` is specified the name of the environment.
+An environment always start with ```\begin{}``` and stop with ```\end{}```. Inside the ```{}``` is specified the name of the environment.
 
 > ## The document environment
-> The ``02-minimal.tex`` contains the environment ```document``` this environment is obligatory : what is inside is the contents of the document. Outside the document block we will find commands that will change the functionalities or how the document is printed (for example package or global commands)
+> The ``02-minimal-helloworld.tex`` contains the environment ```document```. This environment is obligatory : what is inside is the contents of the document. Outside the document block, we find commands that change the caracteristics of the document and how it is printed (for example package or global commands)
 >
-> All the others environments are optional and you use them when you need f
+> All the others environments are optional and you use them when you need.
 {: .callout}
 
-For example the environment ```itemize``` creates bullet point and a bullet point is created every time the ```\item```command is called :
+For example, the environment ```itemize``` creates bullet points. So, a bullet point is created everytime the ```\item```command is called :
 {% latex filename=02-environment-example %}
 \documentclass[a4paper]{article}
 

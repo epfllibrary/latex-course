@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-11-11 10:00:21 +0100">
+    <meta http-equiv="last-modified" content="2019-11-13 10:04:17 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -70,11 +70,10 @@
 
 
 <div class="panel panel-default life-cycle">
-  <div id="life-cycle" class="panel-body alpha">
-    This lesson is in the early stages of development (Alpha version)
+  <div id="life-cycle" class="panel-body beta">
+    This lesson is being piloted (Beta version)
   </div>
 </div>
-
 
 
 
@@ -232,9 +231,9 @@
 
   <div class="row">
     <div class="col-md-3">
-      <strong>Teaching:</strong> 0 min
+      <strong>Teaching:</strong> 10 min
       <br/>
-      <strong>Exercises:</strong> 0 min
+      <strong>Exercises:</strong> 5 min
     </div>
     <div class="col-md-9">
       <strong>Questions</strong>
@@ -243,7 +242,7 @@
 	<li><p>How to add images, figures ?</p>
 </li>
 	
-	<li><p>How to make tabular ?</p>
+	<li><p>How to make things with the tabular environment ?</p>
 </li>
 	
       </ul>
@@ -257,10 +256,13 @@
       <strong>Objectives</strong>
       <ul>
 	
-	<li><p>Add Figure and Table</p>
+	<li><p>Add figures and tables, with</p>
 </li>
 	
-	<li><p>Create tabular</p>
+	<li><p>Use the tabular environment</p>
+</li>
+	
+	<li><p>Add footnotes</p>
 </li>
 	
       </ul>
@@ -270,18 +272,18 @@
 </blockquote>
 
 <h2 id="floats">Floats</h2>
-<p>LateX manages two kind of floats, the figures and the tables, they are called floats because they can be inserted anywhere in the documents and referenced in the text (like Figure 1).</p>
+<p>LaTeX manages two kinds of floats, the figures and the tables, they are called floats because they can be inserted anywhere in the documents and referenced in the text (like Figure 1).</p>
 
-<p>Figure and Table are managed the same way, they just have their distinct numbering.</p>
+<p>Figures and tables are managed the same way, they just have their distinct numbering.</p>
 
-<p>Figure use the environment <code class="language-html highlighter-rouge">figure</code> and Tables the environment <code class="language-html highlighter-rouge">table</code>.</p>
+<p>Figures use the environment <code class="language-html highlighter-rouge">figure</code> and tables the environment <code class="language-html highlighter-rouge">table</code>.</p>
 
 <p>A legend can be defined with the <code class="language-html highlighter-rouge">\caption{}</code>command inside the float environment.</p>
 
 <blockquote class="callout">
-  <h2 id="howto-include-external-pictures">HOWTO include external pictures</h2>
-  <p>To include external picture file you need to use the <code class="language-html highlighter-rouge">\includegraphics{}</code> command. The parameter contains the path to the picture (where is stored the file).
-The optional parameter can specify the figure size for example <code class="language-html highlighter-rouge">with=5cm</code> will fix the width of the picture and adjust the height accordingly.</p>
+  <h2 id="how-to-include-external-pictures">How to include external pictures</h2>
+  <p>To include external picture files, you need to use the <code class="language-html highlighter-rouge">\includegraphics{}</code> command. The parameter contains the path to the picture (where the file is stored).
+The optional parameter can specify the figure size. For example, <code class="language-html highlighter-rouge">width=5cm</code> will fix the width of the picture and adjust the height accordingly.</p>
 </blockquote>
 
 <div class="challenge">
@@ -306,11 +308,14 @@ The optional parameter can specify the figure size for example <code class="lang
 
 </div>
 
-<blockquote class="callout">
+<blockquote>
   <h2 id="change-the-position-of-floats">Change the position of floats</h2>
-  <p>By default if you don’t specified anything LaTex will move the float where it thinks it will be the best. You can specify where you want to have the float by adding option in the environment.</p>
+</blockquote>
 
-  <p>For example <code class="language-html highlighter-rouge">\begin{figure}[ht]</code> means that you want the figure to where you define it (with <code class="language-html highlighter-rouge">h</code> : here) and a the top of the page (with <code class="language-html highlighter-rouge">t</code>:top).</p>
+<blockquote class="callout">
+  <p>By default if you don’t specify anything, LaTeX will move the float where it thinks it will be the best. You can specify where you want to have the float by adding option in the environment.</p>
+
+  <p>For example, <code class="language-html highlighter-rouge">\begin{figure}[ht]</code> means that you want the figure to be where you define it (with <code class="language-html highlighter-rouge">h</code> : here) and a the top of the page (with <code class="language-html highlighter-rouge">t</code>:top).</p>
 
   <p>The possible commands  are :</p>
   <ul>
@@ -321,12 +326,12 @@ The optional parameter can specify the figure size for example <code class="lang
     <li><code class="language-html highlighter-rouge">p</code> : create a page of floats</li>
   </ul>
 
-  <p>By default (if you don’t put any indication) LaTex uses <code class="language-html highlighter-rouge">[tbp]</code></p>
+  <p>By default (if you don’t put any indication), LaTeX uses <code class="language-html highlighter-rouge">[tbp]</code>.</p>
 </blockquote>
 
 <h2 id="tables">Tables</h2>
 
-<p>Table are managed by the <code class="language-html highlighter-rouge">tabular</code>environment. The <code class="language-html highlighter-rouge">04-table-01.tex</code> file below shows an example of a small table.</p>
+<p>Tables are managed by the <code class="language-html highlighter-rouge">tabular</code>environment. The <code class="language-html highlighter-rouge">04-table-01.tex</code> file below shows an example of a small table.</p>
 
 <div class="challenge">
   <h2>04-table-01</h2>
@@ -363,11 +368,35 @@ This is my table :
 
 </div>
 
-<p>The parameter of the <code class="language-html highlighter-rouge">tabular</code>environment : <code class="language-html highlighter-rouge">{|l|r|c|}</code> represents the number of columns (here 3), the letter (l,c,or r) represents the alignment of each column (left, centered or right). The vertical separator <code class="language-html highlighter-rouge">|</code> will draw a vertical line.</p>
+<p>The parameter of the <code class="language-html highlighter-rouge">tabular</code>environment : <code class="language-html highlighter-rouge">{|l|r|c|}</code> represents the number of columns (here 3), the letter (l, c, or r) represents the alignment of each column (left, centered or right).
+ The vertical separator <code class="language-html highlighter-rouge">|</code> will draw a vertical line.</p>
 
-<p>Each line is ended by <code class="language-html highlighter-rouge">\\</code> and each row is separated by <code class="language-html highlighter-rouge"><span class="err">&amp;</span></code></p>
+<p>Each line is ended by <code class="language-html highlighter-rouge">\\</code> and each row is separated by <code class="language-html highlighter-rouge"><span class="err">&amp;</span></code>.</p>
 
 <p>To draw a horizontal line, you can use the <code class="language-html highlighter-rouge">\hline</code>command.</p>
+
+<h2 id="exercises">Exercises</h2>
+
+<blockquote class="challenge">
+  <h2 id="empty-cell">Empty cell</h2>
+
+  <p>I would like to have an empty cell on the top left of my table. 
+To do this, I need to use <code class="language-html highlighter-rouge">\cline{}</code>.
+How could I code my table ?</p>
+
+  <blockquote class="solution">
+
+    <h2 id="solution">Solution</h2>
+    <p>Possible solution :</p>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tabular}</span><span class="p">{</span>|l|c|c<span class="p">}</span>
+<span class="k">\cline</span><span class="p">{</span>2-3<span class="p">}</span> <span class="p">&amp;</span> Paris <span class="p">&amp;</span> Oslo <span class="k">\\</span>
+<span class="k">\hline</span>
+Rome <span class="p">&amp;</span> 1447 km <span class="p">&amp;</span> 2565 km <span class="k">\\</span> 
+Prague <span class="p">&amp;</span> 1061 km <span class="p">&amp;</span> 1202 km <span class="k">\\</span>
+<span class="nt">\end{tabular}</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
 
 
 
@@ -378,13 +407,13 @@ This is my table :
     <li><p>Figure uses the environment <code class="language-html highlighter-rouge">figure</code>and table the environment <code class="language-html highlighter-rouge">table</code></p>
 </li>
     
-    <li><p>Legend are defined with <code class="language-html highlighter-rouge">\caption{}</code> inside the float environment.</p>
+    <li><p>Legends are defined with <code class="language-html highlighter-rouge">\caption{}</code> inside the float environment.</p>
 </li>
     
     <li><p><code class="language-html highlighter-rouge">\includegraphics{}</code> is used to add external graphic file.</p>
 </li>
     
-    <li><p>by adding <code class="language-html highlighter-rouge">[(h)(H)(p)(b)(t)]</code>to the float environment, you can choose how LaTex put the float in the document.</p>
+    <li><p>By adding <code class="language-html highlighter-rouge">[(h)(H)(p)(b)(t)]</code>to the float environment, you can choose how LaTeXT put the float in the document.</p>
 </li>
     
   </ul>

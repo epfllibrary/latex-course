@@ -1,4 +1,4 @@
-I"@<p>Below, you will get to know the minimal commands required to compile a LaTeX document. We will see a little further what each command does.</p>
+I"1@<p>Below, you will get to know the minimal commands required to compile a LaTeX document. We will see a little further what each command does.</p>
 
 <blockquote class="callout">
   <h2 id="compilation">Compilation</h2>
@@ -6,7 +6,7 @@
 
   <p>In texmaker, you can compile by clicking by selecting PdfLatex option and then click on the <strong>Run</strong> button or use the <strong>Tools</strong> menu</p>
 
-  <p>If you want to use the terminal the command is <code class="language-html highlighter-rouge">pdflatex your_file.txt</code> it will genrate a PDF file with the same name than your .tex file.</p>
+  <p>If you want to use the terminal, the command is <code class="language-html highlighter-rouge">pdflatex your_file.txt</code> it will genrate a PDF file with the same name as your .tex file.</p>
 </blockquote>
 
 <div class="challenge">
@@ -37,20 +37,20 @@
 
 </div>
 
-<p>When we compile only “Hello World” appears, the others things are inputs for the compiler : they give instructions or add new capabilities, they are not displayed after compilation.</p>
+<p>When we compile, only “Hello World” appears. The others things typed in the document are inputs for the compiler : they give instructions or add new capabilities, they are not displayed after compilation.</p>
 
-<p>Environments define a “block” all the text inside this block will be transformed according to what the block do.</p>
+<p>Environments define a “block”: all the text inside this block will be transformed according to what the environment does.</p>
 
-<p>An environment always start with <code class="language-html highlighter-rouge">\begin{}</code> and stop with <code class="language-html highlighter-rouge">\end{}</code> inside the <code class="language-html highlighter-rouge">{}</code> is specified the name of the environment.</p>
+<p>An environment always start with <code class="language-html highlighter-rouge">\begin{}</code> and stop with <code class="language-html highlighter-rouge">\end{}</code>. Inside the <code class="language-html highlighter-rouge">{}</code> is specified the name of the environment.</p>
 
 <blockquote class="callout">
   <h2 id="the-document-environment">The document environment</h2>
-  <p>The <code class="language-html highlighter-rouge">02-minimal.tex</code> contains the environment <code class="language-html highlighter-rouge">document</code> this environment is obligatory : what is inside is the contents of the document. Outside the document block we will find commands that will change the functionalities or how the document is printed (for example package or global commands)</p>
+  <p>The <code class="language-html highlighter-rouge">02-minimal-helloworld.tex</code> contains the environment <code class="language-html highlighter-rouge">document</code>. This environment is obligatory : what is inside is the contents of the document. Outside the document block, we find commands that change the caracteristics of the document and how it is printed (for example package or global commands)</p>
 
-  <p>All the others environments are optional and you use them when you need f</p>
+  <p>All the others environments are optional and you use them when you need.</p>
 </blockquote>
 
-<p>For example the environment <code class="language-html highlighter-rouge">itemize</code> creates bullet point and a bullet point is created every time the <code class="language-html highlighter-rouge">\item</code>command is called :</p>
+<p>For example, the environment <code class="language-html highlighter-rouge">itemize</code> creates bullet points. So, a bullet point is created everytime the <code class="language-html highlighter-rouge">\item</code>command is called :</p>
 <div class="challenge">
   <h2>02-environment-example</h2>
   <div class="latex-src">

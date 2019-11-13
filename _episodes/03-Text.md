@@ -18,7 +18,7 @@ keypoints:
 
 ## Fonts
 We know how to write simple plain text.
-Let's see how we can change the fonts used in LaTeX
+Let's see how we can change the fonts used in LaTeX.
 
 {% latex filename=03-font-01 %}
 
@@ -40,9 +40,10 @@ Let's see how we can change the fonts used in LaTeX
 
 {% endlatex %}
 
-With the commands ```\textit{...}``` and ```\textbf{...}```, you can modify parts of the text.
+With the commands ```\textit{...}``` and ```\textbf{...}```, you can modify parts of the text. 
+Keep in mind that such modifications are useful to emphazise your point but should be used consistently and parsimoniously.
 
-The size of the font can be changed by : (from the smallest to the biggest)
+The size of the font can be changed with the following commands : (from the smallest to the biggest)
 * ```\tiny{...}```
 * ```\small{...}```
 * ```\normalsize{...}```
@@ -52,7 +53,7 @@ The size of the font can be changed by : (from the smallest to the biggest)
 * ```\huge{...}```
 * ```\Huge{...}```
 
-The size of the font is relative to size specified in the ```documentclass```
+The size of the font is relative to the size specified in the ```documentclass```
 
 {% latex filename=03-font-02 %}
 
@@ -81,10 +82,10 @@ The size of the font is relative to size specified in the ```documentclass```
 {% endlatex %}
 
 ## Paragraphs
-You may have realized that LaTeX doesn't jump to a new line when you press enter in your source file this is because you need to jump at least two lines for LaTex to jump one (it will ignore the extra lines you add). You can also jump line by using the ```\\``` at this end of the line.
+You may have realized that LaTeX doesn't jump to a new line when you press enter in your source file. This is because, you need to jump at least two lines in the source file for LaTex to jump one in the compiled document
+ (it will ignore the extra lines you add). You can also jump line by using the ```\\``` at this end of the line.
 
-
-By default LaTeX justify the paragraph it is possible to change that inside a environment ```flushright``` ```center``` or ```flushleft```
+By default, LaTeX justifies the paragraph. It is possible to change that inside an  environment: ```flushright``` ```center``` or ```flushleft```
 
 {% latex filename=03-para-01 minimal=true %}
 
@@ -114,13 +115,12 @@ And this line will be separated
 
 ## Page
 
-To create a new page just put ```\newpage```, if you have a double sided document the command ```\cleardoublepage```will make sure that the new page will be an odd page.
+To create a new page, insert ```\newpage```. If you have a double sided document, the command ```\cleardoublepage```will make sure that the new page will be an odd page.
 
 ## List
-LaTeX manage two kind of lists, list that are numbered or the list that are not.
-The numbered list uses the environment ```enumerate```and the non-ordered the environment ```itemize```
-For both environment a new element of the list is defined with the ```\item``` command.
-
+LaTeX manages two kinds of lists: lists that are numbered or lists that are not.
+The numbered list uses the environment ```enumerate```and the non-ordered list uses the environment ```itemize```
+For both environments a new element of the list is defined with the ```\item``` command.
 
 
 {% latex filename=03-list-01 minimal=true %}
@@ -145,17 +145,18 @@ With non-ordered list the option in the command ```\item``` specified the type o
 
 ## Footnotes
 
-Footnotes can be added with the command ```\footnote{}``` with the content of your note inside the {], put the command in your text where you want the number of the footnote (without space) and LaTeX will automatically put the note at the bottom of the page with automatic numbering.
+Footnotes can be added with the command ```\footnote{}``` with the content of your note inside the {}. Put the command in your text, where you want the number of the footnote to appear (without space)
+ and LaTeX will automatically put the note at the bottom of the page with automatic numbering.
 
 {% latex filename=03-footnotes-01 minimal=true fold_comp=true %}
 
-I'm always correct and always I always say the truth\footnote{Even when I'm lying}
+I'm always correct and I always say the truth\footnote{Even when I'm lying}
 
 {% endlatex %}
 
 ## Code
 
-If you want to write programs (code) inside your document you can use the ```verbatim```environment.
+If you want to write code inside your document, you can use the ```verbatim```environment.
 
 {% latex filename=03-code-01 minimal=true %}
 Here is my code that does a lot of beautiful work
@@ -168,14 +169,15 @@ else
 endif
 \end{verbatim}
 
-and then the data analysis was done by ...
+and then the data analysis was done by [...].
 
 {% endlatex %}
 
-> ## Align paragraph
->
-> I would like to right-aligned  my text .
->
+## Exercises
+
+> ## Table of content 
+> To do
+> >
 > In order to do that I need to write :
 >
 > 1. ~~~

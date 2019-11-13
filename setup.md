@@ -34,4 +34,10 @@ You can also install the texmaker gui <https://www.xm1math.net/texmaker>
 ```yum install texlive-scheme-full```
 
 
+## Download example files (optionnal)
+
+You can download all the .tex file used in this course : <https://github.com/epfllibrary/latex-examples/archive/master.zip>
+
+
+
 {% include links.md %}

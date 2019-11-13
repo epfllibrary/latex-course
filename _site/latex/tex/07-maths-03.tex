@@ -1,0 +1,24 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+
+\begin{document}
+%<-----> ADDED to minimal <----->
+
+The mathematical formatting does not suit plan text:
+\begin{equation}
+	This is plan text in math mode.
+\end{equation}
+You have to switch back to text mode inside the math environment:
+\begin{equation}
+	\textrm{This is plan text in math mode.}
+\end{equation}
+This can be useful in equations incorporating comments, explanations, etc. :
+\begin{equation}
+	f(x) = \left\{ \begin{array}{l} \textrm{$1$ if $x$ is odd,} \
+\textrm{$0$ if $x$ is even.} \end{array}\right.
+\end{equation}
+\end{document}

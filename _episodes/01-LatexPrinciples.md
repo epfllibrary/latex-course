@@ -29,7 +29,7 @@ The compilation transforms your text source into a PDF document, distributing te
 
 As the author, you edit a source file which is just a simple text file, containing your text along with formatting commands. Those commands will be read during the compilation and will lead to the final document.
 
-**TODO** Graphique presentant le principe
+![compilation principle](../fig/compilation.png)
 
 ## Who does what
 
@@ -38,7 +38,7 @@ As the author, you produce content meaning you focus on the text---and only the 
 The compilation is in charge of the layout. It will translate your intentions into graphical design using pre-established style sheets and adhering to typographic conventions.
 
 ## Why it is nice
-By separating the content (the text and the formating) from the form (how it will look like) LaTeX has a lot of nice features that are hard to beat :
+By separating the content (the text and the formatting) from the form (how it will look like) LaTeX has a lot of nice features that are hard to beat :
 
 * The document will always looks nice, because the pre-established style are designed to be functional and readable
 * It can manage huge documents, because the pictures and other huge file are not loaded while you type

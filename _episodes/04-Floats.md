@@ -41,7 +41,6 @@ A legend can be defined with the ```\caption{}```command inside the float enviro
   {% endlatex %}
 
 > ## Change the position of floats
-
 > By default if you don't specify anything, LaTeX will move the float where it thinks it will be the best. You can specify where you want to have the float by adding option in the environment.
 >
 > For example, ```\begin{figure}[ht]``` means that you want the figure to be where you define it (with ```h``` : here) and a the top of the page (with ```t```:top).
@@ -90,22 +89,76 @@ Each line is ended by ```\\``` and each row is separated by ```&```.
 To draw a horizontal line, you can use the ```\hline```command.
 
 ## Exercises
-
-> ## Empty cell 
+> ## Include graphics
+> I would like to add a picture that I have in my folder ```img```and the filename is ```mypic.png```
 >
-> I would like to have an empty cell on the top left of my table. 
-> To do this, I need to use ```\cline{}```.
+> In order to do that I need to write :
+>
+> 1. ~~~
+>     \begin{float}
+>      \includegraphics{img/mypic}
+>     \end{float}
+>    ~~~
+>    {: .language-latex}
+>
+> > ## Solution
+> > 1. The environment is not ```float```but ```figure```
+> > 2. The command is ```\includegraphics```not ```\include```
+> > 3. Is correct : The image will be displayed in a ```figure``` float
+> > 4. The path is wrong
+> {: .solution}
+{: .challenge}
+
+
+> ## Float position
+> I would like to all my float on the same page.
+>
+> In order to do that I need to write :
+>
+> 1. ~~~
+>    \begin{figure}[p]
+>       The command for my figure
+>    \end{figure}
+>    ~~~
+>    {: .language-latex}
+>    
+> 2. ~~~
+>    \begin{figure}[t]
+>       The command for my figure
+>    \end{figure}
+>    ~~~
+>    {: .language-latex}
+>
+> 3. ~~~
+>    \begin{tabular}[p]
+>       The command for my figure
+>    \end{tabular}>
+>   ~~~
+>    {: .language-latex}
+>    
+> > ## Solution
+> > 1. Is correct : The floats will be on a specific page
+> > 2. The float will be at the top of the page
+> > 3. The environment for flaots is ```figure```or ```table```
+> {: .solution}
+{: .challenge}
+
+
+> ## Empty cell
+>
+> I would like to have an empty cell on the top left of my table.
+> To do this, I need to use ```\cline{}``` the displayed columns are specified using the ```start-end```format, the first column is ```1```in LaTeX.
 > How could I code my table ?
 >
 >
 >>
 > > ## Solution
-> > Possible solution : 
+> > Possible solution :
 > >~~~
 > >\begin{tabular}{|l|c|c}
 > >\cline{2-3} & Paris & Oslo \\
 > >\hline
-> >Rome & 1447 km & 2565 km \\ 
+> >Rome & 1447 km & 2565 km \\
 > >Prague & 1061 km & 1202 km \\
 > >\end{tabular}
 > >~~~

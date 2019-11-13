@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-11-13 12:24:05 +0100">
+    <meta http-equiv="last-modified" content="2019-11-13 17:08:00 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -308,11 +308,8 @@ The optional parameter can specify the figure size. For example, <code class="la
 
 </div>
 
-<blockquote>
-  <h2 id="change-the-position-of-floats">Change the position of floats</h2>
-</blockquote>
-
 <blockquote class="callout">
+  <h2 id="change-the-position-of-floats">Change the position of floats</h2>
   <p>By default if you don’t specify anything, LaTeX will move the float where it thinks it will be the best. You can specify where you want to have the float by adding option in the environment.</p>
 
   <p>For example, <code class="language-html highlighter-rouge">\begin{figure}[ht]</code> means that you want the figure to be where you define it (with <code class="language-html highlighter-rouge">h</code> : here) and a the top of the page (with <code class="language-html highlighter-rouge">t</code>:top).</p>
@@ -376,22 +373,84 @@ This is my table :
 <p>To draw a horizontal line, you can use the <code class="language-html highlighter-rouge">\hline</code>command.</p>
 
 <h2 id="exercises">Exercises</h2>
+<blockquote class="challenge">
+  <h2 id="include-graphics">Include graphics</h2>
+  <p>I would like to add a picture that I have in my folder <code class="language-html highlighter-rouge">img</code>and the filename is <code class="language-html highlighter-rouge">mypic.png</code></p>
+
+  <p>In order to do that I need to write :</p>
+
+  <ol>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">\begin{float}</span>
+  <span class="k">\includegraphics</span><span class="p">{</span>img/mypic<span class="p">}</span>
+ <span class="nt">\end{float}</span>
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution">Solution</h2>
+    <ol>
+      <li>The environment is not <code class="language-html highlighter-rouge">float</code>but <code class="language-html highlighter-rouge">figure</code></li>
+      <li>The command is <code class="language-html highlighter-rouge">\includegraphics</code>not <code class="language-html highlighter-rouge">\include</code></li>
+      <li>Is correct : The image will be displayed in a <code class="language-html highlighter-rouge">figure</code> float</li>
+      <li>The path is wrong</li>
+    </ol>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="float-position">Float position</h2>
+  <p>I would like to all my float on the same page.</p>
+
+  <p>In order to do that I need to write :</p>
+
+  <ol>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>[p]
+   The command for my figure
+<span class="nt">\end{figure}</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>[t]
+   The command for my figure
+<span class="nt">\end{figure}</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tabular}</span>[p]
+   The command for my figure
+<span class="nt">\end{tabular}</span>&gt;
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution-1">Solution</h2>
+    <ol>
+      <li>Is correct : The floats will be on a specific page</li>
+      <li>The float will be at the top of the page</li>
+      <li>The environment for flaots is <code class="language-html highlighter-rouge">figure</code>or <code class="language-html highlighter-rouge">table</code></li>
+    </ol>
+  </blockquote>
+</blockquote>
 
 <blockquote class="challenge">
   <h2 id="empty-cell">Empty cell</h2>
 
-  <p>I would like to have an empty cell on the top left of my table. 
-To do this, I need to use <code class="language-html highlighter-rouge">\cline{}</code>.
+  <p>I would like to have an empty cell on the top left of my table.
+To do this, I need to use <code class="language-html highlighter-rouge">\cline{}</code> the displayed columns are specified using the <code class="language-html highlighter-rouge">start-end</code>format, the first column is <code class="language-html highlighter-rouge">1</code>in LaTeX.
 How could I code my table ?</p>
 
   <blockquote class="solution">
 
-    <h2 id="solution">Solution</h2>
+    <h2 id="solution-2">Solution</h2>
     <p>Possible solution :</p>
     <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{tabular}</span><span class="p">{</span>|l|c|c<span class="p">}</span>
 <span class="k">\cline</span><span class="p">{</span>2-3<span class="p">}</span> <span class="p">&amp;</span> Paris <span class="p">&amp;</span> Oslo <span class="k">\\</span>
 <span class="k">\hline</span>
-Rome <span class="p">&amp;</span> 1447 km <span class="p">&amp;</span> 2565 km <span class="k">\\</span> 
+Rome <span class="p">&amp;</span> 1447 km <span class="p">&amp;</span> 2565 km <span class="k">\\</span>
 Prague <span class="p">&amp;</span> 1061 km <span class="p">&amp;</span> 1202 km <span class="k">\\</span>
 <span class="nt">\end{tabular}</span>
 </code></pre></div>    </div>

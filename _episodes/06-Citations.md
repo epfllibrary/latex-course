@@ -34,7 +34,7 @@ publication. An amendment to the publication agreement and an email template are
   \bibitem{EPFLlibrary2019}
   EPFL Library, Publish in Open Access. [online]. [Accessed 2 July 2019]. Available from:
   \end{thebibliography}
-  
+
 {% endlatex %}
 
 The basic syntax for using ```\bibitem``` is ```\bibitem[label]{key}```
@@ -45,7 +45,7 @@ In-text citations are introduced by the commands ```cite{key}``` as in the previ
 
 
 > ## Setting the indentation and width of labels in the final bibliography
-> The command ```\begin{thebibliography}{}``` requires a mandatory argument. If you do not set this parameter, an error message is displayed. If you do not set it correctly, the indentation of the final 
+> The command ```\begin{thebibliography}{}``` requires a mandatory argument. If you do not set this parameter, an error message is displayed. If you do not set it correctly, the indentation of the final
 bibliography will be chaotic. In fact, this argument determines the width of the widest bibliographic label and the amount of indentation of the final bibliography.
 {: .callout}
 
@@ -132,4 +132,29 @@ Including the BiBTeX file inside a LaTeX document is done with two commands :
 \end{document}
 
 {% endlatex %}
+
+## Exercises
+
+> ## Include publication
+> I have three references I would like to include in my document :
+> 1. EPFL Library Research Data Management Fastguides, EPFL, https://infoscience.epfl.ch/record/265349
+> 1. Eaton ME. A Comparative Analysis of the Use of GitHub by Librarians and Non-Librarians. 1. 29 mai 2018;13(2):27 47.
+> 1. Gordon RS. Information tomorrow reflections on technology and the future of public and academic libraries [Internet]. Medford, N.J.: Information Today, Inc.; 2007 [cité 20 mars 2015]. Disponible sur: http://search.ebscohost.com/login.aspx?direct=true&scope=site&db=nlebk&db=nlabk&AN=211266
+>  Write the corresponding instructions using the ```thebibliography```environment.
+> > ## Solution
+~~~
+\begin{thebibliography}{10}
+ \bibitem{EPFLFastGuide}
+EPFL Library Research Data Management Fastguides, EPFL, https://infoscience.epfl.ch/record/265349
+ \bibitem{EatonMe}
+  Eaton ME. A Comparative Analysis of the Use of GitHub by Librarians and Non-Librarians. 1. 29 mai 2018;13(2):27 47.
+  \bibitem{GordonRS}
+  Gordon RS. Information tomorrow reflections on technology and the future of public and academic libraries [Internet]. Medford, N.J.: Information Today, Inc.; 2007 [cité 20 mars 2015]. Disponible sur: http://search.ebscohost.com/login.aspx?direct=true&scope=site&db=nlebk&db=nlabk&AN=211266
+ \end{thebibliography}
+ ~~~
+ {: .language-latex}
+> {: .solution}
+{: .challenge}
+
+
 {% include links.md %}

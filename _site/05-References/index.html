@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-11-13 12:24:05 +0100">
+    <meta http-equiv="last-modified" content="2019-11-13 17:08:00 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -301,6 +301,8 @@
 
 <span class="k">\newpage</span>
 
+
+
 Some introductory sentences, followed by the context of the work and information about the structure of the document. [...]
 We will analyze the result using the Carpentry method in section <span class="k">\ref</span><span class="p">{</span>sec:analysis<span class="p">}</span>, then will present the results in section <span class="k">\ref</span><span class="p">{</span>sec:results<span class="p">}</span>.
 
@@ -308,7 +310,7 @@ We will analyze the result using the Carpentry method in section <span class="k"
 
 All the the analysis has been done using Python and LaTeX and are summarized in figure <span class="k">\ref</span><span class="p">{</span>fig:analysis<span class="p">}</span>
 
-<span class="nt">\begin{figure}</span>
+<span class="nt">\begin{figure}</span>[h]
 <span class="k">\includegraphics</span><span class="na">[width=5cm]</span><span class="p">{</span>fig/phd050611s<span class="p">}</span>
 <span class="k">\caption</span><span class="p">{</span>A beautiful figure that explain everything (from : http://phdcomics.com/comics/archive.php?comicid=1431)<span class="p">}</span>
 <span class="k">\label</span><span class="p">{</span>fig:analysis<span class="p">}</span>
@@ -336,24 +338,76 @@ As described in section <span class="k">\ref</span><span class="p">{</span>sec:a
 <h2 id="exercises">Exercises</h2>
 
 <blockquote class="challenge">
+  <h2 id="float-label">Float label</h2>
+
+  <p>I would like to label my float and call this label <code class="language-html highlighter-rouge">fig:myfig</code>.</p>
+
+  <p>In order to do that I can write :</p>
+
+  <ol>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>
+  <span class="k">\label</span><span class="p">{</span>fig:myfig<span class="p">}</span>
+  <span class="k">\includegraphics</span><span class="na">[width=5cm]</span><span class="p">{</span>fig/phd051608s<span class="p">}</span>
+  <span class="k">\caption</span><span class="p">{</span>Where you sit in class/seminar. And what it says about you (from : http://phdcomics.com/comics/archive.php?comicid=1017)<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>
+  <span class="k">\includegraphics</span><span class="na">[width=5cm]</span><span class="p">{</span>fig/phd051608s<span class="p">}</span>
+  <span class="k">\caption</span><span class="p">{</span>Where you sit in class/seminar. And what it says about you (from : http://phdcomics.com/comics/archive.php?comicid=1017)<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+<span class="k">\label</span><span class="p">{</span>fig:myfig<span class="p">}</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>
+  <span class="k">\tag</span><span class="p">{</span>fig:myfig<span class="p">}</span>
+  <span class="k">\includegraphics</span><span class="na">[width=5cm]</span><span class="p">{</span>fig/phd051608s<span class="p">}</span>
+  <span class="k">\caption</span><span class="p">{</span>Where you sit in class/seminar. And what it says about you (from : http://phdcomics.com/comics/archive.php?comicid=1017)<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>
+  <span class="k">\includegraphics</span><span class="na">[width=5cm]</span><span class="p">{</span>fig/phd051608s<span class="p">}</span>
+  <span class="k">\caption</span><span class="p">{</span>Where you sit in class/seminar. And what it says about you (from : http://phdcomics.com/comics/archive.php?comicid=1017)<span class="p">}</span>
+  <span class="k">\label</span><span class="p">{</span>fig:myfig<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution">Solution</h2>
+    <ol>
+      <li>and 4. are correct : The floats will be labeled correctly</li>
+      <li>The label is not referencing the figure</li>
+      <li>The command is <code class="language-html highlighter-rouge">\label</code> not <code class="language-html highlighter-rouge">\tag</code></li>
+    </ol>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
   <h2 id="add-list-of-figures">Add list of figures</h2>
 
   <p>At the end of my document, I would like to add a list of figures. Which command do I use ?</p>
 
   <ol>
     <li>
-      <p>\listfigures{}</p>
+      <p><code class="language-html highlighter-rouge">\listfigures{}</code></p>
     </li>
     <li>
-      <p>\begin{list}</p>
+      <p><code class="language-html highlighter-rouge">\begin{list}</code></p>
     </li>
     <li>
-      <p>\listoffigures</p>
+      <p><code class="language-html highlighter-rouge">\listoffigures</code></p>
     </li>
   </ol>
 
   <blockquote class="solution">
-    <h2 id="solution">Solution</h2>
+    <h2 id="solution-1">Solution</h2>
     <ol>
       <li>Does not exist.</li>
       <li>Is the environment to create lists but does not automate the action.</li>
@@ -366,11 +420,11 @@ As described in section <span class="k">\ref</span><span class="p">{</span>sec:a
 <blockquote class="challenge">
   <h2 id="subsections-sections-and-chapters">Subsections, sections and chapters</h2>
 
-  <p>Your are writing a report. 
+  <p>Your are writing a report.
 In your first chapter “State of the art”, you would like to include a section called “Methodology”. In this section, there are two subsections, “Information sources” and “Selection criterias”. How can you include this structure ?</p>
 
   <blockquote class="solution">
-    <h2 id="solution-1">Solution</h2>
+    <h2 id="solution-2">Solution</h2>
     <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\chapter</span><span class="p">{</span>State of the Art<span class="p">}</span>
 <span class="k">\section</span><span class="p">{</span>Methodology<span class="p">}</span>
 <span class="k">\subsection</span><span class="p">{</span>Information sources<span class="p">}</span>

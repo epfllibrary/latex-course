@@ -46,6 +46,8 @@ The command to get the position of the label is ```\ref{}```and the parameter is
 
 \newpage
 
+
+
 Some introductory sentences, followed by the context of the work and information about the structure of the document. [...]
 We will analyze the result using the Carpentry method in section \ref{sec:analysis}, then will present the results in section \ref{sec:results}.
 
@@ -53,7 +55,7 @@ We will analyze the result using the Carpentry method in section \ref{sec:analys
 
 All the the analysis has been done using Python and LaTeX and are summarized in figure \ref{fig:analysis}
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=5cm]{fig/phd050611s}
 \caption{A beautiful figure that explain everything (from : http://phdcomics.com/comics/archive.php?comicid=1431)}
 \label{fig:analysis}
@@ -71,15 +73,66 @@ As described in section \ref{sec:analysis} and \ref{sec:results} respectively on
 
 ## Exercises
 
+
+> ## Float label
+>
+> I would like to label my float and call this label ```fig:myfig```.
+>
+> In order to do that I can write :
+>
+> 1. ~~~
+>    \begin{figure}
+>      \label{fig:myfig}
+>      \includegraphics[width=5cm]{fig/phd051608s}
+>      \caption{Where you sit in class/seminar. And what it says about you (from : http://phdcomics.com/comics/archive.php?comicid=1017)}
+>    \end{figure}
+>    ~~~
+>    {: .language-latex}
+>    
+> 2. ~~~
+>    \begin{figure}
+>      \includegraphics[width=5cm]{fig/phd051608s}
+>      \caption{Where you sit in class/seminar. And what it says about you (from : http://phdcomics.com/comics/archive.php?comicid=1017)}
+>    \end{figure}
+>    \label{fig:myfig}
+>    ~~~
+>    {: .language-latex}
+>
+> 3. ~~~
+>    \begin{figure}
+>      \tag{fig:myfig}
+>      \includegraphics[width=5cm]{fig/phd051608s}
+>      \caption{Where you sit in class/seminar. And what it says about you (from : http://phdcomics.com/comics/archive.php?comicid=1017)}
+>    \end{figure}
+>   ~~~
+>    {: .language-latex}
+>    
+> 4. ~~~
+>    \begin{figure}
+>      \includegraphics[width=5cm]{fig/phd051608s}
+>      \caption{Where you sit in class/seminar. And what it says about you (from : http://phdcomics.com/comics/archive.php?comicid=1017)}
+>      \label{fig:myfig}
+>    \end{figure}
+>    ~~~
+>    {: .language-latex}
+>
+> > ## Solution
+> > 1. and 4. are correct : The floats will be labeled correctly
+> > 2. The label is not referencing the figure
+> > 3. The command is ```\label``` not ```\tag```
+> {: .solution}
+{: .challenge}
+
+
 > ## Add list of figures
-> 
+>
 > At the end of my document, I would like to add a list of figures. Which command do I use ?
 >
-> 1. \listfigures{}
+> 1. ```\listfigures{}```
 >
-> 2. \begin{list}
+> 2. ```\begin{list}```
 >
-> 3. \listoffigures
+> 3. ```\listoffigures```
 >
 > > ## Solution
 > > 1. Does not exist.
@@ -91,7 +144,7 @@ As described in section \ref{sec:analysis} and \ref{sec:results} respectively on
 
 > ## Subsections, sections and chapters
 >
-> Your are writing a report. 
+> Your are writing a report.
 > In your first chapter "State of the art", you would like to include a section called "Methodology". In this section, there are two subsections, "Information sources" and "Selection criterias". How can you include this structure ?
 >
 > > ## Solution
@@ -105,5 +158,7 @@ As described in section \ref{sec:analysis} and \ref{sec:results} respectively on
 > > Note : For ```\chapter{}``` to work, your document must be a book or a report.
 > {: .solution}
 {: .challenge}
+
+
 
 {% include links.md %}

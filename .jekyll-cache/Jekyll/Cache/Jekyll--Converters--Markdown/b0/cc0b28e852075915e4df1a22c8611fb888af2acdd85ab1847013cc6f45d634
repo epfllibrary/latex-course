@@ -1,0 +1,167 @@
+I"+(<p>References in LaTeX are internal links within your document. They allow you to refer to another part of the document easily. For instance, you might want to write <em>“as I explained in the figure : xxx”</em> and replace the <em>xxx</em> by the correct value.</p>
+
+<p>In order to do that, you need to insert a tag to the element you want to refer to. It can be anything like a float, an equation, a chapter, etc. The command to specify a tag is <code class="language-html highlighter-rouge">\label{}</code> and the parameter is the name of the tag. The parameter can be anything you like (it’s usually a good practice to have a naming convention).</p>
+
+<p>The command to get the position of the label is <code class="language-html highlighter-rouge">\ref{}</code>and the parameter is the name of the tag defined in the label described before.  You can put the command anywhere in the document. The command <code class="language-html highlighter-rouge">\pageref{}</code> will display the number of the page in which is the label.</p>
+
+<blockquote class="callout">
+  <h2 id="table-of-contents">Table of contents</h2>
+  <p>To define the hierarchical structure of the document LaTeX provides special commands that defines chapter, section, etc. :</p>
+  <ul>
+    <li><code class="language-html highlighter-rouge">\part{}</code></li>
+    <li><code class="language-html highlighter-rouge">\chapter{}</code></li>
+    <li><code class="language-html highlighter-rouge">\section{}</code></li>
+    <li><code class="language-html highlighter-rouge">\subsection{}</code></li>
+    <li><code class="language-html highlighter-rouge">\subsubsection{}</code></li>
+    <li><code class="language-html highlighter-rouge">\paragraph{}</code></li>
+  </ul>
+
+  <p>You can generate the table of contents of your document automatically during the compilation by using the <code class="language-html highlighter-rouge">\tableofcontents</code> command.</p>
+
+  <p>Other tables can be generated like <code class="language-html highlighter-rouge">\listoffigures</code> or <code class="language-html highlighter-rouge">\listoftables</code>they will generate the list of figures or tables (float).</p>
+</blockquote>
+
+<div class="challenge">
+  <h2>05-reference</h2>
+  <div class="latex-src">
+    <h2> Tex file : <a href="../latex/tex/05-reference.tex">05-reference.tex</a></h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
+
+<span class="k">\tableofcontents</span>
+
+<span class="k">\newpage</span>
+
+
+
+Some introductory sentences, followed by the context of the work and information about the structure of the document. [...]
+We will analyze the result using the Carpentry method in section <span class="k">\ref</span><span class="p">{</span>sec:analysis<span class="p">}</span>, then will present the results in section <span class="k">\ref</span><span class="p">{</span>sec:results<span class="p">}</span>.
+
+<span class="k">\section</span><span class="p">{</span>Analysis<span class="p">}</span><span class="k">\label</span><span class="p">{</span>sec:analysis<span class="p">}</span>
+
+All the the analysis has been done using Python and LaTeX and are summarized in figure <span class="k">\ref</span><span class="p">{</span>fig:analysis<span class="p">}</span>
+
+<span class="nt">\begin{figure}</span>[h]
+<span class="k">\includegraphics</span><span class="na">[width=5cm]</span><span class="p">{</span>fig/phd050611s<span class="p">}</span>
+<span class="k">\caption</span><span class="p">{</span>A beautiful figure that explain everything (from : http://phdcomics.com/comics/archive.php?comicid=1431)<span class="p">}</span>
+<span class="k">\label</span><span class="p">{</span>fig:analysis<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+
+<span class="k">\section</span><span class="p">{</span>Results<span class="p">}</span><span class="k">\label</span><span class="p">{</span>sec:results<span class="p">}</span>
+
+Bla bla bla [...]
+
+<span class="k">\section</span><span class="p">{</span>Conclusion<span class="p">}</span><span class="k">\label</span><span class="p">{</span>sec:conclusion<span class="p">}</span>
+
+As described in section <span class="k">\ref</span><span class="p">{</span>sec:analysis<span class="p">}</span> and <span class="k">\ref</span><span class="p">{</span>sec:results<span class="p">}</span> respectively on page <span class="k">\pageref</span><span class="p">{</span>sec:analysis<span class="p">}</span> and <span class="k">\pageref</span><span class="p">{</span>sec:results<span class="p">}</span>, we can conclude that reference in LaTeX is a great feature.
+
+
+</code></pre></div>    </div>
+
+  </div>
+  <div class="latex-compil">
+    <h2> Compilation : <a href="../latex/pdf/05-reference.pdf">05-reference.pdf</a></h2>
+    <p><img src="../latex/png/05-reference.png" /></p>
+  </div>
+
+</div>
+
+<h2 id="exercises">Exercises</h2>
+
+<blockquote class="challenge">
+  <h2 id="float-label">Float label</h2>
+
+  <p>I would like to label my float and call this label <code class="language-html highlighter-rouge">fig:myfig</code>.</p>
+
+  <p>In order to do that I can write :</p>
+
+  <ol>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>
+  <span class="k">\label</span><span class="p">{</span>fig:myfig<span class="p">}</span>
+  <span class="k">\includegraphics</span><span class="na">[width=5cm]</span><span class="p">{</span>fig/phd051608s<span class="p">}</span>
+  <span class="k">\caption</span><span class="p">{</span>Where you sit in class/seminar. And what it says about you (from : http://phdcomics.com/comics/archive.php?comicid=1017)<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>
+  <span class="k">\includegraphics</span><span class="na">[width=5cm]</span><span class="p">{</span>fig/phd051608s<span class="p">}</span>
+  <span class="k">\caption</span><span class="p">{</span>Where you sit in class/seminar. And what it says about you (from : http://phdcomics.com/comics/archive.php?comicid=1017)<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+<span class="k">\label</span><span class="p">{</span>fig:myfig<span class="p">}</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>
+  <span class="k">\tag</span><span class="p">{</span>fig:myfig<span class="p">}</span>
+  <span class="k">\includegraphics</span><span class="na">[width=5cm]</span><span class="p">{</span>fig/phd051608s<span class="p">}</span>
+  <span class="k">\caption</span><span class="p">{</span>Where you sit in class/seminar. And what it says about you (from : http://phdcomics.com/comics/archive.php?comicid=1017)<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{figure}</span>
+  <span class="k">\includegraphics</span><span class="na">[width=5cm]</span><span class="p">{</span>fig/phd051608s<span class="p">}</span>
+  <span class="k">\caption</span><span class="p">{</span>Where you sit in class/seminar. And what it says about you (from : http://phdcomics.com/comics/archive.php?comicid=1017)<span class="p">}</span>
+  <span class="k">\label</span><span class="p">{</span>fig:myfig<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution">Solution</h2>
+    <ol>
+      <li>and 4. are correct : The floats will be labeled correctly</li>
+      <li>The label is not referencing the figure</li>
+      <li>The command is <code class="language-html highlighter-rouge">\label</code> not <code class="language-html highlighter-rouge">\tag</code></li>
+    </ol>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="add-list-of-figures">Add list of figures</h2>
+
+  <p>At the end of my document, I would like to add a list of figures. Which command do I use ?</p>
+
+  <ol>
+    <li>
+      <p><code class="language-html highlighter-rouge">\listfigures{}</code></p>
+    </li>
+    <li>
+      <p><code class="language-html highlighter-rouge">\begin{list}</code></p>
+    </li>
+    <li>
+      <p><code class="language-html highlighter-rouge">\listoffigures</code></p>
+    </li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution-1">Solution</h2>
+    <ol>
+      <li>Does not exist.</li>
+      <li>Is the environment to create lists but does not automate the action.</li>
+      <li>Is correct. Works the same way as <code class="language-html highlighter-rouge">\tableofcontents</code>.</li>
+    </ol>
+
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="subsections-sections-and-chapters">Subsections, sections and chapters</h2>
+
+  <p>Your are writing a report.
+In your first chapter “State of the art”, you would like to include a section called “Methodology”. In this section, there are two subsections, “Information sources” and “Selection criterias”. How can you include this structure ?</p>
+
+  <blockquote class="solution">
+    <h2 id="solution-2">Solution</h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\chapter</span><span class="p">{</span>State of the Art<span class="p">}</span>
+<span class="k">\section</span><span class="p">{</span>Methodology<span class="p">}</span>
+<span class="k">\subsection</span><span class="p">{</span>Information sources<span class="p">}</span>
+<span class="k">\subsection</span><span class="p">{</span>Selection criteria<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Note : For <code class="language-html highlighter-rouge">\chapter{}</code> to work, your document must be a book or a report.</p>
+  </blockquote>
+</blockquote>
+
+:ET

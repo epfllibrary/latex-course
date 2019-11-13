@@ -40,7 +40,7 @@ Let's see how we can change the fonts used in LaTeX.
 
 {% endlatex %}
 
-With the commands ```\textit{...}``` and ```\textbf{...}```, you can modify parts of the text. 
+With the commands ```\textit{...}``` and ```\textbf{...}```, you can modify parts of the text.
 Keep in mind that such modifications are useful to emphazise your point but should be used consistently and parsimoniously.
 
 The size of the font can be changed with the following commands : (from the smallest to the biggest)
@@ -175,9 +175,10 @@ and then the data analysis was done by [...].
 
 ## Exercises
 
-> ## Table of content 
-> To do
-> >
+> ## Align paragraph
+>
+> I would like to right-aligned  my text .
+>
 > In order to do that I need to write :
 >
 > 1. ~~~

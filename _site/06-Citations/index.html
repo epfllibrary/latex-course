@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-11-13 12:24:05 +0100">
+    <meta http-equiv="last-modified" content="2019-11-13 17:08:00 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -259,10 +259,10 @@
 	<li><p>Create final bibliographies</p>
 </li>
 	
-	<li><p>Create bibliography’s datasets</p>
+	<li><p>Create bibliography datasets</p>
 </li>
 	
-	<li><p>Change bibliography’s styles</p>
+	<li><p>Change bibliography styles</p>
 </li>
 	
       </ul>
@@ -271,13 +271,13 @@
 
 </blockquote>
 
-<p>This part of the course displays how LaTeX deals with bibliography and in-text citations: by using the environment <code class="language-html highlighter-rouge">{thebibliography}</code> and by using BibTeX.</p>
+<p>This part of the course displays how LaTeX deals with bibliographies and in-text citations: by using the environment <code class="language-html highlighter-rouge">{thebibliography}</code> and by using BibTeX.</p>
 
 <h2 id="the-environment-thebibliography">The environment <code class="language-html highlighter-rouge">{thebibliography}</code></h2>
 
-<p>The commands of the environment <code class="language-html highlighter-rouge">{thebibliography}</code> are embedded within LaTeX, these commands are integrated directly in your .tex file. This environment is useful for court bibliographies.</p>
+<p>The commands of the environment <code class="language-html highlighter-rouge">{thebibliography}</code> are embedded within LaTeX, these commands are integrated directly in your .tex file. This environment is useful for short bibliographies.</p>
 
-<p>Each bibliography element is introduced by the command <code class="language-html highlighter-rouge">\bibitem</code>.</p>
+<p>Each bibliography element is introduced by the command <code class="language-html highlighter-rouge">\bibitem</code>, as shown below.</p>
 
 <div class="challenge">
   <h2>06-citations-01</h2>
@@ -285,7 +285,7 @@
     <h2> Tex file : <a href="../latex/tex/06-citations-01.tex">06-citations-01.tex</a></h2>
     <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
 
-Open access is a part of Opening science evolution in scientific universe <span class="k">\cite</span><span class="p">{</span>Bartling2014<span class="p">}</span>.
+Open access is a part of oOening science evolution in scientific universe <span class="k">\cite</span><span class="p">{</span>Bartling2014<span class="p">}</span>.
 "Publish in Open Access is synonym to make its publication freely accessible to everyone. In February 2019, EPFL has adopted an Open Access Policy that clearly expresses the institutional position on Open Access to scientific
 publication. An amendment to the publication agreement and an email template are also available for EPFL authors as negotiation tools with publishers." <span class="k">\cite</span><span class="p">{</span>EPFLlibrary2019<span class="p">}</span>.
  <span class="nt">\begin{thebibliography}</span><span class="p">{</span>10<span class="p">}</span>
@@ -294,7 +294,7 @@ publication. An amendment to the publication agreement and an email template are
   <span class="k">\bibitem</span><span class="p">{</span>EPFLlibrary2019<span class="p">}</span>
   EPFL Library, Publish in Open Access. [online]. [Accessed 2 July 2019]. Available from:
   <span class="nt">\end{thebibliography}</span>
-  
+
 
 </code></pre></div>    </div>
 
@@ -313,20 +313,22 @@ In-text citations are introduced by the commands <code class="language-html high
 
 <blockquote class="callout">
   <h2 id="setting-the-indentation-and-width-of-labels-in-the-final-bibliography">Setting the indentation and width of labels in the final bibliography</h2>
-  <p>The command <code class="language-html highlighter-rouge">\begin{thebibliography}{}</code> requires a mandatory argument. If you do not set this parameter, an error message is displayed. If you do not set it correctly the indentation of the final bibliography will be chaotic. In fact, this argument determines the width of the widest bibliographic label and the amount of indentation of the final bibliography.</p>
+  <p>The command <code class="language-html highlighter-rouge">\begin{thebibliography}{}</code> requires a mandatory argument. If you do not set this parameter, an error message is displayed. If you do not set it correctly, the indentation of the final
+bibliography will be chaotic. In fact, this argument determines the width of the widest bibliographic label and the amount of indentation of the final bibliography.</p>
 </blockquote>
 
 <p>If you use the environment <code class="language-html highlighter-rouge">{the bibliography}</code> in a document defined as an article, the title of your final
-bibliography will be “References” in English or  “Références” if you define your document as French, but for a document defined as a book or a report it will display
+bibliography will be “References” in English or “Références” if you define your document as French, but for a document defined as a book or a report it will display
 “Bibliography”/en or “Biblographie”/fr.</p>
 
 <h2 id="using-bibtex">Using BiBTeX</h2>
 
-<p>For larger document or/and easier management of the bibliography, Latex can be coupled with BiBTeX.
+<p>For larger document or/and easier management of the bibliography, LaTeX can be coupled with BiBTeX.
 With BiBTeX, the bibliography database is contained in a <code class="language-html highlighter-rouge">.bib</code> file.
-The BiBTeX is a text file that contains the publication information, you can write it by hand but there is multiple software that can manages them for you graphicaly such as <a href="https://www.jabref.org/">Jabref</a> , <a href="https://www.zotero.org/">Zotero</a> or <a href="https://www.mendeley.com/">Mendeley</a></p>
+The BiBTeX is a text file that contains the publication information, you can write it by hand but there is multiple software that can manages them for you graphically such as <a href="https://www.jabref.org/">Jabref</a>,
+ <a href="https://www.zotero.org/">Zotero</a> or <a href="https://www.mendeley.com/">Mendeley</a></p>
 
-<p>An bibliography entry looks like this :</p>
+<p>A bibliography entry looks like this :</p>
 
 <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex">@article{greenwade93,
     author  = "Greenwade, George D.",
@@ -353,7 +355,8 @@ The BiBTeX is a text file that contains the publication information, you can wri
 
 <blockquote class="callout">
   <h2 id="bibtex-and-compilation">BiBTeX and compilation</h2>
-  <p>In order to use a BiBTeX file, the compilation process changes a little bit, indeed it’s necessary to called the <code class="language-html highlighter-rouge">bibtex</code>command between multiple compilation to include the reference inside your document.
+
+  <p>In order to use a BiBTeX file, the compilation process changes a little bit. Indeed, it’s necessary to call the <code class="language-html highlighter-rouge">bibtex</code>command between compilations to include the reference inside your document.
 This is the commands you need to run :</p>
   <ol>
     <li><code class="language-html highlighter-rouge">pdflatex latexfile</code></li>
@@ -362,7 +365,7 @@ This is the commands you need to run :</p>
     <li><code class="language-html highlighter-rouge">pdflatex latexfile</code></li>
   </ol>
 
-  <p>This (heavy) ways is not always easy and it can be automatically done by texmaker, you can check and configure the <strong>quick build</strong> to do those actions for you.</p>
+  <p>This (heavy) way is not always easy and it can be automatically done by texmaker, you can check and configure the <strong>quick build</strong> to do those actions for you.</p>
 </blockquote>
 
 <div class="challenge">
@@ -383,8 +386,6 @@ This is the commands you need to run :</p>
   Hello World
 
   This paper<span class="k">\cite</span><span class="p">{</span>ARTICLE:1<span class="p">}</span> is really good
-
-
 
 <span class="k">\bibliographystyle</span><span class="p">{</span>plain<span class="p">}</span>
 <span class="k">\bibliography</span><span class="p">{</span>06-citations-02<span class="p">}</span>
@@ -416,16 +417,44 @@ This is the commands you need to run :</p>
 
 </div>
 
+<h2 id="exercises">Exercises</h2>
+
+<blockquote class="language-latex">
+  <h2 id="include-publication">Include publication</h2>
+  <p>I have three references I would like to include in my document :</p>
+  <ol>
+    <li>EPFL Library Research Data Management Fastguides, EPFL, https://infoscience.epfl.ch/record/265349</li>
+    <li>Eaton ME. A Comparative Analysis of the Use of GitHub by Librarians and Non-Librarians. 1. 29 mai 2018;13(2):27 47.</li>
+    <li>Gordon RS. Information tomorrow reflections on technology and the future of public and academic libraries [Internet]. Medford, N.J.: Information Today, Inc.; 2007 [cité 20 mars 2015]. Disponible sur: http://search.ebscohost.com/login.aspx?direct=true&amp;scope=site&amp;db=nlebk&amp;db=nlabk&amp;AN=211266
+ Write the corresponding instructions using the <code class="language-html highlighter-rouge">thebibliography</code>environment.
+      <blockquote>
+        <h2 id="solution">Solution</h2>
+        <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\begin{thebibliography}{10}
+ \bibitem{EPFLFastGuide}
+EPFL Library Research Data Management Fastguides, EPFL, https://infoscience.epfl.ch/record/265349
+ \bibitem{EatonMe}
+  Eaton ME. A Comparative Analysis of the Use of GitHub by Librarians and Non-Librarians. 1. 29 mai 2018;13(2):27 47.
+  \bibitem{GordonRS}
+  Gordon RS. Information tomorrow reflections on technology and the future of public and academic libraries [Internet]. Medford, N.J.: Information Today, Inc.; 2007 [cité 20 mars 2015]. Disponible sur: http://search.ebscohost.com/login.aspx?direct=true<span class="err">&amp;</span>scope=site<span class="err">&amp;</span>db=nlebk<span class="err">&amp;</span>db=nlabk<span class="err">&amp;</span>AN=211266
+ \end{thebibliography}
+</code></pre></div>        </div>
+      </blockquote>
+    </li>
+  </ol>
+</blockquote>
+<blockquote class="challenge">
+</blockquote>
+
 
 
 <blockquote class="keypoints">
   <h2>Key Points</h2>
   <ul>
     
-    <li><p>For short bibliography you can use the <code class="language-html highlighter-rouge">{thebibliography}</code> environment</p>
+    <li><p>For short bibliographies,you can use the <code class="language-html highlighter-rouge">{thebibliography}</code> environment</p>
 </li>
     
-    <li><p>Long or more robust bibliography yuou can use a BiBTeX linked with your document</p>
+    <li><p>Long or more robust bibliographies need BiBTeX linked with your document</p>
 </li>
     
   </ul>

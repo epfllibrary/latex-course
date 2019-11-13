@@ -3,7 +3,7 @@ title: "Maths"
 teaching: 10
 exercises: 10
 questions:
-- "How to write equation with Latex"
+- "How to write equations with LaTeX"
 objectives:
 - "Discover the math environment"
 - "Write equations"
@@ -12,10 +12,10 @@ keypoints:
 
 ---
 
-As the rest of Latex mathematics have their own environments, mostly two kinds of environment allow you to make the distinction between textual and mathematical content.
-The way to write mathematical equation is a little bit different than text and will be described after.
+As the rest of LaTeX, mathematics have their own environments, mostly two kinds of environments that allow you to make the distinction between textual and mathematical content.
+The way to write mathematical equations is a little bit different than text and will be described below.
 
-## Maths Environments
+## Maths environments
 
 Inline formulas insert mathematical symbols right into a sentence, in this case, Latex uses dollar signs (```$some equation$```) are used to delimit mathematical content.
 

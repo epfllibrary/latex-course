@@ -4,24 +4,27 @@ title: Setup
 
 ## Install LaTeX
 
-Latex is composed of many softwares working together, in order to use them easily it exists what we call distribution : they combine all the needed tools in one big package.
+Latex is composed of many softwares working together. On order to use them easily it exists what we call distribution : they combine all the needed tools in one big package.
 
-### Install Latex Windows
+Please install LaTeX before the course starts, it will save you time. 
 
-Download and install the windows texlive version(install-tl-windows.exe) <https://tug.org/texlive/acquire-netinstall.html>. This is the distribution we will use during the class.
+### Install LaTeX for Windows
 
-You can also install the texmaker gui <https://www.xm1math.net/texmaker>
-### Install Latex MacOs
-
-Download and install the mac texlive version (called mactex) <https://www.tug.org/mactex/mactex-download.html>
+We recommend that you download and install the windows texlive version(install-tl-windows.exe) <https://tug.org/texlive/acquire-netinstall.html>. This is the distribution we will use during the class.
 
 You can also install the texmaker gui <https://www.xm1math.net/texmaker>
 
-### Install Latex Linux
+### Install LaTeX for MacOS
+
+We recommend that you download and install the mac texlive version (called mactex) from : <https://www.tug.org/mactex/mactex-download.html>
+
+You can also install the texmaker gui <https://www.xm1math.net/texmaker>
+
+### Install LaTeX with Linux
 
 #### Debian / Ubuntu
 
-Latex package can be directly installed into the system by running :
+LaTeX package can be directly installed into the system by running :
 
 ```sudo apt install texlive-base```
 
@@ -34,9 +37,9 @@ You can also install the texmaker gui <https://www.xm1math.net/texmaker>
 ```yum install texlive-scheme-full```
 
 
-## Download example files (optionnal)
+## Download example files (optional)
 
-You can download all the .tex file used in this course : <https://github.com/epfllibrary/latex-examples/archive/master.zip>
+You can download all the .tex files used in this course : <https://github.com/epfllibrary/latex-examples/archive/master.zip>
 
 
 

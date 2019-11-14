@@ -1,4 +1,4 @@
-I"ò
+I"ö
 <script>
   window.onload = function() {
     var lesson_episodes = [
@@ -19,7 +19,7 @@
     
     "/08-Supplemental-zotero/index.html",
     
-    "/09_Supplental_collaborative/index.html"
+    "/09_Supplemental_collaborative/index.html"
     
     ];
     var xmlHttp = [];  /* Required since we are going to query every episode. */
@@ -58,6 +58,6 @@
 
 <article id="/08-Supplemental-zotero/index.html"></article>
 
-<article id="/09_Supplental_collaborative/index.html"></article>
+<article id="/09_Supplemental_collaborative/index.html"></article>
 
 :ET

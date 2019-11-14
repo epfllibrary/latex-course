@@ -1,4 +1,4 @@
-I"°
+I"´
 
 <script>
   window.onload = function() {
@@ -20,7 +20,7 @@
     
     "/08-Supplemental-zotero/index.html",
     
-    "/09_Supplental_collaborative/index.html"
+    "/09_Supplemental_collaborative/index.html"
     
     ];
 
@@ -87,6 +87,6 @@
 
 <article id="/08-Supplemental-zotero/index.html" class="figures"></article>
 
-<article id="/09_Supplental_collaborative/index.html" class="figures"></article>
+<article id="/09_Supplemental_collaborative/index.html" class="figures"></article>
 
 :ET

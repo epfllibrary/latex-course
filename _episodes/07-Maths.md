@@ -3,7 +3,7 @@ title: "Maths"
 teaching: 10
 exercises: 10
 questions:
-- "How to write equations with LaTeX"
+- "How to write equations with LaTeX?"
 objectives:
 - "Discover the math environment"
 - "Write equations"
@@ -12,14 +12,17 @@ keypoints:
 
 ---
 
-As the rest of LaTeX, mathematics have their own environments, mostly two kinds of environments that allow you to make the distinction between textual and mathematical content.
+As the rest of LaTeX, mathematics have their own environments, mostly two kinds of environments that allow you to make the distinction between textual 
+and mathematical content.
 The way to write mathematical equations is a little bit different than text and will be described below.
 
 ## Maths environments
 
-Inline formulas insert mathematical symbols right into a sentence, in this case, Latex uses dollar signs (```$some equation$```) are used to delimit mathematical content.
+Inline formulas insert mathematical symbols right into a sentence. In this case, LaTeX uses dollar signs (```$some equation$```) are used to delimit 
+mathematical content.
 
-If an expression needs particular attention, as when displaying important steps or results, mathematical symbols can appear on their own line using the ```equation```environment, with this environment equations are numbered automatically, and can be referenced.
+If an expression needs particular attention, as when displaying important steps or results, mathematical symbols can appear on their
+ own line using the ```equation```environment, with this environment equations are numbered automatically, and can be referenced.
 
 
 {% latex filename=07-maths-01 minimal=true %}
@@ -36,7 +39,8 @@ Both environment use the same way to write maths.
 
 ## How to write math
 
-A wealth of mathematical symbols and formatting commands are available in LaTeX. Some can readily be used with plain LaTeX, others are defined in specialized packages.
+A wealth of mathematical symbols and formatting commands are available in LaTeX. 
+Some can readily be used with plain LaTeX, others are defined in specialized packages.
 
 {% latex filename=07-maths-02 minimal=true %}
 
@@ -56,12 +60,11 @@ You can use [Wikibook Latex Math](https://en.wikibooks.org/wiki/LaTeX/Mathematic
 
 Writing text in math mode can be tricky as math mode removes the spacing between words:
 
-
 {% latex filename=07-maths-03 minimal=true %}
 
-The mathematical formatting does not suit plan text:
+The mathematical formatting does not suit plain text:
 \begin{equation}
-	This is plan text in math mode.
+	This is plain text in math mode.
 \end{equation}
 You have to switch back to text mode inside the math environment:
 \begin{equation}

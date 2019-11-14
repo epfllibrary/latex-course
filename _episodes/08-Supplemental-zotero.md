@@ -1,14 +1,15 @@
 ---
-title: "Supplemental : Zotero and Latex"
-teaching: 15
-exercises: 5
+title: "Supplemental : Zotero and LaTeX"
+teaching: 5
+exercises: 0
 questions:
-- "How to use Zotero with Latex and have citation from my Zotero database"
+- "How to use Zotero with LaTeX ?"
 objectives:
-- "Export my Zotero publication into Latex"
+- "Export my Zotero publication into LaTeX"
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- "References can be exported from Zotero in BibTeX format"
 ---
 
+**This part of the lesson is under development, if you want more information about this topic, ask your EPFL librarians at formations.bib@epfl.ch**
 
 {% include links.md %}

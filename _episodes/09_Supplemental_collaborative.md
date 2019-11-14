@@ -10,7 +10,7 @@ keypoints:
 - "Overleaf is a web platform in which multiple persons can work with a LaTeX document simultaneously"
 ---
 
-**This part of the lesson is under development, if you want more information about this topic, ask your EPFL librarians at formations.bib@epfl.ch**
+**This part of the lesson is under development. If you want more information about this topic, ask your EPFL librarians at formations.bib@epfl.ch**
 
 Overleaf is a web platform where you can write LaTeX and compile documents easily. Packages, environments and commands should work the same in Overleaf as in locally installed versions of LaTeX. 
 

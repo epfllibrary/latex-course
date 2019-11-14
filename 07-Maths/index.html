@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2019-11-13 17:08:00 +0100">
+    <meta http-equiv="last-modified" content="2019-11-14 13:55:01 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -132,9 +132,9 @@
             
             <li><a href="../07-Maths/index.html">Maths</a></li>
             
-            <li><a href="../08-Supplemental-zotero/index.html">Supplemental : Zotero and Latex</a></li>
+            <li><a href="../08-Supplemental-zotero/index.html">Supplemental : Zotero and LaTeX</a></li>
             
-            <li><a href="../09_Supplental_collaborative/index.html">Supplemental : Collaborative latex</a></li>
+            <li><a href="../09_Supplemental_collaborative/index.html">Supplemental : Collaborative LaTeX</a></li>
             
 	    <li role="separator" class="divider"></li>
             <li><a href="../aio.html">All in one page (Beta)</a></li>
@@ -239,7 +239,7 @@
       <strong>Questions</strong>
       <ul>
 	
-	<li><p>How to write equations with LaTeX</p>
+	<li><p>How to write equations with LaTeX?</p>
 </li>
 	
       </ul>
@@ -265,14 +265,17 @@
 
 </blockquote>
 
-<p>As the rest of LaTeX, mathematics have their own environments, mostly two kinds of environments that allow you to make the distinction between textual and mathematical content.
+<p>As the rest of LaTeX, mathematics have their own environments, mostly two kinds of environments that allow you to make the distinction between textual 
+and mathematical content.
 The way to write mathematical equations is a little bit different than text and will be described below.</p>
 
 <h2 id="maths-environments">Maths environments</h2>
 
-<p>Inline formulas insert mathematical symbols right into a sentence, in this case, Latex uses dollar signs (<code class="language-html highlighter-rouge">$some equation$</code>) are used to delimit mathematical content.</p>
+<p>Inline formulas insert mathematical symbols right into a sentence. In this case, LaTeX uses dollar signs (<code class="language-html highlighter-rouge">$some equation$</code>) are used to delimit 
+mathematical content.</p>
 
-<p>If an expression needs particular attention, as when displaying important steps or results, mathematical symbols can appear on their own line using the <code class="language-html highlighter-rouge">equation</code>environment, with this environment equations are numbered automatically, and can be referenced.</p>
+<p>If an expression needs particular attention, as when displaying important steps or results, mathematical symbols can appear on their
+ own line using the <code class="language-html highlighter-rouge">equation</code>environment, with this environment equations are numbered automatically, and can be referenced.</p>
 
 <div class="challenge">
   <h2>07-maths-01</h2>
@@ -301,7 +304,8 @@ for any integer <span class="p">$</span><span class="nb">i</span><span class="p"
 
 <h2 id="how-to-write-math">How to write math</h2>
 
-<p>A wealth of mathematical symbols and formatting commands are available in LaTeX. Some can readily be used with plain LaTeX, others are defined in specialized packages.</p>
+<p>A wealth of mathematical symbols and formatting commands are available in LaTeX. 
+Some can readily be used with plain LaTeX, others are defined in specialized packages.</p>
 
 <div class="challenge">
   <h2>07-maths-02</h2>
@@ -340,9 +344,9 @@ Arrows: <span class="p">$</span><span class="nv">\mapsto</span><span class="nb">
     <h2> Tex file : <a href="../latex/tex/07-maths-03.tex">07-maths-03.tex</a></h2>
     <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
 
-The mathematical formatting does not suit plan text:
+The mathematical formatting does not suit plain text:
 <span class="nt">\begin{equation}</span>
-	This is plan text in math mode.
+	This is plain text in math mode.
 <span class="nt">\end{equation}</span>
 You have to switch back to text mode inside the math environment:
 <span class="nt">\begin{equation}</span>

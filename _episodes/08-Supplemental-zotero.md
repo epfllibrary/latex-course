@@ -10,6 +10,6 @@ keypoints:
 - "References can be exported from Zotero in BibTeX format"
 ---
 
-**This part of the lesson is under development, if you want more information about this topic, ask your EPFL librarians at formations.bib@epfl.ch**
+**This part of the lesson is under development. If you want more information about this topic, ask your EPFL librarians at formations.bib@epfl.ch**
 
 {% include links.md %}

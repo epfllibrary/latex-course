@@ -10,13 +10,15 @@ Please install LaTeX before the course starts, so that we can directly dive into
 
 ### Install LaTeX for Windows
 
-There 2 steps :
+There are 2 steps :
 
 1. We recommend that you download and install the windows texlive version(install-tl-windows.exe) <https://tug.org/texlive/acquire-netinstall.html>. This is the distribution we will use during the class.
 
 2. Please also install a LaTeX editor : we suggest that you use the texmaker gui <https://www.xm1math.net/texmaker>. We will use this editor in class. There are other editors that could suit your needs. 
 
 ### Install LaTeX for MacOS
+
+There are 2 steps :
 
 1. We recommend that you download and install the mac texlive version (called mactex) from : <https://www.tug.org/mactex/mactex-download.html>
 

@@ -4,7 +4,7 @@ title: Setup
 
 ## Install LaTeX
 
-LaTeX is composed of many softwares working together. On order to use them easily it exists what we call distribution : they combine all the needed tools in one big package. To work on your LaTeX source files, please also install an editor.
+LaTeX is composed of many softwares working together. In order to use them easily, *distributions* exist : they combine all the needed tools in one big package. To work on your LaTeX source files, you will need to install a distribution and an editor. 
 
 Please install LaTeX before the course starts, it will save you time. 
 

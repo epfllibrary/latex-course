@@ -3,9 +3,10 @@ title: "Supplemental : Collaborative LaTeX"
 teaching: 5
 exercises: 0
 questions:
-- "How to use LaTeX with Overleaf to work with multiple person"
+- "How to use LaTeX with Overleaf to work with several persons"
 objectives:
 - "Introduction to Overleaf"
+- "Alternatives to Overleaf"
 keypoints:
 - "Overleaf is a web platform in which multiple persons can work with a LaTeX document simultaneously"
 ---

@@ -1,4 +1,4 @@
-I"1@<p>Below, you will get to know the minimal commands required to compile a LaTeX document. We will see a little further what each command does.</p>
+I"\B<p>Below, you will get to know the minimal commands required to compile a LaTeX document. We will see a little further what each command does.</p>
 
 <blockquote class="callout">
   <h2 id="compilation">Compilation</h2>
@@ -127,20 +127,28 @@ A command is usually used for a short and localized modification, for example <c
   <p>A list of packages can be found on the <a href="https://www.ctan.org/">CTAN webpage</a> you can find package based on their name or topics.</p>
 </blockquote>
 
-<h2 id="documentclass"><code class="language-html highlighter-rouge">\documentclass</code></h2>
-<p>The <code class="language-html highlighter-rouge">documentclass</code> command has to be on the top of the document it defines how the document will look like :
-By default latex support different type of documents such as :</p>
-<ul>
-  <li><code class="language-html highlighter-rouge">letter</code> : for letter (mail)</li>
-  <li><code class="language-html highlighter-rouge">article</code> : for publication (journal)</li>
-  <li><code class="language-html highlighter-rouge">report</code> : for middle size publication like master thesis</li>
-  <li><code class="language-html highlighter-rouge">book</code> : for huge publication
-Changing the style of document change the way the document looks like and also some features might be disabled (for example you cannot defined chapters within article)</li>
-</ul>
+<blockquote class="callout">
+  <h2 id="documentclass">\documentclass</h2>
+  <p>The <code class="language-html highlighter-rouge">documentclass</code> command has to be on the top of the document it defines how the document will look like :
+By default LaTeX support different type of documents such as :</p>
+  <ul>
+    <li><code class="language-html highlighter-rouge">letter</code> : for letter (mail)</li>
+    <li><code class="language-html highlighter-rouge">article</code> : for publication (journal)</li>
+    <li><code class="language-html highlighter-rouge">report</code> : for middle size publication like master thesis</li>
+    <li><code class="language-html highlighter-rouge">book</code> : for huge publications, including your PhD thesis</li>
+  </ul>
+</blockquote>
 
-<p>As we shaw, the options in the documentclass can defined the paper size, it’s also possible to define a global font size for the entire document, or if the document is double sided.
+<p>Changing the style of document change the way the document looks like and also some features might be disabled (for example you cannot defined chapters within article)</p>
+
+<p>As we saw, the options in the documentclass can defined the paper size, it’s also possible to define a global font size for the entire document, or if the document is double sided.
 for example :
 <code class="language-html highlighter-rouge">\documentclass[a4paper,12pt,twoside]{report}</code> will generate a report with font size of 12pt on A4 paper double sided.</p>
+
+<p class="callout">Some journals and universities provide templates for LaTeX documents.
+ Templates will include the expected documentclass, font size, packages, etc. in order to create a specific layout.
+ For EPFL, there is an unofficial <a href="https://github.com/glederrey/EPFL_Thesis_Template">PhD thesis template</a> maintained by the PhD association Polydoc. 
+EPFL IC faculty also has a <a href="https://github.com/HexHive/thesis_template">template for LaTeX documents</a> maintained by Mathias Payer.</p>
 
 <h2 id="exercices">Exercices</h2>
 
@@ -154,25 +162,25 @@ for example :
   <ol>
     <li>
       <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{quote}</span>
- Veni vidi vici (Jules Cesear)
+ Veni vidi vici (Jules Caesar)
 <span class="k">\end</span>
 </code></pre></div>      </div>
     </li>
     <li>
       <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\begin</span><span class="na">[quote]</span>
- Veni vidi vici (Jules Cesear)
+ Veni vidi vici (Jules Caesar)
 <span class="k">\end</span><span class="na">[quote]</span>
 </code></pre></div>      </div>
     </li>
     <li>
       <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{quote}</span>
- Veni vidi vici (Jules Cesear)
+ Veni vidi vici (Jules Caesar)
 <span class="nt">\end{quote}</span>
 </code></pre></div>      </div>
     </li>
     <li>
       <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{quotes}</span>
- Veni vidi vici (Jules Cesear)
+ Veni vidi vici (Jules Caesar)
 <span class="nt">\end{quotes}</span>
 </code></pre></div>      </div>
     </li>

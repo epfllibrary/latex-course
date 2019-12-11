@@ -116,14 +116,15 @@ Before the ```document```environment there is several commands :
 > A list of packages can be found on the [CTAN webpage](https://www.ctan.org/) you can find package based on their name or topics.
 {: .callout}
 
-
-> ## ```\documentclass```
+> ## \documentclass
 > The ```documentclass``` command has to be on the top of the document it defines how the document will look like :
 > By default LaTeX support different type of documents such as :
 > * ```letter``` : for letter (mail)
 > * ```article``` : for publication (journal)
 > * ```report``` : for middle size publication like master thesis
 > * ```book``` : for huge publications, including your PhD thesis
+{: .callout}
+
 Changing the style of document change the way the document looks like and also some features might be disabled (for example you cannot defined chapters within article)
 
 As we saw, the options in the documentclass can defined the paper size, it's also possible to define a global font size for the entire document, or if the document is double sided.
@@ -132,7 +133,9 @@ for example :
 
 Some journals and universities provide templates for LaTeX documents.
  Templates will include the expected documentclass, font size, packages, etc. in order to create a specific layout.
- For EPFL, there is an unofficial [PhD thesis](https://github.com/glederrey/EPFL_Thesis_Template) template maintained by the PhD association Polydoc.
+ For EPFL, there is an unofficial [PhD thesis template](https://github.com/glederrey/EPFL_Thesis_Template) maintained by the PhD association Polydoc. 
+EPFL IC faculty also has a [template for LaTeX documents](https://github.com/HexHive/thesis_template) maintained by Mathias Payer.
+{: .callout}
 
 ## Exercices
 

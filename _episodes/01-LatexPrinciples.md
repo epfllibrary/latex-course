@@ -21,7 +21,7 @@ It integrates a lot of useful tools for managing figures, tables, table of conte
 
 LaTeX is ideal because it generates beautiful documents easily.
 
-A LaTeX document looks like... [this example](../latex/pdf/latexprinciples.pdf). 
+A LaTeX document looks like... [this example](https://github.com/epfllibrary/latex-course/blob/master/latex/pdf/latexprinciples.pdf../latex/pdf/latexprinciples.pdf). 
 
 ## How it works
 

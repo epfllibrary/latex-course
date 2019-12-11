@@ -117,19 +117,22 @@ Before the ```document```environment there is several commands :
 {: .callout}
 
 
-## ```\documentclass```
-The ```documentclass``` command has to be on the top of the document it defines how the document will look like :
-By default latex support different type of documents such as :
-* ```letter``` : for letter (mail)
-* ```article``` : for publication (journal)
-* ```report``` : for middle size publication like master thesis
-* ```book``` : for huge publication
+> ## ```\documentclass```
+> The ```documentclass``` command has to be on the top of the document it defines how the document will look like :
+> By default LaTeX support different type of documents such as :
+> * ```letter``` : for letter (mail)
+> * ```article``` : for publication (journal)
+> * ```report``` : for middle size publication like master thesis
+> * ```book``` : for huge publications, including your PhD thesis
 Changing the style of document change the way the document looks like and also some features might be disabled (for example you cannot defined chapters within article)
 
-As we shaw, the options in the documentclass can defined the paper size, it's also possible to define a global font size for the entire document, or if the document is double sided.
+As we saw, the options in the documentclass can defined the paper size, it's also possible to define a global font size for the entire document, or if the document is double sided.
 for example :
 ```\documentclass[a4paper,12pt,twoside]{report}``` will generate a report with font size of 12pt on A4 paper double sided.
 
+Some journals and universities provide templates for LaTeX documents.
+ Templates will include the expected documentclass, font size, packages, etc. in order to create a specific layout.
+ For EPFL, there is an unofficial [PhD thesis](https://github.com/glederrey/EPFL_Thesis_Template) template maintained by the PhD association Polydoc.
 
 ## Exercices
 
@@ -141,28 +144,28 @@ for example :
 >
 > 1. ~~~
 >    \begin{quote}
->     Veni vidi vici (Jules Cesear)
+>     Veni vidi vici (Jules Caesar)
 >    \end
 >    ~~~
 >    {: .language-latex}
 >
 > 2. ~~~
 >    \begin[quote]
->     Veni vidi vici (Jules Cesear)
+>     Veni vidi vici (Jules Caesar)
 >    \end[quote]
 >    ~~~
 >    {: .language-latex}
 >
 > 3. ~~~
 >    \begin{quote}
->     Veni vidi vici (Jules Cesear)
+>     Veni vidi vici (Jules Caesar)
 >    \end{quote}
 >    ~~~
 >    {: .language-latex}
 >
 > 4. ~~~
 >    \begin{quotes}
->     Veni vidi vici (Jules Cesear)
+>     Veni vidi vici (Jules Caesar)
 >    \end{quotes}
 >    ~~~
 >    {: .language-latex}

@@ -41,19 +41,21 @@ Let's see how we can change the fonts used in LaTeX.
 {% endlatex %}
 
 With the commands ```\textit{...}``` and ```\textbf{...}```, you can modify parts of the text.
-Keep in mind that such modifications are useful to emphazise your point but should be used consistently and parsimoniously.
+Keep in mind that such modifications are useful to emphasize your point but should be used consistently and parsimoniously.
 
 The size of the font can be changed with the following commands : (from the smallest to the biggest)
-* ```\tiny{...}```
-* ```\small{...}```
-* ```\normalsize{...}```
-* ```\large{...}```
-* ```\Large{...}```
-* ```\LARGE{...}```
-* ```\huge{...}```
-* ```\Huge{...}```
+* ```\tiny```
+* ```\small```
+* ```\normalsize```
+* ```\large```
+* ```\Large```
+* ```\LARGE```
+* ```\huge```
+* ```\Huge```
 
-The size of the font is relative to the size specified in the ```documentclass```
+Their usage is a little different than regular commands. Indeed, they are like switches and change the fontsize until the end of the current group.
+
+The actual font size is relative to the size specified in the ```documentclass```
 
 {% latex filename=03-font-02 %}
 
@@ -65,27 +67,61 @@ The size of the font is relative to the size specified in the ```documentclass``
 
 \begin{document}
 
-        \tiny{tiny}
+        \tiny
 
-        \small{small}
+				tiny
 
-        \normalsize{normal}
+				tiny
 
-        \large{large}
+        \small
 
-        \LARGE{LARGE}
+				small
 
-        \Huge{Huge}
+				small
+
+				still small
+
+        \normalsize
+
+				normal
+
+				back to normal
+
+        \large
+
+				large
+
+        \LARGE
+
+				LARGE
+
+        \Huge
+
+				Huge
 
 \end{document}
 
 {% endlatex %}
 
-## Paragraphs
-You may have realized that LaTeX doesn't jump to a new line when you press enter in your source file. This is because, you need to jump at least two lines in the source file for LaTex to jump one in the compiled document
- (it will ignore the extra lines you add). You can also jump line by using the ```\\``` at this end of the line.
 
-By default, LaTeX justifies the paragraph. It is possible to change that inside an  environment: ```flushright``` ```center``` or ```flushleft```
+In this example the font size is changed when the command is used and will stay until another size is specified, if you want to change the font size only for a few number of words, you can group the command using:  ```{\Large only some text is large}```.
+
+It's also possible to specify the font size for a specific object like environment by just switching the size the size at the beginning of the environment like:
+~~~
+\begin{itemize}
+  \Large
+  \item Alpha
+  \item Beta
+  \item Gamma
+\end{itemize}
+~~~
+{: .language-latex}
+
+
+## Paragraphs
+You may have realized that LaTeX doesn't jump to a new line when you press enter in your source file. This is because, you need to jump at least two lines in the source file for LaTex to jump one in the compiled document (it will ignore the extra lines you add). You can also jump line by using the ```\\``` at this end of the line.
+
+By default, LaTeX justifies the paragraph. It is possible to change that inside an  environment: ```flushright``` ```center``` or ```flushleft```.
 
 {% latex filename=03-para-01 minimal=true %}
 

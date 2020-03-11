@@ -1,4 +1,4 @@
-I"�3<h2 id="fonts">Fonts</h2>
+I"�6<h2 id="fonts">Fonts</h2>
 <p>We know how to write simple plain text.
 Let’s see how we can change the fonts used in LaTeX.</p>
 
@@ -36,21 +36,23 @@ Let’s see how we can change the fonts used in LaTeX.</p>
 </div>
 
 <p>With the commands <code class="language-html highlighter-rouge">\textit{...}</code> and <code class="language-html highlighter-rouge">\textbf{...}</code>, you can modify parts of the text.
-Keep in mind that such modifications are useful to emphazise your point but should be used consistently and parsimoniously.</p>
+Keep in mind that such modifications are useful to emphasize your point but should be used consistently and parsimoniously.</p>
 
 <p>The size of the font can be changed with the following commands : (from the smallest to the biggest)</p>
 <ul>
-  <li><code class="language-html highlighter-rouge">\tiny{...}</code></li>
-  <li><code class="language-html highlighter-rouge">\small{...}</code></li>
-  <li><code class="language-html highlighter-rouge">\normalsize{...}</code></li>
-  <li><code class="language-html highlighter-rouge">\large{...}</code></li>
-  <li><code class="language-html highlighter-rouge">\Large{...}</code></li>
-  <li><code class="language-html highlighter-rouge">\LARGE{...}</code></li>
-  <li><code class="language-html highlighter-rouge">\huge{...}</code></li>
-  <li><code class="language-html highlighter-rouge">\Huge{...}</code></li>
+  <li><code class="language-html highlighter-rouge">\tiny</code></li>
+  <li><code class="language-html highlighter-rouge">\small</code></li>
+  <li><code class="language-html highlighter-rouge">\normalsize</code></li>
+  <li><code class="language-html highlighter-rouge">\large</code></li>
+  <li><code class="language-html highlighter-rouge">\Large</code></li>
+  <li><code class="language-html highlighter-rouge">\LARGE</code></li>
+  <li><code class="language-html highlighter-rouge">\huge</code></li>
+  <li><code class="language-html highlighter-rouge">\Huge</code></li>
 </ul>
 
-<p>The size of the font is relative to the size specified in the <code class="language-html highlighter-rouge">documentclass</code></p>
+<p>Their usage is a little different than regular commands. Indeed, they are like switches and change the fontsize until the end of the current group.</p>
+
+<p>The actual font size is relative to the size specified in the <code class="language-html highlighter-rouge">documentclass</code></p>
 
 <div class="challenge">
   <h2>03-font-02</h2>
@@ -66,17 +68,37 @@ Keep in mind that such modifications are useful to emphazise your point but shou
 
 <span class="nt">\begin{document}</span>
 
-        <span class="k">\tiny</span><span class="p">{</span>tiny<span class="p">}</span>
+        <span class="k">\tiny</span>
 
-        <span class="k">\small</span><span class="p">{</span>small<span class="p">}</span>
+				tiny
 
-        <span class="k">\normalsize</span><span class="p">{</span>normal<span class="p">}</span>
+				tiny
 
-        <span class="k">\large</span><span class="p">{</span>large<span class="p">}</span>
+        <span class="k">\small</span>
 
-        <span class="k">\LARGE</span><span class="p">{</span>LARGE<span class="p">}</span>
+				small
 
-        <span class="k">\Huge</span><span class="p">{</span>Huge<span class="p">}</span>
+				small
+
+				still small
+
+        <span class="k">\normalsize</span>
+
+				normal
+
+				back to normal
+
+        <span class="k">\large</span>
+
+				large
+
+        <span class="k">\LARGE</span>
+
+				LARGE
+
+        <span class="k">\Huge</span>
+
+				Huge
 
 <span class="nt">\end{document}</span>
 
@@ -91,11 +113,21 @@ Keep in mind that such modifications are useful to emphazise your point but shou
 
 </div>
 
-<h2 id="paragraphs">Paragraphs</h2>
-<p>You may have realized that LaTeX doesn’t jump to a new line when you press enter in your source file. This is because, you need to jump at least two lines in the source file for LaTex to jump one in the compiled document
- (it will ignore the extra lines you add). You can also jump line by using the <code class="language-html highlighter-rouge">\\</code> at this end of the line.</p>
+<p>In this example the font size is changed when the command is used and will stay until another size is specified, if you want to change the font size only for a few number of words, you can group the command using:  <code class="language-html highlighter-rouge">{\Large only some text is large}</code>.</p>
 
-<p>By default, LaTeX justifies the paragraph. It is possible to change that inside an  environment: <code class="language-html highlighter-rouge">flushright</code> <code class="language-html highlighter-rouge">center</code> or <code class="language-html highlighter-rouge">flushleft</code></p>
+<p>It’s also possible to specify the font size for a specific object like environment by just switching the size the size at the beginning of the environment like:</p>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{itemize}</span>
+  <span class="k">\Large</span>
+  <span class="k">\item</span> Alpha
+  <span class="k">\item</span> Beta
+  <span class="k">\item</span> Gamma
+<span class="nt">\end{itemize}</span>
+</code></pre></div></div>
+
+<h2 id="paragraphs">Paragraphs</h2>
+<p>You may have realized that LaTeX doesn’t jump to a new line when you press enter in your source file. This is because, you need to jump at least two lines in the source file for LaTex to jump one in the compiled document (it will ignore the extra lines you add). You can also jump line by using the <code class="language-html highlighter-rouge">\\</code> at this end of the line.</p>
+
+<p>By default, LaTeX justifies the paragraph. It is possible to change that inside an  environment: <code class="language-html highlighter-rouge">flushright</code> <code class="language-html highlighter-rouge">center</code> or <code class="language-html highlighter-rouge">flushleft</code>.</p>
 
 <div class="challenge">
   <h2>03-para-01</h2>

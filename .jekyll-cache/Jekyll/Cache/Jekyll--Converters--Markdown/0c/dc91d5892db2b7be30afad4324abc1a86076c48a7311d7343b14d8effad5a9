@@ -1,10 +1,12 @@
-I"N	<h2 id="what-it-is">What it is</h2>
+I"ã	<h2 id="what-it-is">What it is</h2>
 
 <p>LaTeX is a typesetting system, you can use it for writing articles, books, thesis or any kind of written document.</p>
 
 <p>It integrates a lot of useful tools for managing figures, tables, table of contents, equations, etc.</p>
 
 <p>LaTeX is ideal because it generates beautiful documents easily.</p>
+
+<p>A LaTeX document looks likeâ€¦ <a href="https://github.com/epfllibrary/latex-course/blob/master/files/latexprinciples.pdf">this example</a>.</p>
 
 <h2 id="how-it-works">How it works</h2>
 

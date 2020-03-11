@@ -21,6 +21,8 @@ It integrates a lot of useful tools for managing figures, tables, table of conte
 
 LaTeX is ideal because it generates beautiful documents easily.
 
+A LaTeX document looks like... [this example](https://github.com/epfllibrary/latex-course/blob/master/files/latexprinciples.pdf). 
+
 ## How it works
 
 LaTeX is different from a what-you-see-is-what-you-get software like Microsoft Word, because you can't see how the document will look like immediately, before it has been processed by the Latex software. This process is called **compilation**.

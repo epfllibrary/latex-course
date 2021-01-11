@@ -63,7 +63,7 @@ Tables are managed by the ```tabular```environment. The ```04-table-01.tex``` fi
 \documentclass[a4paper]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 \usepackage{graphicx}
 

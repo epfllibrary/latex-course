@@ -29,7 +29,7 @@ Below, you will get to know the minimal commands required to compile a LaTeX doc
 \documentclass[a4paper]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 \usepackage{graphicx}
 
@@ -57,7 +57,7 @@ For example, the environment ```itemize``` creates bullet points. So, a bullet p
 \documentclass[a4paper]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 \usepackage{graphicx}
 
@@ -89,12 +89,12 @@ For example, the environment ```itemize``` creates bullet points. So, a bullet p
 
 
 
-Before the ```document```environment there is several commands :
+Before the ```document```environment there are several commands :
 ~~~
 \documentclass[a4paper]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 \usepackage{graphicx}
 
@@ -108,7 +108,7 @@ Before the ```document```environment there is several commands :
 >
 >
 > * For example ```\usepackage[utf8]{inputenc}``` loads the ```ìnputenc``` package with the ```utf8```option (this is is for character encoding)
-> * ```\usepackage{lmodern}``` specify that we are using the ```lmodern``` fonts packages.
+> * ```\usepackage[T1]{fontenc}``` specify that we are using the ```T1``` fonts packages.
 > * ```\usepackage[english]{babel}``` loads the package ```babel``` that takes care of the specific typography for the language (here ```english``` you can change the option if you are typing in another language for example ```french``` or ```german```).
 > * ```\usepackage{graphicx}``` loads the package that allow to include external image to the document.
 >
@@ -133,7 +133,7 @@ for example :
 
 Some journals and universities provide templates for LaTeX documents.
  Templates will include the expected documentclass, font size, packages, etc. in order to create a specific layout.
- For EPFL, there is an unofficial [PhD thesis template](https://github.com/glederrey/EPFL_Thesis_Template) maintained by the PhD association Polydoc. 
+ For EPFL, there is an unofficial [PhD thesis template](https://github.com/glederrey/EPFL_Thesis_Template) maintained by the PhD association Polydoc.
 EPFL IC faculty also has a [template for LaTeX documents](https://github.com/HexHive/thesis_template) maintained by Mathias Payer.
 {: .callout}
 
@@ -247,7 +247,7 @@ EPFL IC faculty also has a [template for LaTeX documents](https://github.com/Hex
 > > ~~~
 > > \documentclass[a4paper]{article}
 > > \usepackage[utf8]{inputenc}
-> > \usepackage{lmodern}
+> > \usepackage[T1]{fontenc}
 > > \usepackage[english]{babel}
 > > \usepackage{graphicx}
 > > \usepackage{listings}

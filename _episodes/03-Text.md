@@ -25,7 +25,7 @@ Let's see how we can change the fonts used in LaTeX.
 \documentclass[a4paper]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 
 \begin{document}
@@ -43,7 +43,8 @@ Let's see how we can change the fonts used in LaTeX.
 With the commands ```\textit{...}``` and ```\textbf{...}```, you can modify parts of the text.
 Keep in mind that such modifications are useful to emphasize your point but should be used consistently and parsimoniously.
 
-The size of the font can be changed with the following commands : (from the smallest to the biggest)
+The relative size of the font can be changed with the following commands : (from the smallest to the biggest, the actual font size is relative to the size specified in the ```documentclass```
+)
 * ```\tiny```
 * ```\small```
 * ```\normalsize```
@@ -53,16 +54,15 @@ The size of the font can be changed with the following commands : (from the smal
 * ```\huge```
 * ```\Huge```
 
-Their usage is a little different than regular commands. Indeed, they are like switches and change the fontsize until the end of the current group.
+Their usage is a little different than regular commands. Indeed, they are like switches and changes the fontsize until the end of the current group.
 
-The actual font size is relative to the size specified in the ```documentclass```
 
 {% latex filename=03-font-02 %}
 
 \documentclass[a4paper]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 
 \begin{document}
@@ -256,7 +256,7 @@ and then the data analysis was done by [...].
 > > ~~~
 > > \documentclass[a4paper,14pt,twoside]{book}
 > > \usepackage[utf8]{inputenc}
-> > \usepackage{lmodern}
+> > \usepackage[T1]{fontenc}
 > > \usepackage[english]{babel}
 > > \usepackage{graphicx}
 > > \begin{document}

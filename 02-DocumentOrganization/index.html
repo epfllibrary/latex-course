@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2020-03-11 09:37:38 +0100">
+    <meta http-equiv="last-modified" content="2021-01-11 11:28:37 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -283,7 +283,7 @@
 <span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
 
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
-<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[T1]</span><span class="p">{</span>fontenc<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span>
 
@@ -325,7 +325,7 @@
 <span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
 
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
-<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[T1]</span><span class="p">{</span>fontenc<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span>
 
@@ -365,11 +365,11 @@ A command is usually used for a short and localized modification, for example <c
   <p>We usually have to provide inputs for commands or environment, the command are written between <code class="language-html highlighter-rouge">{}</code> sometimes you can specified options, they are written between <code class="language-html highlighter-rouge">[]</code> before the <code class="language-html highlighter-rouge">{}</code>.</p>
 </blockquote>
 
-<p>Before the <code class="language-html highlighter-rouge">document</code>environment there is several commands :</p>
+<p>Before the <code class="language-html highlighter-rouge">document</code>environment there are several commands :</p>
 <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
 
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
-<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[T1]</span><span class="p">{</span>fontenc<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span>
 
@@ -385,7 +385,7 @@ A command is usually used for a short and localized modification, for example <c
 
   <ul>
     <li>For example <code class="language-html highlighter-rouge">\usepackage[utf8]{inputenc}</code> loads the <code class="language-html highlighter-rouge">ìnputenc</code> package with the <code class="language-html highlighter-rouge">utf8</code>option (this is is for character encoding)</li>
-    <li><code class="language-html highlighter-rouge">\usepackage{lmodern}</code> specify that we are using the <code class="language-html highlighter-rouge">lmodern</code> fonts packages.</li>
+    <li><code class="language-html highlighter-rouge">\usepackage[T1]{fontenc}</code> specify that we are using the <code class="language-html highlighter-rouge">T1</code> fonts packages.</li>
     <li><code class="language-html highlighter-rouge">\usepackage[english]{babel}</code> loads the package <code class="language-html highlighter-rouge">babel</code> that takes care of the specific typography for the language (here <code class="language-html highlighter-rouge">english</code> you can change the option if you are typing in another language for example <code class="language-html highlighter-rouge">french</code> or <code class="language-html highlighter-rouge">german</code>).</li>
     <li><code class="language-html highlighter-rouge">\usepackage{graphicx}</code> loads the package that allow to include external image to the document.</li>
   </ul>
@@ -413,7 +413,7 @@ for example :
 
 <p class="callout">Some journals and universities provide templates for LaTeX documents.
  Templates will include the expected documentclass, font size, packages, etc. in order to create a specific layout.
- For EPFL, there is an unofficial <a href="https://github.com/glederrey/EPFL_Thesis_Template">PhD thesis template</a> maintained by the PhD association Polydoc. 
+ For EPFL, there is an unofficial <a href="https://github.com/glederrey/EPFL_Thesis_Template">PhD thesis template</a> maintained by the PhD association Polydoc.
 EPFL IC faculty also has a <a href="https://github.com/HexHive/thesis_template">template for LaTeX documents</a> maintained by Mathias Payer.</p>
 
 <h2 id="exercices">Exercices</h2>
@@ -534,7 +534,7 @@ print "the average score is: ", average
     <h2 id="solution-2">Solution</h2>
     <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
-<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[T1]</span><span class="p">{</span>fontenc<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>listings<span class="p">}</span>
@@ -620,7 +620,7 @@ print "the average score is: ", average
   <div class="row">
     <div class="col-md-6 copyright" align="left">
 	
-  Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2019–2020
+  Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2019–2021
   by <a href="https://library.epfl.ch/">EPFL Library</a>
 	
     </div>

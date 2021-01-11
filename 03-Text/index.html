@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2020-03-11 09:37:38 +0100">
+    <meta http-equiv="last-modified" content="2021-01-11 11:28:37 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -280,7 +280,7 @@ Let’s see how we can change the fonts used in LaTeX.</p>
 <span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
 
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
-<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[T1]</span><span class="p">{</span>fontenc<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
 
 <span class="nt">\begin{document}</span>
@@ -307,7 +307,8 @@ Let’s see how we can change the fonts used in LaTeX.</p>
 <p>With the commands <code class="language-html highlighter-rouge">\textit{...}</code> and <code class="language-html highlighter-rouge">\textbf{...}</code>, you can modify parts of the text.
 Keep in mind that such modifications are useful to emphasize your point but should be used consistently and parsimoniously.</p>
 
-<p>The size of the font can be changed with the following commands : (from the smallest to the biggest)</p>
+<p>The relative size of the font can be changed with the following commands : (from the smallest to the biggest, the actual font size is relative to the size specified in the <code class="language-html highlighter-rouge">documentclass</code>
+)</p>
 <ul>
   <li><code class="language-html highlighter-rouge">\tiny</code></li>
   <li><code class="language-html highlighter-rouge">\small</code></li>
@@ -319,9 +320,7 @@ Keep in mind that such modifications are useful to emphasize your point but shou
   <li><code class="language-html highlighter-rouge">\Huge</code></li>
 </ul>
 
-<p>Their usage is a little different than regular commands. Indeed, they are like switches and change the fontsize until the end of the current group.</p>
-
-<p>The actual font size is relative to the size specified in the <code class="language-html highlighter-rouge">documentclass</code></p>
+<p>Their usage is a little different than regular commands. Indeed, they are like switches and changes the fontsize until the end of the current group.</p>
 
 <div class="challenge">
   <h2>03-font-02</h2>
@@ -332,7 +331,7 @@ Keep in mind that such modifications are useful to emphasize your point but shou
 <span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
 
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
-<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[T1]</span><span class="p">{</span>fontenc<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
 
 <span class="nt">\begin{document}</span>
@@ -602,7 +601,7 @@ Put some text and add a page that starts on a odd side and put again some text o
     <h2 id="solution-1">Solution</h2>
     <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="na">[a4paper,14pt,twoside]</span><span class="p">{</span>book<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
-<span class="k">\usepackage</span><span class="p">{</span>lmodern<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[T1]</span><span class="p">{</span>fontenc<span class="p">}</span>
 <span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span>
 <span class="nt">\begin{document}</span>
@@ -686,7 +685,7 @@ This is another chapter of my Latex life
   <div class="row">
     <div class="col-md-6 copyright" align="left">
 	
-  Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2019–2020
+  Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2019–2021
   by <a href="https://library.epfl.ch/">EPFL Library</a>
 	
     </div>

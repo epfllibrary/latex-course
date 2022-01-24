@@ -143,8 +143,8 @@ Including the BiBTeX file inside a LaTeX document is done with two commands :
 >  Write the corresponding instructions using the ```thebibliography```environment.
 >
 >>
-> > ## Solution
-> > ~~~
+>> ## Solution
+>> ~~~
 > > \begin{thebibliography}{10}
 > > \bibitem{EPFLFastGuide}
 > > EPFL Library Research Data Management Fastguides, EPFL, https://infoscience.epfl.ch/record/265349
@@ -154,7 +154,7 @@ Including the BiBTeX file inside a LaTeX document is done with two commands :
   > > Gordon RS. Information tomorrow reflections on technology and the future of public and academic libraries [Internet]. Medford, N.J.: Information Today, Inc.; 2007 [cité 20 mars 2015]. Disponible sur: http://search.ebscohost.com/login.aspx?direct=true&scope=site&db=nlebk&db=nlabk&AN=211266
 > > \end{thebibliography}
 > > ~~~
-> >{: .language-latex}
+>>{: .language-latex}
 > {: .solution}
 {: .challenge}
 

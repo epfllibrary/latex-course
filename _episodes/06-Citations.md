@@ -131,7 +131,7 @@ Including the BiBTeX file inside a LaTeX document is done with two commands :
 
 \end{document}
 
-{% endlatex %}
+
 
 > ## Include publications
 >

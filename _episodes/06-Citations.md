@@ -10,7 +10,7 @@ objectives:
 - "Create bibliography datasets"
 - "Change bibliography styles"
 keypoints:
-- "For short bibliographies,you can use the ```{thebibliography}``` environment"
+- "For short bibliographies, you can use the ```{thebibliography}``` environment"
 - "Long or more robust bibliographies need BiBTeX linked with your document"
 ---
 

@@ -141,7 +141,8 @@ Including the BiBTeX file inside a LaTeX document is done with two commands :
 > 1. Eaton ME. A Comparative Analysis of the Use of GitHub by Librarians and Non-Librarians. 1. 29 mai 2018;13(2):27 47.
 > 1. Gordon RS. Information tomorrow reflections on technology and the future of public and academic libraries [Internet]. Medford, N.J.: Information Today, Inc.; 2007 [cité 20 mars 2015]. Disponible sur: http://search.ebscohost.com/login.aspx?direct=true&scope=site&db=nlebk&db=nlabk&AN=211266
 >  Write the corresponding instructions using the ```thebibliography```environment.
-> 
+>
+>>
 > > ## Solution
 > > ~~~
 > > \begin{thebibliography}{10}
@@ -156,6 +157,5 @@ Including the BiBTeX file inside a LaTeX document is done with two commands :
 > >{: .language-latex}
 > {: .solution}
 {: .challenge}
-
 
 {% include links.md %}

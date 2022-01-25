@@ -8,7 +8,19 @@ Restart your computer.
 
 Launch Debian. 
 
-Clone or pull the content of the repository into the Debian environment
+Install packages in Debian: 
+
+sudo apt-get update
+
+sudo apt-get install git-all
+
+sudo apt install ruby-full
+
+sudo apt-get install texlive-full
+
+Clone the content of the repository into the Debian environment:
+
+git clone https://github.com/epfllibrary/latex-course.git
 
 In the folder latex-course, run the following commands:
 

@@ -137,6 +137,19 @@ Some journals and universities provide templates for LaTeX documents.
 EPFL IC faculty also has a [template for LaTeX documents](https://github.com/HexHive/thesis_template) maintained by Mathias Payer.
 {: .callout}
 
+> ## Structure of the document
+> To define the hierarchical structure of the document LaTeX provides special commands that defines chapter, section, etc. :
+> * ```\part{}```
+> * ```\chapter{}```
+> * ```\section{}```
+> * ```\subsection{}```
+> * ```\subsubsection{}```
+> * ```\paragraph{}```
+>
+>
+> Please note that the availability of these commands depends on the document class we have selected. For example, Part and Chapter are only available for the document class "Book".
+{: .callout}
+
 ## Exercices
 
 > ## Using Environments

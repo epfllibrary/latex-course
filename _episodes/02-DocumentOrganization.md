@@ -150,6 +150,15 @@ EPFL IC faculty also has a [template for LaTeX documents](https://github.com/Hex
 > Please note that the availability of these commands depends on the document class we have selected. For example, Part and Chapter are only available for the document class "Book".
 {: .callout}
 
+> ## Title, author, date
+> You can add important metadata as title, author and date in the preamble of your document:
+> * ```\title{Title of my document}```
+> * ```\author{Myself}```
+> * ```\date{February 2022}```
+>
+> In the document environment you can have these metadata displayed at any point using the command ```\maketitle```.
+{: .callout}
+
 ## Exercices
 
 > ## Using Environments

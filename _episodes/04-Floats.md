@@ -101,6 +101,27 @@ To draw a horizontal line, you can use the ```\hline```command.
 >    ~~~
 >    {: .language-latex}
 >
+> 2. ~~~
+>     \begin{figure}
+>      \include{img/mypic}
+>     \end{figure}
+>    ~~~
+>    {: .language-latex}
+>    
+> 3. ~~~
+>     \begin{figure}
+>      \includegraphics{img/mypic}
+>     \end{figure}
+>    ~~~
+>    {: .language-latex}
+>    
+> 4. ~~~
+>     \begin{figure}
+>      \includegraphics{img\mypic}
+>     \end{figure}
+>    ~~~
+>    {: .language-latex}
+>    
 > > ## Solution
 > > 1. The environment is not ```float```but ```figure```
 > > 2. The command is ```\includegraphics```not ```\include```

@@ -1,6 +1,7 @@
 # Windows
 
-Install WSL and then install debian or ubuntu
+In Windows Powershell, as an admin, [install WSL](https://docs.microsoft.com/en-us/windows/wsl/install) and then install debian or ubuntu.
+Restart your computer.
 
 sudo apt-get ruby-full build-essential imagemagick git texlive-full
 

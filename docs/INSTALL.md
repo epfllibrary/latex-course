@@ -1,11 +1,14 @@
 # Windows
 
-In Windows Powershell, as an admin, [install WSL](https://docs.microsoft.com/en-us/windows/wsl/install) and then install Debian or Ubuntu.
+In Windows Powershell, as an admin, [install WSL](https://docs.microsoft.com/en-us/windows/wsl/install) and then install Debian with command:
+
+wsl --install -d Debian
+
 Restart your computer.
 
-Launch Ubuntu or Debian. 
+Launch Debian. 
 
-Clone or pull the content of the repository into the Ubunto or Debian environment
+Clone or pull the content of the repository into the Debian environment
 
 In the folder latex-course, run the following commands:
 

@@ -1,4 +1,4 @@
-I"8'<h2 id="floats">Floats</h2>
+I"++<h2 id="floats">Floats</h2>
 <p>LaTeX manages two kinds of floats, the figures and the tables, they are called floats because they can be inserted anywhere in the documents and referenced in the text (like Figure 1).</p>
 
 <p>Figures and tables are managed the same way, they just have their distinct numbering.</p>
@@ -111,6 +111,24 @@ This is my table :
       <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">\begin{float}</span>
   <span class="k">\includegraphics</span><span class="p">{</span>img/mypic<span class="p">}</span>
  <span class="nt">\end{float}</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">\begin{figure}</span>
+  <span class="k">\include</span><span class="p">{</span>img/mypic<span class="p">}</span>
+ <span class="nt">\end{figure}</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">\begin{figure}</span>
+  <span class="k">\includegraphics</span><span class="p">{</span>img/mypic<span class="p">}</span>
+ <span class="nt">\end{figure}</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">\begin{figure}</span>
+  <span class="k">\includegraphics</span><span class="p">{</span>img<span class="k">\mypic</span><span class="p">}</span>
+ <span class="nt">\end{figure}</span>
 </code></pre></div>      </div>
     </li>
   </ol>

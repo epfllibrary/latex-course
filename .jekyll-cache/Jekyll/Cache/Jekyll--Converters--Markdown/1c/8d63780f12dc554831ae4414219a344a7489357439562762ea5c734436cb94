@@ -1,4 +1,4 @@
-I"�-<p>This part of the course displays how LaTeX deals with bibliographies and in-text citations: by using the environment <code class="language-html highlighter-rouge">{thebibliography}</code> and by using BibTeX.</p>
+I"&<p>This part of the course displays how LaTeX deals with bibliographies and in-text citations: by using the environment <code class="language-html highlighter-rouge">{thebibliography}</code> and by using BibTeX.</p>
 
 <h2 id="the-environment-thebibliography">The environment <code class="language-html highlighter-rouge">{thebibliography}</code></h2>
 
@@ -143,33 +143,5 @@ This is the commands you need to run :</p>
   </div>
 
 </div>
-
-<h2 id="exercises">Exercises</h2>
-
-<blockquote class="language-latex">
-  <h2 id="include-publication">Include publication</h2>
-  <p>I have three references I would like to include in my document :</p>
-  <ol>
-    <li>EPFL Library Research Data Management Fastguides, EPFL, https://infoscience.epfl.ch/record/265349</li>
-    <li>Eaton ME. A Comparative Analysis of the Use of GitHub by Librarians and Non-Librarians. 1. 29 mai 2018;13(2):27 47.</li>
-    <li>Gordon RS. Information tomorrow reflections on technology and the future of public and academic libraries [Internet]. Medford, N.J.: Information Today, Inc.; 2007 [cité 20 mars 2015]. Disponible sur: http://search.ebscohost.com/login.aspx?direct=true&amp;scope=site&amp;db=nlebk&amp;db=nlabk&amp;AN=211266
- Write the corresponding instructions using the <code class="language-html highlighter-rouge">thebibliography</code>environment.
-      <blockquote>
-        <h2 id="solution">Solution</h2>
-        <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\begin{thebibliography}{10}
- \bibitem{EPFLFastGuide}
-EPFL Library Research Data Management Fastguides, EPFL, https://infoscience.epfl.ch/record/265349
- \bibitem{EatonMe}
-  Eaton ME. A Comparative Analysis of the Use of GitHub by Librarians and Non-Librarians. 1. 29 mai 2018;13(2):27 47.
-  \bibitem{GordonRS}
-  Gordon RS. Information tomorrow reflections on technology and the future of public and academic libraries [Internet]. Medford, N.J.: Information Today, Inc.; 2007 [cité 20 mars 2015]. Disponible sur: http://search.ebscohost.com/login.aspx?direct=true<span class="err">&amp;</span>scope=site<span class="err">&amp;</span>db=nlebk<span class="err">&amp;</span>db=nlabk<span class="err">&amp;</span>AN=211266
- \end{thebibliography}
-</code></pre></div>        </div>
-      </blockquote>
-    </li>
-  </ol>
-</blockquote>
-<blockquote class="challenge">
-</blockquote>
 
 :ET

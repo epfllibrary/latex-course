@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2021-01-11 11:28:37 +0100">
+    <meta http-equiv="last-modified" content="2022-01-28 17:48:33 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -416,6 +416,33 @@ for example :
  For EPFL, there is an unofficial <a href="https://github.com/glederrey/EPFL_Thesis_Template">PhD thesis template</a> maintained by the PhD association Polydoc.
 EPFL IC faculty also has a <a href="https://github.com/HexHive/thesis_template">template for LaTeX documents</a> maintained by Mathias Payer.</p>
 
+<blockquote class="callout">
+  <h2 id="structure-of-the-document">Structure of the document</h2>
+  <p>To define the hierarchical structure of the document LaTeX provides special commands that defines chapter, section, etc. :</p>
+  <ul>
+    <li><code class="language-html highlighter-rouge">\part{}</code></li>
+    <li><code class="language-html highlighter-rouge">\chapter{}</code></li>
+    <li><code class="language-html highlighter-rouge">\section{}</code></li>
+    <li><code class="language-html highlighter-rouge">\subsection{}</code></li>
+    <li><code class="language-html highlighter-rouge">\subsubsection{}</code></li>
+    <li><code class="language-html highlighter-rouge">\paragraph{}</code></li>
+  </ul>
+
+  <p>Please note that the availability of these commands depends on the document class we have selected. For example, Part and Chapter are only available for the document class “Book”.</p>
+</blockquote>
+
+<blockquote class="callout">
+  <h2 id="title-author-date">Title, author, date</h2>
+  <p>You can add important metadata as title, author and date in the preamble of your document:</p>
+  <ul>
+    <li><code class="language-html highlighter-rouge">\title{Title of my document}</code></li>
+    <li><code class="language-html highlighter-rouge">\author{Myself}</code></li>
+    <li><code class="language-html highlighter-rouge">\date{February 2022}</code></li>
+  </ul>
+
+  <p>In the document environment you can have these metadata displayed at any point using the command <code class="language-html highlighter-rouge">\maketitle</code>.</p>
+</blockquote>
+
 <h2 id="exercices">Exercices</h2>
 
 <blockquote class="challenge">
@@ -620,7 +647,7 @@ print "the average score is: ", average
   <div class="row">
     <div class="col-md-6 copyright" align="left">
 	
-  Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2019–2021
+  Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2019–2022
   by <a href="https://library.epfl.ch/">EPFL Library</a>
 	
     </div>

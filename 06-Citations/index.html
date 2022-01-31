@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2022-01-28 17:48:33 +0100">
+    <meta http-equiv="last-modified" content="2022-01-31 20:21:09 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -413,13 +413,39 @@ This is the commands you need to run :</p>
 
 </div>
 
+<h2 id="exercises">Exercises</h2>
+
+<blockquote class="challenge">
+  <h2 id="include-publication">Include publication</h2>
+  <p>I have three references I would like to include in my document :</p>
+  <ol>
+    <li>EPFL Library Research Data Management Fastguides, EPFL, https://infoscience.epfl.ch/record/265349</li>
+    <li>Eaton ME. A Comparative Analysis of the Use of GitHub by Librarians and Non-Librarians. 1. 29 mai 2018;13(2):27 47.</li>
+    <li>Gordon RS. Information tomorrow reflections on technology and the future of public and academic libraries [Internet]. Medford, N.J.: Information Today, Inc.; 2007 [cité 20 mars 2015]. Disponible sur: http://search.ebscohost.com/login.aspx?direct=true&amp;scope=site&amp;db=nlebk&amp;db=nlabk&amp;AN=211266
+ Write the corresponding instructions using the <code class="language-html highlighter-rouge">thebibliography</code>environment.</li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution">Solution</h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{thebibliography}</span><span class="p">{</span>10<span class="p">}</span>
+ <span class="k">\bibitem</span><span class="p">{</span>EPFLFastGuide<span class="p">}</span>
+EPFL Library Research Data Management Fastguides, EPFL, https://infoscience.epfl.ch/record/265349
+ <span class="k">\bibitem</span><span class="p">{</span>EatonMe<span class="p">}</span>
+  Eaton ME. A Comparative Analysis of the Use of GitHub by Librarians and Non-Librarians. 1. 29 mai 2018;13(2):27 47.
+  <span class="k">\bibitem</span><span class="p">{</span>GordonRS<span class="p">}</span>
+  Gordon RS. Information tomorrow reflections on technology and the future of public and academic libraries [Internet]. Medford, N.J.: Information Today, Inc.; 2007 [cité 20 mars 2015]. Disponible sur: http://search.ebscohost.com/login.aspx?direct=true<span class="p">&amp;</span>scope=site<span class="p">&amp;</span>db=nlebk<span class="p">&amp;</span>db=nlabk<span class="p">&amp;</span>AN=211266
+<span class="nt">\end{thebibliography}</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
 
 
 <blockquote class="keypoints">
   <h2>Key Points</h2>
   <ul>
     
-    <li><p>For short bibliographies, you can use the <code class="language-html highlighter-rouge">{thebibliography}</code> environment</p>
+    <li><p>For short bibliographies,you can use the <code class="language-html highlighter-rouge">{thebibliography}</code> environment</p>
 </li>
     
     <li><p>Long or more robust bibliographies need BiBTeX linked with your document</p>

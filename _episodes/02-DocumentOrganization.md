@@ -212,7 +212,7 @@ EPFL IC faculty also has a [template for LaTeX documents](https://github.com/Hex
 > In order to do that I need to write :
 >
 > 1. ~~~
->    My \textbf{cat} is cuter than my \textit{dog}.
+>     My \textbf{cat} is cuter than my \textit{dog}.
 >    ~~~
 >    
 >

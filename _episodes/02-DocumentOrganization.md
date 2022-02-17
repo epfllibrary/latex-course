@@ -212,26 +212,26 @@ EPFL IC faculty also has a [template for LaTeX documents](https://github.com/Hex
 > In order to do that I need to write :
 >
 > 1. ~~~
->    My \textbf{cat} is cutter than my \textit{dog}.
+>    My \textbf{cat} is cuter than my \textit{dog}.
 >    ~~~
 >    
 >
 > 2. ~~~
 >    \begin[quote]
->     My \textit{cat} is cutter than my \textbf{dog}.
+>     My \textit{cat} is cuter than my \textbf{dog}.
 >    \end[quote]
 >    ~~~
 >    
 >
 > 3. ~~~
 >    \begin{quote}
->     My \textit(cat) is cutter than my \textbf{dog}.
+>     My \textit(cat) is cuter than my \textbf{dog}.
 >    \end{quote}
 >    ~~~
 >    
 > 4. ~~~
 >    \begin{quote}
->     My /textit{cat} is cutter than my \textbf{dog}.
+>     My /textit{cat} is cuter than my \textbf{dog}.
 >    \end{quote}
 >    ~~~
 >    

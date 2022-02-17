@@ -17,7 +17,7 @@ keypoints:
 Below, you will get to know the minimal commands required to compile a LaTeX document. We will see a little further what each command does.
 
 > ## Packages
-> ```\usepackage[]{}``` is a command that loads a plugin. A plugin adds new functionalities and there plenty of plugins (for example to display pictures, make tables, draw chemical formula, make sudoku grid etc.) 
+> ```\usepackage[]{}``` is a command that loads a plugin. A plugin adds new functionalities and there plenty of plugins (for example to display pictures, make tables, draw chemical formula, make sudoku grid etc.). 
 >
 >
 > * For example ```\usepackage[utf8]{inputenc}``` loads the ```ìnputenc``` package with the ```utf8```option (this is is for character encoding)

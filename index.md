@@ -8,7 +8,7 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 
 {% comment %} This is a comment in Liquid {% endcomment %}
 
-## Why learn Latex ?
+## Why learn LaTeX ?
 
 For multiple reasons :
 * You want to write beautiful documents

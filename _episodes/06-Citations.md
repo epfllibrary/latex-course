@@ -25,7 +25,7 @@ Each bibliography element is introduced by the command ```\bibitem```, as shown 
 
 {% latex minimal=true filename=06-citations-01 %}
 
-Open access is a part of oOening science evolution in scientific universe \cite{Bartling2014}.
+Open access is a part of opening science evolution in scientific universe \cite{Bartling2014}.
 "Publish in Open Access is synonym to make its publication freely accessible to everyone. In February 2019, EPFL has adopted an Open Access Policy that clearly expresses the institutional position on Open Access to scientific
 publication. An amendment to the publication agreement and an email template are also available for EPFL authors as negotiation tools with publishers." \cite{EPFLlibrary2019}.
  \begin{thebibliography}{10}

@@ -240,13 +240,16 @@ module Jekyll
             # Compile the document to PNG
 
             ok = execute_cmd(@@globals["pdflatex_cmd"])
+
             ok = execute_cmd(@@globals["pdflatex_cmd"])
+
             if bibuse
               ok = execute_cmd(@@globals["bib_cmd"])
               ok = execute_cmd(@@globals["pdflatex_cmd"])
               ok = execute_cmd(@@globals["pdflatex_cmd"])
             end
             ok=execute_cmd(@@globals["convert_cmd"]) if ok
+
           end
 
           #Save tex file

@@ -35,7 +35,7 @@ Let's see how we can change the style of our text.
 	\textit{Italic text}
 
 	\textbf{Bold text}
-  
+
   \underline{Underlined text}
 
 \end{document}
@@ -215,17 +215,7 @@ and then the data analysis was done by [...].
 
 Anyway, a much better way it's using the ```lstlisting``` environment. For this, you will need to use the ```\usepackage{listings}```:
 
-{% latex filename=04-code-01 minimal=true %}
 
-\begin{lstlisting}[language=Python]
- round1 = int(raw_input("Enter score for round 1: "))
- round2 = int(raw_input("Enter score for round 2: "))
- round3 = int(raw_input("Enter score for round 3: "))
- average = (round1 + round2 + round3) / 3
- print "the average score is: ", average
-\end{lstlisting}
-
-{% endlatex %}
 
 
 

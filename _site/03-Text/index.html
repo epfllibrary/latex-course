@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2022-01-31 20:21:09 +0100">
+    <meta http-equiv="last-modified" content="2022-03-04 17:19:13 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -235,7 +235,7 @@
       <strong>Questions</strong>
       <ul>
 	
-	<li><p>How can I write text in my LaTeX document ?</p>
+	<li><p>How can I write text in my LaTeX document?</p>
 </li>
 	
       </ul>
@@ -252,10 +252,10 @@
 	<li><p>Change fonts and their size</p>
 </li>
 	
-	<li><p>Justify paragraphs</p>
+	<li><p>Change the alignment of paragraphs</p>
 </li>
 	
-	<li><p>Work with paragraph, pages and structure your document</p>
+	<li><p>Work with paragraphs, pages and structure your document</p>
 </li>
 	
 	<li><p>Include lists and tables</p>
@@ -267,9 +267,9 @@
 
 </blockquote>
 
-<h2 id="fonts">Fonts</h2>
+<h2 id="fonts-style-typeface-and-size">Fonts: style, typeface and size</h2>
 <p>We know how to write simple plain text.
-Let’s see how we can change the fonts used in LaTeX.</p>
+Let’s see how we can change the style of our text.</p>
 
 <div class="challenge">
   <h2>03-font-01</h2>
@@ -291,6 +291,8 @@ Let’s see how we can change the fonts used in LaTeX.</p>
 
 	<span class="k">\textbf</span><span class="p">{</span>Bold text<span class="p">}</span>
 
+  <span class="k">\underline</span><span class="p">{</span>Underlined text<span class="p">}</span>
+
 <span class="nt">\end{document}</span>
 
 
@@ -304,10 +306,10 @@ Let’s see how we can change the fonts used in LaTeX.</p>
 
 </div>
 
-<p>With the commands <code class="language-html highlighter-rouge">\textit{...}</code> and <code class="language-html highlighter-rouge">\textbf{...}</code>, you can modify parts of the text.
+<p>With the commands <code class="language-html highlighter-rouge">\textit{...}</code>, <code class="language-html highlighter-rouge">\textbf{...}</code> and <code class="language-html highlighter-rouge">\underline{...}</code> you can modify parts of the text.
 Keep in mind that such modifications are useful to emphasize your point but should be used consistently and parsimoniously.</p>
 
-<p>The relative size of the font can be changed with the following commands : (from the smallest to the biggest, the actual font size is relative to the size specified in the <code class="language-html highlighter-rouge">documentclass</code>
+<p>The relative size of the font can be changed with the following commands: (from the smallest to the biggest, the actual font size is relative to the size specified in the <code class="language-html highlighter-rouge">documentclass</code>
 )</p>
 <ul>
   <li><code class="language-html highlighter-rouge">\tiny</code></li>
@@ -320,7 +322,7 @@ Keep in mind that such modifications are useful to emphasize your point but shou
   <li><code class="language-html highlighter-rouge">\Huge</code></li>
 </ul>
 
-<p>Their usage is a little different than regular commands. Indeed, they are like switches and changes the fontsize until the end of the current group.</p>
+<p>Their usage is a little different than regular commands. Indeed, they are like switches and changes the font size until the end of the current group.</p>
 
 <div class="challenge">
   <h2>03-font-02</h2>
@@ -381,9 +383,9 @@ Keep in mind that such modifications are useful to emphasize your point but shou
 
 </div>
 
-<p>In this example the font size is changed when the command is used and will stay until another size is specified, if you want to change the font size only for a few number of words, you can group the command using:  <code class="language-html highlighter-rouge">{\Large only some text is large}</code>.</p>
+<p>In this example the font size is changed when the command is used and will stay until another size is specified; if you want to change the font size only for a few number of words, you can group the command using: <code class="language-html highlighter-rouge">{\Large only some text is large}</code>.</p>
 
-<p>It’s also possible to specify the font size for a specific object like environment by just switching the size the size at the beginning of the environment like:</p>
+<p>It’s also possible to specify the font size for a specific environment by just switching the size the size at the beginning of the environment like:</p>
 <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{itemize}</span>
   <span class="k">\Large</span>
   <span class="k">\item</span> Alpha
@@ -391,6 +393,8 @@ Keep in mind that such modifications are useful to emphasize your point but shou
   <span class="k">\item</span> Gamma
 <span class="nt">\end{itemize}</span>
 </code></pre></div></div>
+
+<p>By default, LaTeX use the Computer Modern typeface. You can easily change it in the preamble using a package: <code class="language-html highlighter-rouge">\usepackage{tgpagella}</code> will use the typeface Gyre Pagella. You can change the default font size in the class declaration: <code class="language-html highlighter-rouge">\documentclass[16pt]{article}</code> will set a type size of 16pt and all the changes will be relative to this value.</p>
 
 <h2 id="paragraphs">Paragraphs</h2>
 <p>You may have realized that LaTeX doesn’t jump to a new line when you press enter in your source file. This is because, you need to jump at least two lines in the source file for LaTex to jump one in the compiled document (it will ignore the extra lines you add). You can also jump line by using the <code class="language-html highlighter-rouge">\\</code> at this end of the line.</p>
@@ -438,11 +442,11 @@ And this line will be separated
 
 <h2 id="page">Page</h2>
 
-<p>To create a new page, insert <code class="language-html highlighter-rouge">\newpage</code>. If you have a double sided document, the command <code class="language-html highlighter-rouge">\cleardoublepage</code>will make sure that the new page will be an odd page.</p>
+<p>To create a new page, insert <code class="language-html highlighter-rouge">\newpage</code>. If you have a double sided document (<code class="language-html highlighter-rouge">\documentclass[twoside]{article}</code>), the command <code class="language-html highlighter-rouge">\cleardoublepage</code>will make sure that the new page will be an odd page.</p>
 
 <h2 id="list">List</h2>
 <p>LaTeX manages two kinds of lists: lists that are numbered or lists that are not.
-The numbered list uses the environment <code class="language-html highlighter-rouge">enumerate</code>and the non-ordered list uses the environment <code class="language-html highlighter-rouge">itemize</code>
+The numbered list uses the environment <code class="language-html highlighter-rouge">enumerate</code>and the non-ordered list uses the environment <code class="language-html highlighter-rouge">itemize</code>.
 For both environments a new element of the list is defined with the <code class="language-html highlighter-rouge">\item</code> command.</p>
 
 <div class="challenge">
@@ -520,7 +524,7 @@ I'm always correct and I always say the truth<span class="k">\footnote</span><sp
 
 <h2 id="code">Code</h2>
 
-<p>If you want to write code inside your document, you can use the <code class="language-html highlighter-rouge">verbatim</code>environment.</p>
+<p>The simplest way to display code inside your document it’s the <code class="language-html highlighter-rouge">verbatim</code> environment.</p>
 
 <div class="challenge">
   <h2>03-code-01</h2>
@@ -549,6 +553,8 @@ and then the data analysis was done by [...].
   </div>
 
 </div>
+
+<p>Anyway, a much better way it’s using the <code class="language-html highlighter-rouge">lstlisting</code> environment. For this, you will need to use the <code class="language-html highlighter-rouge">\usepackage{listings}</code>:</p>
 
 <h2 id="exercises">Exercises</h2>
 
@@ -582,9 +588,9 @@ and then the data analysis was done by [...].
 
     <h2 id="solution">Solution</h2>
     <ol>
-      <li>Is correct : The text will be right-aligned</li>
-      <li>The name of the environment is <code class="language-html highlighter-rouge">flushright</code></li>
-      <li>In order to align I need to use an environment not a command</li>
+      <li>Correct: the text will be right-aligned.</li>
+      <li>Wrong: the name of the environment is <code class="language-html highlighter-rouge">flushright</code>.</li>
+      <li>Wrong: in order to align you need to use an environment, not a command.</li>
     </ol>
   </blockquote>
 </blockquote>
@@ -607,7 +613,52 @@ Put some text and add a page that starts on a odd side and put again some text o
 <span class="nt">\begin{document}</span>
 This is my example text. I like latex
 <span class="k">\cleardoublepage</span>
-This is another chapter of my Latex life
+This is another chapter of my LaTeX life
+<span class="nt">\end{document}</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="using-packages">Using packages</h2>
+
+  <p>I would like to use the package <code class="language-html highlighter-rouge">listings</code> to write a bit code in Python.</p>
+
+  <p>The package uses the <code class="language-html highlighter-rouge">lstlisting</code>environment</p>
+
+  <p>the used language for the code is defined in an option <code class="language-html highlighter-rouge">language=Python</code></p>
+
+  <p>Please try to include the package, call the environment and specify the option</p>
+
+  <p>The code I want to include is :</p>
+  <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Calculate the average
+round1 = int(raw_input("Enter score for round 1: "))
+round2 = int(raw_input("Enter score for round 2: "))
+round3 = int(raw_input("Enter score for round 3: "))   
+# Calculate the average
+average = (round1 + round2 + round3) / 3
+# Print out the test score
+print "the average score is: ", average
+</code></pre></div>  </div>
+  <blockquote class="solution">
+    <h2 id="solution-2">Solution</h2>
+    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[T1]</span><span class="p">{</span>fontenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[english]</span><span class="p">{</span>babel<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>graphicx<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>listings<span class="p">}</span>
+<span class="nt">\begin{document}</span>
+<span class="nt">\begin{lstlisting}</span>[language=Python]
+# Get three test score
+round1 = int(raw<span class="p">_</span>input("Enter score for round 1: "))
+round2 = int(raw<span class="p">_</span>input("Enter score for round 2: "))
+round3 = int(raw<span class="p">_</span>input("Enter score for round 3: "))
+# Calculate the average
+average = (round1 + round2 + round3) / 3
+# Print out the test score
+print "the average score is: ", average
+<span class="nt">\end{lstlisting}</span>
 <span class="nt">\end{document}</span>
 </code></pre></div>    </div>
   </blockquote>
@@ -622,10 +673,10 @@ This is another chapter of my Latex life
     <li><p>Font size can be changed using  <code class="language-html highlighter-rouge">\tiny</code>, <code class="language-html highlighter-rouge">\small</code>, <code class="language-html highlighter-rouge">\normalsize</code>, <code class="language-html highlighter-rouge">\large</code>, <code class="language-html highlighter-rouge">\Large</code>, <code class="language-html highlighter-rouge">\LARGE</code>, <code class="language-html highlighter-rouge">\huge</code>, <code class="language-html highlighter-rouge">\Huge</code></p>
 </li>
     
-    <li><p>To have your text in italic : <code class="language-html highlighter-rouge">\textit</code> or in bold :  <code class="language-html highlighter-rouge">\textbf</code></p>
+    <li><p>To have your text in italic: <code class="language-html highlighter-rouge">\textit</code> or in bold :  <code class="language-html highlighter-rouge">\textbf</code></p>
 </li>
     
-    <li><p>Ordered lists use the <code class="language-html highlighter-rouge">enumerate</code> environment non-ordered the <code class="language-html highlighter-rouge">itemize</code>. Item list are defined with <code class="language-html highlighter-rouge">\item</code></p>
+    <li><p>Ordered lists use the <code class="language-html highlighter-rouge">enumerate</code> environment; unordered lists the <code class="language-html highlighter-rouge">itemize</code>. Items are defined with <code class="language-html highlighter-rouge">\item</code></p>
 </li>
     
     <li><p>New page is added with <code class="language-html highlighter-rouge">\newpage</code></p>

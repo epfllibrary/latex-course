@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2022-01-31 20:21:09 +0100">
+    <meta http-equiv="last-modified" content="2022-03-04 17:19:13 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -281,7 +281,7 @@
     <h2> Tex file : <a href="../latex/tex/06-citations-01.tex">06-citations-01.tex</a></h2>
     <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
 
-Open access is a part of oOening science evolution in scientific universe <span class="k">\cite</span><span class="p">{</span>Bartling2014<span class="p">}</span>.
+Open access is a part of opening science evolution in scientific universe <span class="k">\cite</span><span class="p">{</span>Bartling2014<span class="p">}</span>.
 "Publish in Open Access is synonym to make its publication freely accessible to everyone. In February 2019, EPFL has adopted an Open Access Policy that clearly expresses the institutional position on Open Access to scientific
 publication. An amendment to the publication agreement and an email template are also available for EPFL authors as negotiation tools with publishers." <span class="k">\cite</span><span class="p">{</span>EPFLlibrary2019<span class="p">}</span>.
  <span class="nt">\begin{thebibliography}</span><span class="p">{</span>10<span class="p">}</span>
@@ -326,15 +326,15 @@ The BiBTeX is a text file that contains the publication information, you can wri
 
 <p>A bibliography entry looks like this :</p>
 
-<figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex">@article{greenwade93,
-    author  = "Greenwade, George D.",
-    title   = "The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN})",
-    year    = "1993",
-    journal = "TUGBoat",
-    volume  = "14",
-    number  = "3",
-    pages   = "342--351"
-}</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">greenwade93</span><span class="p">,</span>
+    <span class="na">author</span>  <span class="p">=</span> <span class="s">"Greenwade, George D."</span><span class="p">,</span>
+    <span class="na">title</span>   <span class="p">=</span> <span class="s">"The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN})"</span><span class="p">,</span>
+    <span class="na">year</span>    <span class="p">=</span> <span class="s">"1993"</span><span class="p">,</span>
+    <span class="na">journal</span> <span class="p">=</span> <span class="s">"TUGBoat"</span><span class="p">,</span>
+    <span class="na">volume</span>  <span class="p">=</span> <span class="s">"14"</span><span class="p">,</span>
+    <span class="na">number</span>  <span class="p">=</span> <span class="s">"3"</span><span class="p">,</span>
+    <span class="na">pages</span>   <span class="p">=</span> <span class="s">"342--351"</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>Here the <code class="language-html highlighter-rouge">@article</code> specify the <a href="http://newton.ex.ac.uk/tex/pack/bibtex/btxdoc/node6.html">category</a> of the publication, then <code class="language-html highlighter-rouge">greenwade93</code>is the key that will be use within the <code class="language-html highlighter-rouge">cite{}</code>command in the latex document.</p>
 

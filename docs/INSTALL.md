@@ -1,4 +1,4 @@
-# Windows
+# Windows / Linux (ubuntu debian)
 
 In Windows Powershell, as an admin, [install WSL](https://docs.microsoft.com/en-us/windows/wsl/install) and then install Debian with command:
 
@@ -6,27 +6,33 @@ wsl --install -d Debian
 
 Restart your computer.
 
-Launch Debian. 
+Launch Debian.
 
-Install packages in Debian: 
+Install packages in Debian:
 
-sudo apt-get update
+sudo -s
 
-sudo apt-get install git-all
+apt update
+apt install git texlive-full imagemagick build-essential curl
+apt remove ruby
 
-sudo apt install ruby-full
+command curl -sSL https://rvm.io/mpapis.asc |  gpg --import -
+command curl -sSL https://rvm.io/pkuczynski.asc |  gpg --import -
 
-sudo apt-get install texlive-full
+curl -sSL https://get.rvm.io |  bash -s stable
 
-sudo apt-get install ruby-full build-essential imagemagick git texlive-full
+source /etc/profile.d/rvm.sh
+rvm requirements
+rvm install 2.6
+gem install github-pages
 
-sudo gem install jekyll bundler
+sed -i_bak \
+'s/rights="none" pattern="PDF"/rights="read | write" pattern="PDF"/' \
+/etc/ImageMagick-6/policy.xml
 
-# Linux (debian)
+exit
 
-sudo apt-get ruby-full build-essential imagemagick git texlive-full
 
-sudo gem install jekyll bundler
 
 # MacOS
 

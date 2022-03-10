@@ -121,6 +121,8 @@ It's also possible to specify the font size for a specific environment by just s
 
 By default, LaTeX use the Computer Modern typeface. You can easily change it in the preamble using a package: ```\usepackage{tgpagella}``` will use the typeface Gyre Pagella. You can change the default font size in the class declaration: ```\documentclass[10pt]{article}``` but please be aware that by default the class Article can only have values 10pt, 11pt or 12pt. You can have more control using a package: ```\usepackage[fontsize=15pt]{fontsize}```.
 
+A list of available font types can be found here: https://tug.org/FontCatalogue/
+
 
 ## Paragraphs
 You may have realized that LaTeX doesn't jump to a new line when you press enter in your source file. This is because, you need to jump at least two lines in the source file for LaTex to jump one in the compiled document (it will ignore the extra lines you add). You can also jump line by using the ```\\``` at this end of the line.

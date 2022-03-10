@@ -119,7 +119,7 @@ It's also possible to specify the font size for a specific environment by just s
 ~~~
 {: .language-latex}
 
-By default, LaTeX use the Computer Modern typeface. You can easily change it in the preamble using a package: ```\usepackage{tgpagella}``` will use the typeface Gyre Pagella. You can change the default font size in the class declaration: ```\documentclass[16pt]{article}``` will set a type size of 16pt and all the changes will be relative to this value.
+By default, LaTeX use the Computer Modern typeface. You can easily change it in the preamble using a package: ```\usepackage{tgpagella}``` will use the typeface Gyre Pagella. You can change the default font size in the class declaration: ```\documentclass[10pt]{article}``` but please be aware that by default the class Article can only have values 10pt, 11pt or 12pt. You can have more control using a package: ```\usepackage[fontsize=15pt]{fontsize}```.
 
 
 ## Paragraphs

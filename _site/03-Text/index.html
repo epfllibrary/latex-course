@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2022-03-04 17:19:13 +0100">
+    <meta http-equiv="last-modified" content="2022-03-10 20:03:16 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_sear
     ch() -->
@@ -394,7 +394,9 @@ Keep in mind that such modifications are useful to emphasize your point but shou
 <span class="nt">\end{itemize}</span>
 </code></pre></div></div>
 
-<p>By default, LaTeX use the Computer Modern typeface. You can easily change it in the preamble using a package: <code class="language-html highlighter-rouge">\usepackage{tgpagella}</code> will use the typeface Gyre Pagella. You can change the default font size in the class declaration: <code class="language-html highlighter-rouge">\documentclass[16pt]{article}</code> will set a type size of 16pt and all the changes will be relative to this value.</p>
+<p>By default, LaTeX use the Computer Modern typeface. You can easily change it in the preamble using a package: <code class="language-html highlighter-rouge">\usepackage{tgpagella}</code> will use the typeface Gyre Pagella. You can change the default font size in the class declaration: <code class="language-html highlighter-rouge">\documentclass[10pt]{article}</code> but please be aware that by default the class Article can only have values 10pt, 11pt or 12pt. You can have more control using a package: <code class="language-html highlighter-rouge">\usepackage[fontsize=15pt]{fontsize}</code>.</p>
+
+<p>A list of available font types can be found here: https://tug.org/FontCatalogue/</p>
 
 <h2 id="paragraphs">Paragraphs</h2>
 <p>You may have realized that LaTeX doesn’t jump to a new line when you press enter in your source file. This is because, you need to jump at least two lines in the source file for LaTex to jump one in the compiled document (it will ignore the extra lines you add). You can also jump line by using the <code class="language-html highlighter-rouge">\\</code> at this end of the line.</p>

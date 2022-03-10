@@ -1,4 +1,4 @@
-I"f1<p>This part of the course displays how LaTeX deals with bibliographies and in-text citations: by using the environment <code class="language-html highlighter-rouge">{thebibliography}</code> and by using BibTeX.</p>
+I"}.<p>This part of the course displays how LaTeX deals with bibliographies and in-text citations: by using the environment <code class="language-html highlighter-rouge">{thebibliography}</code> and by using BibTeX.</p>
 
 <h2 id="the-environment-thebibliography">The environment <code class="language-html highlighter-rouge">{thebibliography}</code></h2>
 
@@ -57,15 +57,15 @@ The BiBTeX is a text file that contains the publication information, you can wri
 
 <p>A bibliography entry looks like this :</p>
 
-<figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">greenwade93</span><span class="p">,</span>
-    <span class="na">author</span>  <span class="p">=</span> <span class="s">"Greenwade, George D."</span><span class="p">,</span>
-    <span class="na">title</span>   <span class="p">=</span> <span class="s">"The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN})"</span><span class="p">,</span>
-    <span class="na">year</span>    <span class="p">=</span> <span class="s">"1993"</span><span class="p">,</span>
-    <span class="na">journal</span> <span class="p">=</span> <span class="s">"TUGBoat"</span><span class="p">,</span>
-    <span class="na">volume</span>  <span class="p">=</span> <span class="s">"14"</span><span class="p">,</span>
-    <span class="na">number</span>  <span class="p">=</span> <span class="s">"3"</span><span class="p">,</span>
-    <span class="na">pages</span>   <span class="p">=</span> <span class="s">"342--351"</span>
-<span class="p">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex">@article{greenwade93,
+    author  = "Greenwade, George D.",
+    title   = "The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN})",
+    year    = "1993",
+    journal = "TUGBoat",
+    volume  = "14",
+    number  = "3",
+    pages   = "342--351"
+}</code></pre></figure>
 
 <p>Here the <code class="language-html highlighter-rouge">@article</code> specify the <a href="http://newton.ex.ac.uk/tex/pack/bibtex/btxdoc/node6.html">category</a> of the publication, then <code class="language-html highlighter-rouge">greenwade93</code>is the key that will be use within the <code class="language-html highlighter-rouge">cite{}</code>command in the latex document.</p>
 

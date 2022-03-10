@@ -1,4 +1,4 @@
-I"PH<h2 id="fonts-style-typeface-and-size">Fonts: style, typeface and size</h2>
+I"sE<h2 id="fonts-style-typeface-and-size">Fonts: style, typeface and size</h2>
 <p>We know how to write simple plain text.
 Let’s see how we can change the style of our text.</p>
 
@@ -21,7 +21,7 @@ Let’s see how we can change the style of our text.</p>
 	<span class="k">\textit</span><span class="p">{</span>Italic text<span class="p">}</span>
 
 	<span class="k">\textbf</span><span class="p">{</span>Bold text<span class="p">}</span>
-  
+
   <span class="k">\underline</span><span class="p">{</span>Underlined text<span class="p">}</span>
 
 <span class="nt">\end{document}</span>
@@ -125,7 +125,9 @@ Keep in mind that such modifications are useful to emphasize your point but shou
 <span class="nt">\end{itemize}</span>
 </code></pre></div></div>
 
-<p>By default, LaTeX use the Computer Modern typeface. You can easily change it in the preamble using a package: <code class="language-html highlighter-rouge">\usepackage{tgpagella}</code> will use the typeface Gyre Pagella. You can change the default font size in the class declaration: <code class="language-html highlighter-rouge">\documentclass[16pt]{article}</code> will set a type size of 16pt and all the changes will be relative to this value.</p>
+<p>By default, LaTeX use the Computer Modern typeface. You can easily change it in the preamble using a package: <code class="language-html highlighter-rouge">\usepackage{tgpagella}</code> will use the typeface Gyre Pagella. You can change the default font size in the class declaration: <code class="language-html highlighter-rouge">\documentclass[10pt]{article}</code> but please be aware that by default the class Article can only have values 10pt, 11pt or 12pt. You can have more control using a package: <code class="language-html highlighter-rouge">\usepackage[fontsize=15pt]{fontsize}</code>.</p>
+
+<p>A list of available font types can be found here: https://tug.org/FontCatalogue/</p>
 
 <h2 id="paragraphs">Paragraphs</h2>
 <p>You may have realized that LaTeX doesn’t jump to a new line when you press enter in your source file. This is because, you need to jump at least two lines in the source file for LaTex to jump one in the compiled document (it will ignore the extra lines you add). You can also jump line by using the <code class="language-html highlighter-rouge">\\</code> at this end of the line.</p>
@@ -286,31 +288,6 @@ and then the data analysis was done by [...].
 </div>
 
 <p>Anyway, a much better way it’s using the <code class="language-html highlighter-rouge">lstlisting</code> environment. For this, you will need to use the <code class="language-html highlighter-rouge">\usepackage{listings}</code>:</p>
-
-<div class="challenge">
-  <h2>04-code-01</h2>
-  <div class="latex-src">
-    <h2> Tex file : <a href="../latex/tex/04-code-01.tex">04-code-01.tex</a></h2>
-    <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">%&lt;-----&gt; ADDED to minimal &lt;-----&gt;</span>
-
-<span class="nt">\begin{lstlisting}</span>[language=Python]
- round1 = int(raw<span class="p">_</span>input("Enter score for round 1: "))
- round2 = int(raw<span class="p">_</span>input("Enter score for round 2: "))
- round3 = int(raw<span class="p">_</span>input("Enter score for round 3: "))
- average = (round1 + round2 + round3) / 3
- print "the average score is: ", average
-<span class="nt">\end{lstlisting}</span>
-
-
-</code></pre></div>    </div>
-
-  </div>
-  <div class="latex-compil">
-    <h2> Compilation : <a href="../latex/pdf/04-code-01.pdf">04-code-01.pdf</a></h2>
-    <p><img src="../latex/png/04-code-01.png" /></p>
-  </div>
-
-</div>
 
 <h2 id="exercises">Exercises</h2>
 
